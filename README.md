@@ -28,8 +28,19 @@ Ersetzen Sie alle `[…]`-Platzhalter in:
 
 ### 3. Inhalte anpassen
 
-- Weitere Vorlesungen als `vorlesungen/0N_….qmd` anlegen (`format: revealjs`).
-- Design und Mermaid-Farben nicht ändern — Vorgaben liegen in `assets/styles/` (`slides.scss` / `custom.scss`).
+- Weitere Vorlesungen als `vorlesungen/0N_….qmd` anlegen.
+- Pro Vorlesung zwei Formate im YAML setzen:
+
+```yaml
+format:
+  revealjs: default              # Vortrag (Notes nur mit Taste S)
+  handout-revealjs:
+    output-file: 0N_titel-handout.html   # Studienskript
+```
+
+- **Vortrag:** `quarto render vorlesungen/0N_….qmd --to revealjs` — Speaker Notes nur in der Speaker View (**S**).
+- **Handout-PDF:** Handout-HTML öffnen → Taste **E** (Druckansicht) → Drucken als PDF. Dialog: **A4**, **Hochformat**, Ränder **Standard** (nicht „Keine“), Hintergrundgrafiken an.
+- Design und Mermaid-Farben nicht ändern — Vorgaben liegen in `assets/styles/` (`slides.scss` / `custom.scss` / `handout.scss`).
 - Lokal prüfen: `quarto preview` bzw. `quarto render`.
 
 ### 4. Aufräumen

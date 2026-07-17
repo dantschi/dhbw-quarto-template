@@ -2,7 +2,12 @@
 title: "01 · Kickoff"
 subtitle: "[Modulname] · DHBW Stuttgart"
 author: "[Modulkürzel]"
-format: revealjs
+format:
+  # Vortrag: Notes nur in Speaker View (S)
+  revealjs: default
+  # Studienskript: Folie + Notes; PDF via Druckansicht (E), A4 Hochformat
+  handout-revealjs:
+    output-file: 01_kickoff-handout.html
 ---
 
 ## Willkommen zur [Modulkürzel]

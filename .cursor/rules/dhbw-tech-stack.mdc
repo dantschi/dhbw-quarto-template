@@ -18,6 +18,7 @@ style Beispiel fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important;
 
 - Neue Reveal.js-Folien immer mit `---` oder `##` (Level-2-Header) trennen
 - Sprechtexte für den Dozenten **immer** in `::: notes` … `:::` — darin didaktische Tipps (z. B. Verwechslungsgefahr verwandter Begriffe)
+- Pro Vorlesung zwei Formate: `revealjs` (Vortrag, Notes nur Speaker View) und `handout-revealjs` (Skript: Folie oben, Notes unten; PDF über Druckansicht **E**, A4 Hochformat)
 - Code-Blöcke immer mit passender Sprache taggen für Syntax-Highlighting
 
 ```markdown

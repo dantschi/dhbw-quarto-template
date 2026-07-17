@@ -35,7 +35,8 @@ format:
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   # ---------------------------------------------------------------------------
-  # Reveal.js — Vorlesungsfolien (in .qmd per format: revealjs)
+  # Reveal.js — Vorlesungsfolien (Vortrag)
+  # Speaker Notes nur in der Speaker View (Taste S) — nicht auf der Leinwand.
   # ---------------------------------------------------------------------------
   revealjs:
     theme:
@@ -46,6 +47,7 @@ format:
     chalkboard: false
     preview-links: auto
     center: true
+    show-notes: false
     include-in-header:
       - text: |
           <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,13 +55,14 @@ format:
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   # ---------------------------------------------------------------------------
-  # PDF-Skript
+  # PDF-Artikel (optional, für reine Textskripte — nicht Folien-Handout)
+  # Folien-Handout: format handout-revealjs → Druckansicht (E) → A4 Hochformat
   # ---------------------------------------------------------------------------
   pdf:
     documentclass: article
     papersize: a4
     geometry:
-      - margin=3cm
+      - margin=2.2cm
     mainfont: Arial
     sansfont: Arial
     monofont: Consolas

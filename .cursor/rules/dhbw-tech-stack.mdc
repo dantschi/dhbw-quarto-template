@@ -8,10 +8,10 @@ alwaysApply: false
 
 - **Framework:** Quarto (Websites, PDFs, Reveal.js)
 - **Sprachen:** Markdown (`.qmd`), SCSS; weitere Sprachen je nach Modul (z. B. C, Assembler, Python)
-- **Diagramme:** Mermaid.js nativ in Quarto (` ```mermaid `). Globale Farben (Weiß/Grau) steuert `_quarto.yml` (`mermaid.themeVariables`). Keine hartcodierten Farben — außer bei didaktischer Hervorhebung. Akzente **immer** mit DHBW-Rot:
+- **Diagramme:** Mermaid.js nativ in Quarto (` ```mermaid `). Die globalen Farben für Mermaid (Weiß/Grau) werden zentral über SCSS-Variablen in der `slides.scss`/`custom.scss` erzwungen. Didaktische Hervorhebungen (z. B. der aktive Datenpfad) erfolgen weiterhin im Markdown mit dem DHBW-Rot. Bei Inline-Styles **immer** `!important` anhängen, damit sie die SCSS-Regeln überschreiben:
 
 ```mermaid
-style Beispiel fill:#FFFFFF,stroke:#E2001A,stroke-width:2px
+style Beispiel fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important;
 ```
 
 # Quarto / Markdown

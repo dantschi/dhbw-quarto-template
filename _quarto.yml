@@ -72,18 +72,3 @@ format:
     toc: true
     numbersections: true
     keep-tex: false
-
-# ---------------------------------------------------------------------------
-# Mermaid — globales Farbschema (Apple × DHBW)
-# ---------------------------------------------------------------------------
-mermaid:
-  theme: default
-  themeVariables:
-    fontFamily: "Inter, -apple-system, sans-serif"
-    primaryColor: "#FFFFFF"
-    primaryTextColor: "#1D1D1F"
-    primaryBorderColor: "#E5E5EA"
-    lineColor: "#86868B"
-    clusterBkg: "#F5F5F7"
-    clusterBorder: "#E5E5EA"
-    edgeLabelBackground: "#FFFFFF"

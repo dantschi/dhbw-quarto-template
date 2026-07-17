@@ -23,5 +23,5 @@ alwaysApply: false
 
 ## Mermaid
 
-- Standardfarben kommen aus `_quarto.yml` (`theme: default` + `themeVariables`) — nicht in Diagrammen überschreiben
-- Didaktische Hervorhebung nur so: `style [Knoten] fill:#FFFFFF,stroke:#E2001A,stroke-width:2px`
+- Die globalen Farben für Mermaid (Weiß/Grau) werden zentral über SCSS-Variablen in der `slides.scss`/`custom.scss` erzwungen. Didaktische Hervorhebungen (z. B. der aktive Datenpfad) erfolgen weiterhin im Markdown mit dem DHBW-Rot (`style [Knoten] fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important;`).
+- Bei Inline-Styles **immer** `!important` anhängen, damit sie die SCSS-Regeln überschreiben.

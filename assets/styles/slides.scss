@@ -170,6 +170,35 @@ $presentation-font-size-root: 32px !default;
 // =============================================================================
 // Mermaid / Diagramme & Callouts
 // =============================================================================
+/* --- MERMAID DIAGRAM THEMING (Apple / DHBW Minimalismus) --- */
+:root, .reveal {
+  /* Quarto native Variablen */
+  --mermaid-bg-color: transparent;
+  --mermaid-node-bg-color: #FFFFFF;
+  --mermaid-node-fg-color: #1D1D1F;
+  --mermaid-edge-color: #86868B;
+  --mermaid-font-family: "Inter", -apple-system, sans-serif;
+  --mermaid-label-bg-color: #FFFFFF;
+  --mermaid-label-fg-color: #1D1D1F;
+}
+
+/* Harte Overrides für die zarten Rahmen, da Quarto das sonst oft überschreibt */
+.mermaid {
+  .node rect, .node circle, .node polygon, .node path {
+    stroke: #E5E5EA !important; /* Zartes Apple-Grau für Rahmen */
+    stroke-width: 1.5px !important;
+  }
+
+  .edgePath .path {
+    stroke: #86868B !important; /* Mittelgraue Pfeile */
+  }
+
+  .marker {
+    fill: #86868B !important;
+    stroke: #86868B !important;
+  }
+}
+
 .reveal .mermaid {
   margin: 1.5rem auto;
 }

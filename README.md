@@ -29,7 +29,7 @@ Ersetzen Sie alle `[…]`-Platzhalter in:
 ### 3. Inhalte anpassen
 
 - Weitere Vorlesungen als `vorlesungen/0N_….qmd` anlegen (`format: revealjs`).
-- Design und Mermaid-Farben nicht ändern — Vorgaben liegen in `assets/styles/` und `_quarto.yml`.
+- Design und Mermaid-Farben nicht ändern — Vorgaben liegen in `assets/styles/` (`slides.scss` / `custom.scss`).
 - Lokal prüfen: `quarto preview` bzw. `quarto render`.
 
 ### 4. Aufräumen

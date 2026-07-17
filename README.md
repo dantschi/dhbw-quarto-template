@@ -64,6 +64,8 @@ Definitionen, Terminologie und didaktischer Aufbau orientieren sich an diesem St
 
 ## OER & Lizenz
 
-Dieses Vorlesungsmaterial ist eine **Open Educational Resource (OER)** und steht unter der Lizenz **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.
+Die Vorlesungsinhalte dieses Materials (Texte, Code, Diagramme) sind eine **Open Educational Resource (OER)** und stehen unter der Lizenz **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.
 
-Sie dürfen das Material teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei [`LICENSE`](LICENSE) im Repository.
+Sie dürfen diese Inhalte teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei [`LICENSE`](LICENSE) im Repository.
+
+**Ausnahme:** Das Logo der Dualen Hochschule Baden-Württemberg (DHBW) sowie andere geschützte Markenzeichen sind von der CC-BY-4.0-Lizenz ausdrücklich ausgenommen. Sie unterliegen dem Markenrecht der jeweiligen Inhaber und dürfen nicht ohne entsprechende Genehmigung verwendet werden.

@@ -1,0 +1,27 @@
+---
+description: Design-Richtlinien Apple-Look + DHBW für Folien, Website und SCSS
+globs: "**/*.{scss,css,qmd}"
+alwaysApply: false
+---
+
+# Design-Richtlinien (Apple + DHBW)
+
+Ästhetik: minimalistisch, modern („Apple-Look“ / Jony Ive).
+
+- Viel Whitespace, weiche Schatten, abgerundete Ecken — keine harten Rahmen
+- Typografie: Sans-Serif (Inter / San Francisco), Zeilenabstand 1.6
+
+## Farben (strikt)
+
+| Rolle | Wert | Verwendung |
+|-------|------|------------|
+| Hintergrund Folien | `#FFFFFF` | Reveal.js |
+| Hintergrund Website | `#F5F5F7` | Quarto-Site |
+| Haupttext | `#1D1D1F` | Body |
+| Sekundärtext | `#86868B` | Captions, Meta |
+| Akzent DHBW Rot | `#E2001A` | Nur sparsam: Links, Highlights, Fortschrittsbalken, Mermaid-Akzente |
+
+## Mermaid
+
+- Standardfarben kommen aus `_quarto.yml` (`theme: default` + `themeVariables`) — nicht in Diagrammen überschreiben
+- Didaktische Hervorhebung nur so: `style [Knoten] fill:#FFFFFF,stroke:#E2001A,stroke-width:2px`

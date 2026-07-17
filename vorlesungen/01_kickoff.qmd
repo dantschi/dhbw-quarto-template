@@ -1,0 +1,77 @@
+---
+title: "01 · Kickoff"
+subtitle: "[Modulname] · DHBW Stuttgart"
+author: "[Modulkürzel]"
+format: revealjs
+---
+
+## Willkommen zur [Modulkürzel]
+
+- Modul: **[Modulname]**
+- Fokus: **[Schwerpunkt / Themenfeld]**
+- Zielgruppe: [Zielgruppe, z. B. Bachelor …]
+
+::: notes
+Begrüßung und organisatorischer Einstieg. Kurz den Semesterfahrplan skizzieren und die Lernziele des Moduls einordnen.
+:::
+
+## Was Sie erwarten können
+
+1. [Themenblock 1]
+2. [Themenblock 2]
+3. [Themenblock 3]
+4. [Themenblock 4]
+
+::: notes
+Hier den roten Faden des Semesters vorstellen und Erwartungen an Vorbereitung und Mitarbeit klären.
+:::
+
+## Didaktischer Aufbau
+
+Wir bauen Verständnis Schicht für Schicht auf:
+
+$$\text{[Ebene 1]} \rightarrow \text{[Ebene 2]} \rightarrow \text{[Ebene 3]} \rightarrow \text{[Ebene 4]}$$
+
+::: notes
+Diesen Pfad als roten Faden des Semesters etablieren und an konkreten Beispielen aus dem Modul veranschaulichen.
+:::
+
+## Beispiel: Übersicht
+
+```{mermaid}
+graph LR
+  A[Konzept A] --> B[Konzept B]
+  B --> C[Konzept C]
+```
+
+::: notes
+Didaktischer Tipp: Betonen, dass dies eine stark vereinfachte Sicht ist. Später mit detaillierteren Darstellungen gegenüberstellen.
+:::
+
+## Tools im Kurs
+
+- **[Tool 1]** – [Kurzbeschreibung]
+- **[Tool 2]** – [Kurzbeschreibung]
+
+::: notes
+Optional die wichtigsten Tools kurz zeigen. Studierende sollen sie früh einrichten bzw. bookmarken.
+:::
+
+## Literatur
+
+**[Autor:innen]**  
+*[Werktitel]*
+
+::: notes
+Als zentrale Referenz des Moduls vorstellen. Empfehlen, parallel zur Vorlesung zu lesen – nicht erst vor der Klausur.
+:::
+
+## Nächste Schritte
+
+- Organisationsfragen klären
+- Materialien / Tools einrichten
+- Erste Übungen vorbereiten
+
+::: notes
+Abschlussfolie: Raum für Fragen lassen. Auf OER-Lizenz (CC BY 4.0) und die Kurswebsite hinweisen.
+:::

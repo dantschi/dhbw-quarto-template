@@ -56,22 +56,26 @@ format:
 
   # ---------------------------------------------------------------------------
   # PDF-Artikel (optional, für reine Textskripte — nicht Folien-Handout)
-  # Folien-Handout: format handout-revealjs → Druckansicht (E) → A4 Hochformat
+  # Folien-Handout: siehe Profil / Format handout (Druckansicht E bzw. --profile handout)
   # ---------------------------------------------------------------------------
   pdf:
     documentclass: article
     papersize: a4
     geometry:
-      - margin=2.2cm
+      - margin=3cm
     mainfont: Arial
     sansfont: Arial
     monofont: Consolas
     fontsize: 11pt
     linestretch: 1.25
     colorlinks: true
-    linkcolor: "E2001A"
-    urlcolor: "E2001A"
-    citecolor: "E2001A"
+    linkcolor: dhbwred
+    urlcolor: dhbwred
+    citecolor: dhbwred
     toc: true
     numbersections: true
     keep-tex: false
+    include-in-header:
+      - text: |
+          \usepackage{xcolor}
+          \definecolor{dhbwred}{HTML}{E2001A}

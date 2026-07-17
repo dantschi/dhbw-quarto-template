@@ -1,13 +1,12 @@
 ---
 title: "01 · Kickoff"
 subtitle: "[Modulname] · DHBW Stuttgart"
-author: "[Modulkürzel]"
-format:
-  # Vortrag: Notes nur in Speaker View (S)
-  revealjs: default
-  # Studienskript: Folie + Notes; PDF via Druckansicht (E), A4 Hochformat
-  handout-revealjs:
-    output-file: 01_kickoff-handout.html
+author: "[Dozent:in]"
+# Vortrag:  quarto preview vorlesungen/01_kickoff.qmd
+#           (Notizen nur mit Taste S)
+# Handout:  quarto render vorlesungen/01_kickoff.qmd --profile handout --to pdf
+#           → _handout/vorlesungen/01_kickoff.pdf
+format: revealjs
 ---
 
 ## Willkommen zur [Modulkürzel]
@@ -17,7 +16,7 @@ format:
 - Zielgruppe: [Zielgruppe, z. B. Bachelor …]
 
 ::: notes
-Begrüßung und organisatorischer Einstieg. Kurz den Semesterfahrplan skizzieren und die Lernziele des Moduls einordnen.
+Kurzer Begrüßungstext und organisatorischer Einstieg. Lernziele und Semesterrahmen kurz einordnen.
 :::
 
 ## Was Sie erwarten können
@@ -28,7 +27,7 @@ Begrüßung und organisatorischer Einstieg. Kurz den Semesterfahrplan skizzieren
 4. [Themenblock 4]
 
 ::: notes
-Hier den roten Faden des Semesters vorstellen und Erwartungen an Vorbereitung und Mitarbeit klären.
+Roten Faden des Semesters skizzieren und Erwartungen an Vorbereitung sowie Mitarbeit klären.
 :::
 
 ## Didaktischer Aufbau
@@ -38,7 +37,7 @@ Wir bauen Verständnis Schicht für Schicht auf:
 $$\text{[Ebene 1]} \rightarrow \text{[Ebene 2]} \rightarrow \text{[Ebene 3]} \rightarrow \text{[Ebene 4]}$$
 
 ::: notes
-Diesen Pfad als roten Faden des Semesters etablieren und an konkreten Beispielen aus dem Modul veranschaulichen.
+Diesen Aufbau als roten Faden etablieren und an einem kurzen Beispiel aus dem Modul veranschaulichen.
 :::
 
 ## Beispiel: Übersicht
@@ -47,19 +46,22 @@ Diesen Pfad als roten Faden des Semesters etablieren und an konkreten Beispielen
 graph LR
   A[Konzept A] --> B[Konzept B]
   B --> C[Konzept C]
+  style A fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px
+  style B fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important
+  style C fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px
 ```
 
 ::: notes
-Didaktischer Tipp: Betonen, dass dies eine stark vereinfachte Sicht ist. Später mit detaillierteren Darstellungen gegenüberstellen.
+Betonen, dass dies eine vereinfachte Übersicht ist. Später mit detaillierteren Darstellungen gegenüberstellen.
 :::
 
 ## Tools im Kurs
 
-- **[Tool 1]** – [Kurzbeschreibung]
-- **[Tool 2]** – [Kurzbeschreibung]
+- **[Tool 1]** – [Beschreibung/Tools]
+- **[Tool 2]** – [Beschreibung/Tools]
 
 ::: notes
-Optional die wichtigsten Tools kurz zeigen. Studierende sollen sie früh einrichten bzw. bookmarken.
+Wichtigste Tools kurz zeigen. Studierende sollen sie früh einrichten bzw. bookmarken.
 :::
 
 ## Literatur
@@ -68,7 +70,7 @@ Optional die wichtigsten Tools kurz zeigen. Studierende sollen sie früh einrich
 *[Werktitel]*
 
 ::: notes
-Als zentrale Referenz des Moduls vorstellen. Empfehlen, parallel zur Vorlesung zu lesen – nicht erst vor der Klausur.
+Zentrale Referenz vorstellen und empfehlen, parallel zur Vorlesung zu lesen.
 :::
 
 ## Nächste Schritte
@@ -78,5 +80,5 @@ Als zentrale Referenz des Moduls vorstellen. Empfehlen, parallel zur Vorlesung z
 - Erste Übungen vorbereiten
 
 ::: notes
-Abschlussfolie: Raum für Fragen lassen. Auf OER-Lizenz (CC BY 4.0) und die Kurswebsite hinweisen.
+Raum für Fragen lassen. Auf OER-Lizenz (CC BY 4.0) und die Kurswebsite hinweisen.
 :::

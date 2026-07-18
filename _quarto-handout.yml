@@ -24,9 +24,10 @@ format:
       - bottom=2cm
       - left=2cm
       - right=2cm
-    mainfont: Arial
-    sansfont: Arial
-    monofont: Consolas
+    # TeX Gyre (mit TinyTeX) — Arial/Consolas fehlen auf Linux-CI und brechen lualatex
+    mainfont: TeX Gyre Heros
+    sansfont: TeX Gyre Heros
+    monofont: TeX Gyre Cursor
     fontsize: 11pt
     linestretch: 1.25
     toc: false

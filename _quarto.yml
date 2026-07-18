@@ -63,9 +63,10 @@ format:
     papersize: a4
     geometry:
       - margin=3cm
-    mainfont: Arial
-    sansfont: Arial
-    monofont: Consolas
+    # TeX Gyre — portabel mit TinyTeX (CI/Linux); Arial/Consolas sind dort oft nicht installiert
+    mainfont: TeX Gyre Heros
+    sansfont: TeX Gyre Heros
+    monofont: TeX Gyre Cursor
     fontsize: 11pt
     linestretch: 1.25
     colorlinks: true

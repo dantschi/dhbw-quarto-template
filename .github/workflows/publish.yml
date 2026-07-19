@@ -12,13 +12,12 @@ permissions:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    # Früher abbrechen statt bis 6h zu hängen
     timeout-minutes: 45
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -30,7 +29,7 @@ jobs:
       - name: Render website
         uses: quarto-dev/quarto-actions/render@v2
 
-      # --- PDF-Handout (kann an Mermaid/Chrome scheitern; Website trotzdem publishen) ---
+      # --- PDF-Handouts: Fehler sind Warnungen; Website wird trotzdem veröffentlicht ---
       - name: Install Chrome Headless Shell (Mermaid → PNG)
         timeout-minutes: 10
         run: quarto install chrome-headless-shell --no-prompt
@@ -41,32 +40,67 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends librsvg2-bin
 
+      # Optional/vorbefüllt; Quarto kann fehlende Pakete beim Render oft selbst nachziehen.
+      # || true: CTAN-/Spiegel-Ausfälle sollen den Job nicht hart abbrechen.
       - name: Install LaTeX packages for handout
         timeout-minutes: 10
         run: |
           tlmgr update --self || true
-          # tex-gyre: TeX Gyre Heros/Cursor (PDF-Fonts in _quarto*.yml)
           tlmgr install \
             tcolorbox needspace sectsty xcolor pgf environ trimspaces \
             pdfcol fancyvrb framed booktabs setspace float mdwtools \
             caption unicode-math fontspec lm lm-math tex-gyre \
             || true
 
-      - name: Render PDF handout
+      - name: Render PDF handouts
         id: handout
-        # Bei Hänger (z. B. Mermaid/Chrome) nach 20 Min abbrechen — nicht 6h warten
-        timeout-minutes: 20
-        continue-on-error: true
+        timeout-minutes: 25
         run: |
-          quarto render vorlesungen/01_kickoff.qmd --profile handout --to pdf
+          set -u
+          shopt -s nullglob
+          files=(vorlesungen/*.qmd)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "::warning::Keine .qmd-Dateien in vorlesungen/ — überspringe Handouts."
+            echo "handout_ok=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
 
-      - name: Attach handout PDF to website
-        if: steps.handout.outcome == 'success'
+          failed=0
+          for f in "${files[@]}"; do
+            echo "::group::Handout: $f"
+            if quarto render "$f" --profile handout --to pdf; then
+              echo "OK: $f"
+            else
+              echo "::warning::PDF-Handout fehlgeschlagen: $f"
+              failed=1
+            fi
+            echo "::endgroup::"
+          done
+
+          if [ "$failed" -ne 0 ]; then
+            echo "handout_ok=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Mindestens ein PDF-Handout ist fehlgeschlagen. Website wird trotzdem veröffentlicht."
+          else
+            echo "handout_ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Attach handout PDFs to website
+        if: always()
         run: |
+          set -u
+          shopt -s nullglob
           mkdir -p _site/vorlesungen
-          cp _handout/vorlesungen/01_kickoff.pdf \
-             _site/vorlesungen/01_kickoff-handout.pdf
-          ls -la _site/vorlesungen/*.pdf
+          pdfs=(_handout/vorlesungen/*.pdf)
+          if [ ${#pdfs[@]} -eq 0 ]; then
+            echo "Keine Handout-PDFs zum Kopieren."
+            exit 0
+          fi
+          for pdf in "${pdfs[@]}"; do
+            base="$(basename "$pdf" .pdf)"
+            cp "$pdf" "_site/vorlesungen/${base}-handout.pdf"
+            echo "Kopiert: ${base}-handout.pdf"
+          done
+          ls -la _site/vorlesungen/*-handout.pdf
 
       - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
@@ -75,9 +109,3 @@ jobs:
           render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Fail if handout PDF did not build
-        if: steps.handout.outcome != 'success'
-        run: |
-          echo "::error::PDF-Handout ist fehlgeschlagen oder timed out (siehe Schritt „Render PDF handout“)."
-          exit 1

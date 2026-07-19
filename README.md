@@ -59,7 +59,9 @@ Workflow: [`.github/workflows/publish.yml`](.github/workflows/publish.yml)
 
 **Trigger:** Push auf `main` oder manuell (*Actions* → *Publish Quarto Website*).
 
-**Ablauf:** Website rendern → PDF-Handout bauen → PDF nach `_site/vorlesungen/01_kickoff-handout.pdf` → Publish auf Branch **`gh-pages`**.
+**Ablauf:** Website rendern → alle `vorlesungen/*.qmd` als PDF-Handout bauen → PDFs nach `_site/vorlesungen/*-handout.pdf` → Publish auf Branch **`gh-pages`**.
+
+Scheitert ein Handout (z. B. Mermaid/Chrome), erscheint eine **Warnung**; die Website wird trotzdem veröffentlicht und der Job bleibt grün. Erfolgreiche Handouts liegen z. B. unter `…/vorlesungen/01_kickoff-handout.pdf`.
 
 Die gerenderte Startseite ist der Inhalt dieser README (über `index.qmd`). URL typischerweise `https://[GITHUB-USER].github.io/[REPO]/`.
 

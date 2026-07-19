@@ -4,7 +4,47 @@
     "href": "index.html",
     "title": "[Modulname] ([Modulkürzel])",
     "section": "",
-    "text": "Herzlich willkommen zur Vorlesung [Modulname] ([Modulkürzel]) an der Dualen Hochschule Baden-Württemberg Stuttgart.\n[Beschreibung]",
+    "text": "Hinweis zur Startseite: Diese README.md wird von index.qmd eingebunden und ist damit der Inhalt der GitHub-Pages-Startseite (und der Repo-README auf GitHub). Nach dem Einrichten Ihres Moduls den gesamten Template-Block (TODO — LÖSCHEN) entfernen und unten nur noch den Kursinhalt belassen (TODO — ERSETZEN).\n\nGitHub-Template-Repository für Vorlesungswebsites an der DHBW Stuttgart: Quarto-Website, Reveal.js-Folien (Apple-/DHBW-Design) und automatisches Publish inkl. PDF-Handout über GitHub Actions.\n\n\n\n\n\n\n\n\n\nBereich\nInhalt\n\n\n\n\nWebsite\nQuarto-Projekt (_quarto.yml); Startseite = diese README via index.qmd\n\n\nFolien\nReveal.js unter vorlesungen/*.qmd, Design in assets/styles/\n\n\nHandout\nProfil handout (_quarto-handout.yml) → PDF mit Folie + Dozentennotizen\n\n\nCI/CD\n.github/workflows/publish.yml → Website auf gh-pages + PDF-Handout\n\n\nKI-Kontext\nCursor-Rules unter .cursor/rules/\n\n\n\n\n\n\n\nAuf GitHub Use this template → neues Repository erstellen.\nRepository klonen; mit Quarto lokal arbeiten.\nTODO — ERSETZEN: Alle […]-Platzhalter in _quarto.yml, in diesem Dateiteil unten (Kursinhalt), in vorlesungen/01_kickoff.qmd und optional in .cursor/rules/.\nTODO — LÖSCHEN: Diesen gesamten Template-Abschnitt (bis TEMPLATE-ENDE) entfernen.\nWeitere Vorlesungen als vorlesungen/0N_….qmd anlegen (format: revealjs, Notizen in ::: notes).\nDesign/Mermaid in assets/styles/ möglichst unverändert lassen.\n\n\n\n\n\n\n\n\nDatei\nAktion\n\n\n\n\n_quarto.yml\nErsetzen: [Modulname], [Modulkürzel], [GITHUB-USER], [REPO]\n\n\nREADME.md (dieser Block)\nLöschen nach dem Einrichten\n\n\nREADME.md (Kursinhalt unten)\nErsetzen: Beschreibung, Literatur, Tools\n\n\nindex.qmd\nTitel anpassen; behält {{&lt; include README.md &gt;}}\n\n\nvorlesungen/01_kickoff.qmd\nErsetzen: Folieninhalt und Notizen\n\n\n.cursor/rules/dhbw-*.mdc\noptional Ersetzen: Modulbezug\n\n\n\n\n\n\nquarto preview\nquarto preview vorlesungen/01_kickoff.qmd\nquarto render vorlesungen/01_kickoff.qmd --profile handout --to pdf\n# → _handout/vorlesungen/01_kickoff.pdf\nPDF-Handout: Quarto, TinyTeX/LaTeX; für Mermaid: quarto install chrome-headless-shell.\n\n\n\nWorkflow: .github/workflows/publish.yml\nTrigger: Push auf main oder manuell (Actions → Publish Quarto Website).\nAblauf: Website rendern → PDF-Handout bauen → PDF nach _site/vorlesungen/01_kickoff-handout.pdf → Publish auf Branch gh-pages.\nDie gerenderte Startseite ist der Inhalt dieser README (über index.qmd). URL typischerweise https://[GITHUB-USER].github.io/[REPO]/.\nEinmalig: Branch gh-pages vorhanden; Settings → Pages → Deploy from branch gh-pages; Actions mit Schreibrechten; für öffentliche Kursseiten Repo public stellen.",
+    "crumbs": [
+      "Startseite"
+    ]
+  },
+  {
+    "objectID": "index.html#was-enthalten-ist",
+    "href": "index.html#was-enthalten-ist",
+    "title": "[Modulname] ([Modulkürzel])",
+    "section": "",
+    "text": "Bereich\nInhalt\n\n\n\n\nWebsite\nQuarto-Projekt (_quarto.yml); Startseite = diese README via index.qmd\n\n\nFolien\nReveal.js unter vorlesungen/*.qmd, Design in assets/styles/\n\n\nHandout\nProfil handout (_quarto-handout.yml) → PDF mit Folie + Dozentennotizen\n\n\nCI/CD\n.github/workflows/publish.yml → Website auf gh-pages + PDF-Handout\n\n\nKI-Kontext\nCursor-Rules unter .cursor/rules/",
+    "crumbs": [
+      "Startseite"
+    ]
+  },
+  {
+    "objectID": "index.html#neues-modul-anlegen",
+    "href": "index.html#neues-modul-anlegen",
+    "title": "[Modulname] ([Modulkürzel])",
+    "section": "",
+    "text": "Auf GitHub Use this template → neues Repository erstellen.\nRepository klonen; mit Quarto lokal arbeiten.\nTODO — ERSETZEN: Alle […]-Platzhalter in _quarto.yml, in diesem Dateiteil unten (Kursinhalt), in vorlesungen/01_kickoff.qmd und optional in .cursor/rules/.\nTODO — LÖSCHEN: Diesen gesamten Template-Abschnitt (bis TEMPLATE-ENDE) entfernen.\nWeitere Vorlesungen als vorlesungen/0N_….qmd anlegen (format: revealjs, Notizen in ::: notes).\nDesign/Mermaid in assets/styles/ möglichst unverändert lassen.\n\n\n\n\n\n\n\n\nDatei\nAktion\n\n\n\n\n_quarto.yml\nErsetzen: [Modulname], [Modulkürzel], [GITHUB-USER], [REPO]\n\n\nREADME.md (dieser Block)\nLöschen nach dem Einrichten\n\n\nREADME.md (Kursinhalt unten)\nErsetzen: Beschreibung, Literatur, Tools\n\n\nindex.qmd\nTitel anpassen; behält {{&lt; include README.md &gt;}}\n\n\nvorlesungen/01_kickoff.qmd\nErsetzen: Folieninhalt und Notizen\n\n\n.cursor/rules/dhbw-*.mdc\noptional Ersetzen: Modulbezug",
+    "crumbs": [
+      "Startseite"
+    ]
+  },
+  {
+    "objectID": "index.html#lokal-arbeiten",
+    "href": "index.html#lokal-arbeiten",
+    "title": "[Modulname] ([Modulkürzel])",
+    "section": "",
+    "text": "quarto preview\nquarto preview vorlesungen/01_kickoff.qmd\nquarto render vorlesungen/01_kickoff.qmd --profile handout --to pdf\n# → _handout/vorlesungen/01_kickoff.pdf\nPDF-Handout: Quarto, TinyTeX/LaTeX; für Mermaid: quarto install chrome-headless-shell.",
+    "crumbs": [
+      "Startseite"
+    ]
+  },
+  {
+    "objectID": "index.html#publish-mit-github-actions",
+    "href": "index.html#publish-mit-github-actions",
+    "title": "[Modulname] ([Modulkürzel])",
+    "section": "",
+    "text": "Workflow: .github/workflows/publish.yml\nTrigger: Push auf main oder manuell (Actions → Publish Quarto Website).\nAblauf: Website rendern → PDF-Handout bauen → PDF nach _site/vorlesungen/01_kickoff-handout.pdf → Publish auf Branch gh-pages.\nDie gerenderte Startseite ist der Inhalt dieser README (über index.qmd). URL typischerweise https://[GITHUB-USER].github.io/[REPO]/.\nEinmalig: Branch gh-pages vorhanden; Settings → Pages → Deploy from branch gh-pages; Actions mit Schreibrechten; für öffentliche Kursseiten Repo public stellen.",
     "crumbs": [
       "Startseite"
     ]

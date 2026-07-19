@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -145,9 +180,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link active" data-scroll-target="#literatur">Literatur</a></li>
+  <li><a href="#dhbw-quarto-vorlesungstemplate" id="toc-dhbw-quarto-vorlesungstemplate" class="nav-link active" data-scroll-target="#dhbw-quarto-vorlesungstemplate">DHBW Quarto Vorlesungstemplate</a>
+  <ul class="collapse">
+  <li><a href="#was-enthalten-ist" id="toc-was-enthalten-ist" class="nav-link" data-scroll-target="#was-enthalten-ist">Was enthalten ist</a></li>
+  <li><a href="#neues-modul-anlegen" id="toc-neues-modul-anlegen" class="nav-link" data-scroll-target="#neues-modul-anlegen">Neues Modul anlegen</a></li>
+  <li><a href="#lokal-arbeiten" id="toc-lokal-arbeiten" class="nav-link" data-scroll-target="#lokal-arbeiten">Lokal arbeiten</a></li>
+  <li><a href="#publish-mit-github-actions" id="toc-publish-mit-github-actions" class="nav-link" data-scroll-target="#publish-mit-github-actions">Publish mit GitHub Actions</a></li>
+  </ul></li>
+  <li><a href="#modulname-modulkürzel" id="toc-modulname-modulkürzel" class="nav-link" data-scroll-target="#modulname-modulkürzel">[Modulname] ([Modulkürzel])</a>
+  <ul class="collapse">
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   <li><a href="#tools-ressourcen" id="toc-tools-ressourcen" class="nav-link" data-scroll-target="#tools-ressourcen">Tools &amp; Ressourcen</a></li>
   <li><a href="#oer-lizenz" id="toc-oer-lizenz" class="nav-link" data-scroll-target="#oer-lizenz">OER &amp; Lizenz</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -173,6 +218,128 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!-- ==========================================================================
+     TODO — LÖSCHEN (nach dem Kopieren des Templates)
+     Gesamten Block von TEMPLATE-START bis TEMPLATE-ENDE entfernen,
+     damit er nicht auf der GitHub-Pages-Startseite erscheint.
+     ========================================================================== -->
+<!-- TEMPLATE-START -->
+<section id="dhbw-quarto-vorlesungstemplate" class="level1">
+<h1>DHBW Quarto Vorlesungstemplate</h1>
+<blockquote class="blockquote">
+<p><strong>Hinweis zur Startseite:</strong> Diese <code>README.md</code> wird von <code>index.qmd</code> eingebunden und ist damit der Inhalt der <strong>GitHub-Pages-Startseite</strong> (und der Repo-README auf GitHub). Nach dem Einrichten Ihres Moduls den gesamten Template-Block (<strong>TODO — LÖSCHEN</strong>) entfernen und unten nur noch den Kursinhalt belassen (<strong>TODO — ERSETZEN</strong>).</p>
+</blockquote>
+<p>GitHub-Template-Repository für Vorlesungswebsites an der <strong>DHBW Stuttgart</strong>: Quarto-Website, Reveal.js-Folien (Apple-/DHBW-Design) und automatisches Publish inkl. PDF-Handout über GitHub Actions.</p>
+<section id="was-enthalten-ist" class="level2">
+<h2 class="anchored" data-anchor-id="was-enthalten-ist">Was enthalten ist</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bereich</th>
+<th>Inhalt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Website</td>
+<td>Quarto-Projekt (<code>_quarto.yml</code>); Startseite = diese README via <code>index.qmd</code></td>
+</tr>
+<tr class="even">
+<td>Folien</td>
+<td>Reveal.js unter <code>vorlesungen/*.qmd</code>, Design in <code>assets/styles/</code></td>
+</tr>
+<tr class="odd">
+<td>Handout</td>
+<td>Profil <code>handout</code> (<code>_quarto-handout.yml</code>) → PDF mit Folie + Dozentennotizen</td>
+</tr>
+<tr class="even">
+<td>CI/CD</td>
+<td><code>.github/workflows/publish.yml</code> → Website auf <code>gh-pages</code> + PDF-Handout</td>
+</tr>
+<tr class="odd">
+<td>KI-Kontext</td>
+<td>Cursor-Rules unter <code>.cursor/rules/</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="neues-modul-anlegen" class="level2">
+<h2 class="anchored" data-anchor-id="neues-modul-anlegen">Neues Modul anlegen</h2>
+<ol type="1">
+<li>Auf GitHub <strong>Use this template</strong> → neues Repository erstellen.</li>
+<li>Repository klonen; mit <a href="https://quarto.org/">Quarto</a> lokal arbeiten.</li>
+<li><strong>TODO — ERSETZEN:</strong> Alle <code>[…]</code>-Platzhalter in <code>_quarto.yml</code>, in diesem Dateiteil unten (Kursinhalt), in <code>vorlesungen/01_kickoff.qmd</code> und optional in <code>.cursor/rules/</code>.</li>
+<li><strong>TODO — LÖSCHEN:</strong> Diesen gesamten Template-Abschnitt (bis <code>TEMPLATE-ENDE</code>) entfernen.</li>
+<li>Weitere Vorlesungen als <code>vorlesungen/0N_….qmd</code> anlegen (<code>format: revealjs</code>, Notizen in <code>::: notes</code>).</li>
+<li>Design/Mermaid in <code>assets/styles/</code> möglichst unverändert lassen.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Datei</th>
+<th>Aktion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_quarto.yml</code></td>
+<td><strong>Ersetzen:</strong> <code>[Modulname]</code>, <code>[Modulkürzel]</code>, <code>[GITHUB-USER]</code>, <code>[REPO]</code></td>
+</tr>
+<tr class="even">
+<td><code>README.md</code> (dieser Block)</td>
+<td><strong>Löschen</strong> nach dem Einrichten</td>
+</tr>
+<tr class="odd">
+<td><code>README.md</code> (Kursinhalt unten)</td>
+<td><strong>Ersetzen:</strong> Beschreibung, Literatur, Tools</td>
+</tr>
+<tr class="even">
+<td><code>index.qmd</code></td>
+<td>Titel anpassen; behält <code>{{&lt; include README.md &gt;}}</code></td>
+</tr>
+<tr class="odd">
+<td><code>vorlesungen/01_kickoff.qmd</code></td>
+<td><strong>Ersetzen:</strong> Folieninhalt und Notizen</td>
+</tr>
+<tr class="even">
+<td><code>.cursor/rules/dhbw-*.mdc</code></td>
+<td>optional <strong>Ersetzen:</strong> Modulbezug</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lokal-arbeiten" class="level2">
+<h2 class="anchored" data-anchor-id="lokal-arbeiten">Lokal arbeiten</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview vorlesungen/01_kickoff.qmd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render vorlesungen/01_kickoff.qmd <span class="at">--profile</span> handout <span class="at">--to</span> pdf</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># → _handout/vorlesungen/01_kickoff.pdf</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>PDF-Handout: Quarto, TinyTeX/LaTeX; für Mermaid: <code>quarto install chrome-headless-shell</code>.</p>
+</section>
+<section id="publish-mit-github-actions" class="level2">
+<h2 class="anchored" data-anchor-id="publish-mit-github-actions">Publish mit GitHub Actions</h2>
+<p>Workflow: <a href=".github/workflows/publish.yml"><code>.github/workflows/publish.yml</code></a></p>
+<p><strong>Trigger:</strong> Push auf <code>main</code> oder manuell (<em>Actions</em> → <em>Publish Quarto Website</em>).</p>
+<p><strong>Ablauf:</strong> Website rendern → PDF-Handout bauen → PDF nach <code>_site/vorlesungen/01_kickoff-handout.pdf</code> → Publish auf Branch <strong><code>gh-pages</code></strong>.</p>
+<p>Die gerenderte Startseite ist der Inhalt dieser README (über <code>index.qmd</code>). URL typischerweise <code>https://[GITHUB-USER].github.io/[REPO]/</code>.</p>
+<p><strong>Einmalig:</strong> Branch <code>gh-pages</code> vorhanden; <em>Settings → Pages</em> → Deploy from branch <code>gh-pages</code>; Actions mit Schreibrechten; für öffentliche Kursseiten Repo <strong>public</strong> stellen.</p>
+<!-- TEMPLATE-ENDE -->
+<!-- ==========================================================================
+     TODO — ERSETZEN (Kursinhalt für Studierende / GitHub Pages)
+     Platzhalter […] durch Ihre Moduldaten ersetzen.
+     ========================================================================== -->
+</section>
+</section>
+<section id="modulname-modulkürzel" class="level1">
+<h1>[Modulname] ([Modulkürzel])</h1>
 <p>Herzlich willkommen zur Vorlesung <strong>[Modulname] ([Modulkürzel])</strong> an der Dualen Hochschule Baden-Württemberg Stuttgart.</p>
 <p>[Beschreibung]</p>
 <section id="literatur" class="level2">
@@ -216,6 +383,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Ausnahme:</strong> Das Logo der Dualen Hochschule Baden-Württemberg (DHBW) sowie andere geschützte Markenzeichen sind von dieser Lizenz <strong>ausdrücklich ausgenommen</strong>. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

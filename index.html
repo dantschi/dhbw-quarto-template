@@ -335,7 +335,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="publish-mit-github-actions">Publish mit GitHub Actions</h2>
 <p>Workflow: <a href=".github/workflows/publish.yml"><code>.github/workflows/publish.yml</code></a></p>
 <p><strong>Trigger:</strong> Push auf <code>main</code> oder manuell (<em>Actions</em> → <em>Publish Quarto Website</em>).</p>
-<p><strong>Ablauf:</strong> Website rendern → PDF-Handout bauen → PDF nach <code>_site/vorlesungen/01_kickoff-handout.pdf</code> → Publish auf Branch <strong><code>gh-pages</code></strong>.</p>
+<p><strong>Ablauf:</strong> Website rendern → alle <code>vorlesungen/*.qmd</code> als PDF-Handout bauen → PDFs nach <code>_site/vorlesungen/*-handout.pdf</code> → Publish auf Branch <strong><code>gh-pages</code></strong>.</p>
+<p>Scheitert ein Handout (z. B. Mermaid/Chrome), erscheint eine <strong>Warnung</strong>; die Website wird trotzdem veröffentlicht und der Job bleibt grün. Erfolgreiche Handouts liegen z. B. unter <code>…/vorlesungen/01_kickoff-handout.pdf</code>.</p>
 <p>Die gerenderte Startseite ist der Inhalt dieser README (über <code>index.qmd</code>). URL typischerweise <code>https://[GITHUB-USER].github.io/[REPO]/</code>.</p>
 <p><strong>Einmalig:</strong> Branch <code>gh-pages</code> vorhanden; <em>Settings → Pages</em> → Deploy from branch <code>gh-pages</code>; Actions mit Schreibrechten; für öffentliche Kursseiten Repo <strong>public</strong> stellen.</p>
 <p><strong>Logo:</strong> Im Repo liegt nur <code>assets/logo-template.svg</code> (Platzhalter). <strong>TODO — ERSETZEN</strong> durch Ihr freigegebenes Hochschul-/Modullogo.</p>

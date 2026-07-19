@@ -7,6 +7,8 @@
 
 # DHBW Quarto Vorlesungstemplate
 
+> **Hinweis:** Dies ist ein **inoffizielles Dozenten-Template**, keine offizielle DHBW-Software.
+
 > **Hinweis zur Startseite:** Diese `README.md` wird von `index.qmd` eingebunden und ist damit der Inhalt der **GitHub-Pages-Startseite** (und der Repo-README auf GitHub). Nach dem Einrichten Ihres Moduls den gesamten Template-Block (**TODO — LÖSCHEN**) entfernen und unten nur noch den Kursinhalt belassen (**TODO — ERSETZEN**).
 
 GitHub-Template-Repository für Vorlesungswebsites an der **DHBW Stuttgart**: Quarto-Website, Reveal.js-Folien (Apple-/DHBW-Design) und automatisches Publish inkl. PDF-Handout über GitHub Actions.
@@ -33,6 +35,7 @@ GitHub-Template-Repository für Vorlesungswebsites an der **DHBW Stuttgart**: Qu
 | Datei | Aktion |
 |-------|--------|
 | `_quarto.yml` | **Ersetzen:** `[Modulname]`, `[Modulkürzel]`, `[GITHUB-USER]`, `[REPO]` |
+| `assets/logo-template.svg` | **Ersetzen:** durch Ihr Hochschul-/Modullogo (Pfad in `_quarto.yml` anpassen) |
 | `README.md` (dieser Block) | **Löschen** nach dem Einrichten |
 | `README.md` (Kursinhalt unten) | **Ersetzen:** Beschreibung, Literatur, Tools |
 | `index.qmd` | Titel anpassen; behält `{{< include README.md >}}` |
@@ -61,6 +64,10 @@ Workflow: [`.github/workflows/publish.yml`](.github/workflows/publish.yml)
 Die gerenderte Startseite ist der Inhalt dieser README (über `index.qmd`). URL typischerweise `https://[GITHUB-USER].github.io/[REPO]/`.
 
 **Einmalig:** Branch `gh-pages` vorhanden; *Settings → Pages* → Deploy from branch `gh-pages`; Actions mit Schreibrechten; für öffentliche Kursseiten Repo **public** stellen.
+
+**Logo:** Im Repo liegt nur `assets/logo-template.svg` (Platzhalter). **TODO — ERSETZEN** durch Ihr freigegebenes Hochschul-/Modullogo.
+
+**Hinweis:** Dies ist ein **inoffizielles Dozenten-Template**, keine offizielle DHBW-Software. Hochschullogos und Marken sind nicht Teil der CC-BY-Lizenz — siehe [`LICENSE`](LICENSE).
 
 <!-- TEMPLATE-ENDE -->
 
@@ -98,4 +105,4 @@ Dieses Vorlesungsmaterial ist eine **Open Educational Resource (OER)**. Die Vorl
 
 Sie dürfen diese Inhalte teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei [`LICENSE`](LICENSE) im Repository.
 
-**Ausnahme:** Das Logo der Dualen Hochschule Baden-Württemberg (DHBW) sowie andere geschützte Markenzeichen sind von dieser Lizenz **ausdrücklich ausgenommen**. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden.
+**Ausnahme:** Hochschullogos und andere geschützte Markenzeichen sind von dieser Lizenz **ausdrücklich ausgenommen**. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden.

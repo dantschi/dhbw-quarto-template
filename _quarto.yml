@@ -5,7 +5,7 @@ website:
   title: "[Modulname]"
   description: "Vorlesung [Modulname] ([Modulkürzel]) an der DHBW Stuttgart"
   site-url: https://[GITHUB-USER].github.io/[REPO]/
-  favicon: assets/dhbw_logo.svg
+  favicon: assets/logo-template.svg
   sidebar:
     style: floating
     contents:
@@ -42,7 +42,7 @@ format:
     theme:
       - simple
       - assets/styles/slides.scss
-    logo: assets/dhbw_logo.svg
+    logo: assets/logo-template.svg
     slide-number: true
     chalkboard: false
     preview-links: auto

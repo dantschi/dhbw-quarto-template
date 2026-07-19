@@ -22,7 +22,7 @@ contributes:
         - simple
         - ../../../assets/styles/slides.scss
         - ../../../assets/styles/handout.scss
-      logo: ../../../assets/dhbw_logo.svg
+      logo: ../../../assets/logo-template.svg
       include-in-header:
         - text: |
             <link rel="preconnect" href="https://fonts.googleapis.com">

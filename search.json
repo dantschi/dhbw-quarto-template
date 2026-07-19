@@ -1,0 +1,119 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "[Modulname] ([Modulkürzel])",
+    "section": "",
+    "text": "Herzlich willkommen zur Vorlesung [Modulname] ([Modulkürzel]) an der Dualen Hochschule Baden-Württemberg Stuttgart.\n[Beschreibung]",
+    "crumbs": [
+      "Startseite"
+    ]
+  },
+  {
+    "objectID": "index.html#literatur",
+    "href": "index.html#literatur",
+    "title": "[Modulname] ([Modulkürzel])",
+    "section": "Literatur",
+    "text": "Literatur\nDie zentrale Referenz dieses Moduls ist:\n\n[Autor:innen]\n[Werktitel]\n[Verlag]\n\nDefinitionen, Terminologie und didaktischer Aufbau orientieren sich an diesem Standardwerk.",
+    "crumbs": [
+      "Startseite"
+    ]
+  },
+  {
+    "objectID": "index.html#tools-ressourcen",
+    "href": "index.html#tools-ressourcen",
+    "title": "[Modulname] ([Modulkürzel])",
+    "section": "Tools & Ressourcen",
+    "text": "Tools & Ressourcen\n\n\n\nTool\nEinsatz\nLink\n\n\n\n\n[Tool 1]\n[Beschreibung/Tools]\n[Link]\n\n\n[Tool 2]\n[Beschreibung/Tools]\n[Link]",
+    "crumbs": [
+      "Startseite"
+    ]
+  },
+  {
+    "objectID": "index.html#oer-lizenz",
+    "href": "index.html#oer-lizenz",
+    "title": "[Modulname] ([Modulkürzel])",
+    "section": "OER & Lizenz",
+    "text": "OER & Lizenz\nDieses Vorlesungsmaterial ist eine Open Educational Resource (OER). Die Vorlesungsinhalte – Texte, Code und Diagramme – stehen unter der Lizenz Creative Commons Attribution 4.0 International (CC BY 4.0).\nSie dürfen diese Inhalte teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei LICENSE im Repository.\nAusnahme: Das Logo der Dualen Hochschule Baden-Württemberg (DHBW) sowie andere geschützte Markenzeichen sind von dieser Lizenz ausdrücklich ausgenommen. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden.",
+    "crumbs": [
+      "Startseite"
+    ]
+  },
+  {
+    "objectID": "vorlesungen/01_kickoff.html#willkommen-zur-modulkürzel",
+    "href": "vorlesungen/01_kickoff.html#willkommen-zur-modulkürzel",
+    "title": "01 · Kickoff",
+    "section": "Willkommen zur [Modulkürzel]",
+    "text": "Willkommen zur [Modulkürzel]\n\nModul: [Modulname]\nFokus: [Schwerpunkt / Themenfeld]\nZielgruppe: [Zielgruppe, z. B. Bachelor …]\n\n\nKurzer Begrüßungstext und organisatorischer Einstieg. Lernziele und Semesterrahmen kurz einordnen.",
+    "crumbs": [
+      "Vorlesungen",
+      "01 · Kickoff"
+    ]
+  },
+  {
+    "objectID": "vorlesungen/01_kickoff.html#was-sie-erwarten-können",
+    "href": "vorlesungen/01_kickoff.html#was-sie-erwarten-können",
+    "title": "01 · Kickoff",
+    "section": "Was Sie erwarten können",
+    "text": "Was Sie erwarten können\n\n[Themenblock 1]\n[Themenblock 2]\n[Themenblock 3]\n[Themenblock 4]\n\n\nRoten Faden des Semesters skizzieren und Erwartungen an Vorbereitung sowie Mitarbeit klären.",
+    "crumbs": [
+      "Vorlesungen",
+      "01 · Kickoff"
+    ]
+  },
+  {
+    "objectID": "vorlesungen/01_kickoff.html#didaktischer-aufbau",
+    "href": "vorlesungen/01_kickoff.html#didaktischer-aufbau",
+    "title": "01 · Kickoff",
+    "section": "Didaktischer Aufbau",
+    "text": "Didaktischer Aufbau\nWir bauen Verständnis Schicht für Schicht auf:\n\\[\\text{[Ebene 1]} \\rightarrow \\text{[Ebene 2]} \\rightarrow \\text{[Ebene 3]} \\rightarrow \\text{[Ebene 4]}\\]\n\nDiesen Aufbau als roten Faden etablieren und an einem kurzen Beispiel aus dem Modul veranschaulichen.",
+    "crumbs": [
+      "Vorlesungen",
+      "01 · Kickoff"
+    ]
+  },
+  {
+    "objectID": "vorlesungen/01_kickoff.html#beispiel-übersicht",
+    "href": "vorlesungen/01_kickoff.html#beispiel-übersicht",
+    "title": "01 · Kickoff",
+    "section": "Beispiel: Übersicht",
+    "text": "Beispiel: Übersicht\n\n\n\n\n\ngraph LR\n  A[Konzept A] --&gt; B[Konzept B]\n  B --&gt; C[Konzept C]\n  style A fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px\n  style B fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important\n  style C fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px\n\n\n\n\n\n\n\nBetonen, dass dies eine vereinfachte Übersicht ist. Später mit detaillierteren Darstellungen gegenüberstellen.",
+    "crumbs": [
+      "Vorlesungen",
+      "01 · Kickoff"
+    ]
+  },
+  {
+    "objectID": "vorlesungen/01_kickoff.html#tools-im-kurs",
+    "href": "vorlesungen/01_kickoff.html#tools-im-kurs",
+    "title": "01 · Kickoff",
+    "section": "Tools im Kurs",
+    "text": "Tools im Kurs\n\n[Tool 1] – [Beschreibung/Tools]\n[Tool 2] – [Beschreibung/Tools]\n\n\nWichtigste Tools kurz zeigen. Studierende sollen sie früh einrichten bzw. bookmarken.",
+    "crumbs": [
+      "Vorlesungen",
+      "01 · Kickoff"
+    ]
+  },
+  {
+    "objectID": "vorlesungen/01_kickoff.html#literatur",
+    "href": "vorlesungen/01_kickoff.html#literatur",
+    "title": "01 · Kickoff",
+    "section": "Literatur",
+    "text": "Literatur\n[Autor:innen]\n[Werktitel]\n\nZentrale Referenz vorstellen und empfehlen, parallel zur Vorlesung zu lesen.",
+    "crumbs": [
+      "Vorlesungen",
+      "01 · Kickoff"
+    ]
+  },
+  {
+    "objectID": "vorlesungen/01_kickoff.html#nächste-schritte",
+    "href": "vorlesungen/01_kickoff.html#nächste-schritte",
+    "title": "01 · Kickoff",
+    "section": "Nächste Schritte",
+    "text": "Nächste Schritte\n\nOrganisationsfragen klären\nMaterialien / Tools einrichten\nErste Übungen vorbereiten\n\n\nRaum für Fragen lassen. Auf OER-Lizenz (CC BY 4.0) und die Kurswebsite hinweisen.",
+    "crumbs": [
+      "Vorlesungen",
+      "01 · Kickoff"
+    ]
+  }
+]

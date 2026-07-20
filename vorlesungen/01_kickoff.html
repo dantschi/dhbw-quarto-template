@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f1d3f9923f6dc0ca033dffc1b355a0ce.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f355cf95444bdbe7a358cd689c441e6f.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -149,7 +149,7 @@
 </div>
 
 </section>
-<section id="willkommen-zur-modulkürzel" class="slide level2 center">
+<section id="willkommen-zur-modulkürzel" class="slide level2">
 <h2>Willkommen zur [Modulkürzel]</h2>
 <ul>
 <li>Modul: <strong>[Modulname]</strong></li>
@@ -170,7 +170,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="was-sie-erwarten-können" class="slide level2 center">
+<section id="was-sie-erwarten-können" class="slide level2">
 <h2>Was Sie erwarten können</h2>
 <ol type="1">
 <li>[Themenblock 1]</li>
@@ -192,7 +192,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="didaktischer-aufbau" class="slide level2 center">
+<section id="didaktischer-aufbau" class="slide level2">
 <h2>Didaktischer Aufbau</h2>
 <p>Wir bauen Verständnis Schicht für Schicht auf:</p>
 <p><span class="math display">\[\text{[Ebene 1]} \rightarrow \text{[Ebene 2]} \rightarrow \text{[Ebene 3]} \rightarrow \text{[Ebene 4]}\]</span></p>
@@ -210,14 +210,15 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="beispiel-übersicht" class="slide level2 center">
+<section id="beispiel-übersicht" class="slide level2">
 <h2>Beispiel: Übersicht</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell" data-reveal="true" data-fig-width="3.5" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<pre class="mermaid mermaid-js">graph LR
+<pre class="mermaid mermaid-js">%%{init: {'theme': 'base', 'themeVariables': {'background': '#FFFFFF', 'primaryColor': '#FFFFFF', 'primaryBorderColor': '#E5E5EA', 'primaryTextColor': '#1D1D1F', 'lineColor': '#86868B', 'secondaryColor': '#F5F5F7', 'tertiaryColor': '#FFFFFF', 'mainBkg': '#FFFFFF', 'nodeBorder': '#E5E5EA', 'clusterBkg': '#F5F5F7', 'clusterBorder': '#E5E5EA', 'titleColor': '#1D1D1F', 'edgeLabelBackground': '#FFFFFF'}}}%%
+graph LR
   A[Konzept A] --&gt; B[Konzept B]
   B --&gt; C[Konzept C]
   style A fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px
@@ -243,7 +244,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="tools-im-kurs" class="slide level2 center">
+<section id="tools-im-kurs" class="slide level2">
 <h2>Tools im Kurs</h2>
 <ul>
 <li><strong>[Tool 1]</strong> – [Beschreibung/Tools]</li>
@@ -263,7 +264,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="literatur" class="slide level2 center">
+<section id="literatur" class="slide level2">
 <h2>Literatur</h2>
 <p><strong>[Autor:innen]</strong><br>
 <em>[Werktitel]</em></p>
@@ -281,7 +282,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="nächste-schritte" class="slide level2 center">
+<section id="nächste-schritte" class="slide level2">
 <h2>Nächste Schritte</h2>
 <ul>
 <li>Organisationsfragen klären</li>
@@ -390,7 +391,7 @@
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -486,12 +487,12 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1280,
 
-        height: 700,
+        height: 720,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 8.0e-2,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
@@ -519,6 +520,153 @@
           RevealZoom
         ]
       });
+    </script>
+    <script>
+    /**
+     * Fit Quarto/Reveal Mermaid SVGs to remaining slide space.
+     * Dimensions from getBoundingClientRect are viewport pixels; CSS sizes inside
+     * Reveal slides are unscaled — divide by Reveal.getScale().
+     */
+    (function () {
+      const BOTTOM_PAD = 36;
+      const SIDE_PAD_RATIO = 0.92;
+      const MAX_SCALE = 3.4;
+
+      function presentSlide() {
+        var present = document.querySelector("section.present");
+        if (!present) return null;
+        var nested = present.querySelector(":scope > section.present");
+        return nested || present;
+      }
+
+      function revealScale() {
+        if (window.Reveal && typeof Reveal.getScale === "function") {
+          var s = Reveal.getScale();
+          return s > 0.05 ? s : 1;
+        }
+        return 1;
+      }
+
+      function ensureWrap(svg) {
+        var parent = svg.parentElement;
+        if (!parent) return null;
+        if (parent.classList.contains("mermaid-fit")) return parent;
+        var wrap = document.createElement("div");
+        wrap.className = "mermaid-fit";
+        parent.insertBefore(wrap, svg);
+        wrap.appendChild(svg);
+        return wrap;
+      }
+
+      function contentBottomAbove(slide, wrap) {
+        var top = slide.getBoundingClientRect().top;
+        var bottom = top + 8;
+        var children = slide.children;
+        for (var i = 0; i < children.length; i++) {
+          var el = children[i];
+          if (el === wrap || el.classList.contains("mermaid-fit")) break;
+          if (el.querySelector && el.querySelector("svg.mermaid-js")) break;
+          if (el.tagName === "ASIDE") continue;
+          var r = el.getBoundingClientRect();
+          if (r.height > 1) bottom = Math.max(bottom, r.bottom);
+        }
+        return bottom;
+      }
+
+      function naturalSize(svg) {
+        if (svg.dataset.natW && svg.dataset.natH) {
+          return { w: +svg.dataset.natW, h: +svg.dataset.natH };
+        }
+        var vb = svg.viewBox && svg.viewBox.baseVal;
+        if (vb && vb.width > 0 && vb.height > 0) {
+          svg.dataset.natW = String(vb.width);
+          svg.dataset.natH = String(vb.height);
+          return { w: vb.width, h: vb.height };
+        }
+        var wAttr = parseFloat(svg.getAttribute("width"));
+        var hAttr = parseFloat(svg.getAttribute("height"));
+        if (wAttr > 0 && hAttr > 0) {
+          svg.dataset.natW = String(wAttr);
+          svg.dataset.natH = String(hAttr);
+          return { w: wAttr, h: hAttr };
+        }
+        var r = svg.getBoundingClientRect();
+        var rs = revealScale();
+        var w = r.width / rs || 320;
+        var h = r.height / rs || 120;
+        svg.dataset.natW = String(w);
+        svg.dataset.natH = String(h);
+        return { w: w, h: h };
+      }
+
+      function fitMermaids() {
+        var slide = presentSlide();
+        if (!slide) return;
+
+        var rs = revealScale();
+        var slideRect = slide.getBoundingClientRect();
+        var svgs = slide.querySelectorAll("svg.mermaid-js");
+
+        for (var i = 0; i < svgs.length; i++) {
+          var svg = svgs[i];
+          var wrap = ensureWrap(svg);
+          if (!wrap) continue;
+
+          svg.style.removeProperty("transform");
+          svg.style.removeProperty("max-width");
+          svg.style.removeProperty("zoom");
+          wrap.style.zoom = "";
+
+          var nat = naturalSize(svg);
+          var above = contentBottomAbove(slide, wrap);
+          var availW = (slideRect.width * SIDE_PAD_RATIO) / rs;
+          var availH = Math.max(72, (slideRect.bottom - above - BOTTOM_PAD) / rs);
+
+          var scale = Math.min(availW / nat.w, availH / nat.h, MAX_SCALE);
+          if (!(scale > 0)) scale = 1;
+
+          var targetW = Math.max(1, Math.round(nat.w * scale));
+          var targetH = Math.max(1, Math.round(nat.h * scale));
+
+          svg.setAttribute("width", targetW);
+          svg.setAttribute("height", targetH);
+          svg.style.width = targetW + "px";
+          svg.style.height = targetH + "px";
+          svg.style.display = "block";
+          svg.style.margin = "0.35rem auto 0";
+        }
+      }
+
+      function scheduleFit() {
+        requestAnimationFrame(function () {
+          fitMermaids();
+          setTimeout(fitMermaids, 150);
+          setTimeout(fitMermaids, 500);
+          setTimeout(fitMermaids, 1100);
+        });
+      }
+
+      window.addEventListener("load", scheduleFit);
+
+      function bindReveal() {
+        if (!window.Reveal || !Reveal.on) return false;
+        Reveal.on("ready", scheduleFit);
+        Reveal.on("slidechanged", scheduleFit);
+        if (Reveal.isReady && Reveal.isReady()) scheduleFit();
+        return true;
+      }
+
+      if (!bindReveal()) {
+        window.addEventListener("load", function () {
+          var tries = 0;
+          var id = setInterval(function () {
+            if (bindReveal() || ++tries > 50) clearInterval(id);
+          }, 100);
+        });
+      }
+
+      window.mctMermaidFit = fitMermaids;
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -35,7 +35,6 @@ GitHub-Template-Repository für Vorlesungswebsites an der **DHBW Stuttgart**: Qu
 | Datei | Aktion |
 |-------|--------|
 | `_quarto.yml` | **Ersetzen:** `[Modulname]`, `[Modulkürzel]`, `[GITHUB-USER]`, `[REPO]` |
-| `assets/logo-template.svg` | **Ersetzen:** durch Ihr Hochschul-/Modullogo (Pfad in `_quarto.yml` anpassen) |
 | `README.md` (dieser Block) | **Löschen** nach dem Einrichten |
 | `README.md` (Kursinhalt unten) | **Ersetzen:** Beschreibung, Literatur, Tools |
 | `index.qmd` | Titel anpassen; behält `{{< include README.md >}}` |
@@ -61,13 +60,18 @@ Workflow: [`.github/workflows/publish.yml`](.github/workflows/publish.yml)
 
 **Ablauf:** Website rendern → alle `vorlesungen/*.qmd` als PDF-Handout bauen → PDFs nach `_site/vorlesungen/*-handout.pdf` → Publish auf Branch **`gh-pages`**.
 
-Scheitert ein Handout (z. B. Mermaid/Chrome), erscheint eine **Warnung**; die Website wird trotzdem veröffentlicht und der Job bleibt grün. Erfolgreiche Handouts liegen z. B. unter `…/vorlesungen/01_kickoff-handout.pdf`.
+Scheitert ein Handout (z. B. Mermaid/Chrome), erscheint eine **Warnung**; die Website wird trotzdem veröffentlicht und der Job bleibt grün.
 
-Die gerenderte Startseite ist der Inhalt dieser README (über `index.qmd`). URL typischerweise `https://[GITHUB-USER].github.io/[REPO]/`.
+Nach dem Publish sind Folien und Handout z. B. erreichbar unter:
+
+- Folien: [`vorlesungen/01_kickoff.html`](vorlesungen/01_kickoff.html)
+- PDF-Handout: [`vorlesungen/01_kickoff-handout.pdf`](vorlesungen/01_kickoff-handout.pdf)
+
+Vollständige URL typischerweise `https://[GITHUB-USER].github.io/[REPO]/` (Startseite = Inhalt dieser README über `index.qmd`).
 
 **Einmalig:** Branch `gh-pages` vorhanden; *Settings → Pages* → Deploy from branch `gh-pages`; Actions mit Schreibrechten; für öffentliche Kursseiten Repo **public** stellen.
 
-**Hinweis:** Dies ist ein **inoffizielles Dozenten-Template**, keine offizielle DHBW-Software. Hochschullogos und Marken sind nicht Teil der CC-BY-Lizenz — siehe [`LICENSE`](LICENSE).
+**Hinweis:** Dies ist ein **inoffizielles Dozenten-Template**, keine offizielle DHBW-Software. Das DHBW-Logo (`assets/dhbw_logo.svg`) und andere geschützte Markenzeichen sind nicht Teil der CC-BY-Lizenz — siehe [`LICENSE`](LICENSE) und den Abschnitt *OER & Lizenz* unten.
 
 <!-- TEMPLATE-ENDE -->
 
@@ -81,6 +85,15 @@ Die gerenderte Startseite ist der Inhalt dieser README (über `index.qmd`). URL 
 Herzlich willkommen zur Vorlesung **[Modulname] ([Modulkürzel])** an der Dualen Hochschule Baden-Württemberg Stuttgart.
 
 [Beschreibung]
+
+## Materialien
+
+| Format | Link |
+|--------|------|
+| Folien (Reveal.js) | [Kickoff](vorlesungen/01_kickoff.html) |
+| PDF-Handout (Skript) | [Kickoff-Handout (PDF)](vorlesungen/01_kickoff-handout.pdf) |
+
+Das PDF-Handout enthält die Folien inklusive Dozentennotizen und wird bei jedem Publish über GitHub Actions aktualisiert.
 
 ## Literatur
 
@@ -105,4 +118,4 @@ Dieses Vorlesungsmaterial ist eine **Open Educational Resource (OER)**. Die Vorl
 
 Sie dürfen diese Inhalte teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei [`LICENSE`](LICENSE) im Repository.
 
-**Ausnahme:** Hochschullogos und andere geschützte Markenzeichen sind von dieser Lizenz **ausdrücklich ausgenommen**. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden.
+**Ausnahme:** Hochschullogos und andere geschützte Markenzeichen (einschließlich des DHBW-Logos) sind von dieser Lizenz **ausdrücklich ausgenommen**. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden.

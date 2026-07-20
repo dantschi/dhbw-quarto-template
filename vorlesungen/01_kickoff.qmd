@@ -43,6 +43,8 @@ Diesen Aufbau als roten Faden etablieren und an einem kurzen Beispiel aus dem Mo
 ## Beispiel: Übersicht
 
 ```{mermaid}
+%%| fig-width: 3.5
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#FFFFFF', 'primaryColor': '#FFFFFF', 'primaryBorderColor': '#E5E5EA', 'primaryTextColor': '#1D1D1F', 'lineColor': '#86868B', 'secondaryColor': '#F5F5F7', 'tertiaryColor': '#FFFFFF', 'mainBkg': '#FFFFFF', 'nodeBorder': '#E5E5EA', 'clusterBkg': '#F5F5F7', 'clusterBorder': '#E5E5EA', 'titleColor': '#1D1D1F', 'edgeLabelBackground': '#FFFFFF'}}}%%
 graph LR
   A[Konzept A] --> B[Konzept B]
   B --> C[Konzept C]

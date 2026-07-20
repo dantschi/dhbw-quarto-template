@@ -67,8 +67,6 @@ Die gerenderte Startseite ist der Inhalt dieser README (über `index.qmd`). URL 
 
 **Einmalig:** Branch `gh-pages` vorhanden; *Settings → Pages* → Deploy from branch `gh-pages`; Actions mit Schreibrechten; für öffentliche Kursseiten Repo **public** stellen.
 
-**Logo:** Im Repo liegt nur `assets/logo-template.svg` (Platzhalter). **TODO — ERSETZEN** durch Ihr freigegebenes Hochschul-/Modullogo.
-
 **Hinweis:** Dies ist ein **inoffizielles Dozenten-Template**, keine offizielle DHBW-Software. Hochschullogos und Marken sind nicht Teil der CC-BY-Lizenz — siehe [`LICENSE`](LICENSE).
 
 <!-- TEMPLATE-ENDE -->

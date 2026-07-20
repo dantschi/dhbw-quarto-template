@@ -46,13 +46,20 @@ format:
     slide-number: true
     chalkboard: false
     preview-links: auto
-    center: true
+    center: false
+    # r-stretch kollidiert mit SVG-Schaltungen (Höhe oft 0 → unsichtbar)
+    auto-stretch: false
+    width: 1280
+    height: 720
+    margin: 0.08
     show-notes: false
     include-in-header:
       - text: |
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    include-after-body:
+      - assets/scripts/mermaid-fit.html
 
   # ---------------------------------------------------------------------------
   # PDF-Artikel (optional, für reine Textskripte — nicht Folien-Handout)

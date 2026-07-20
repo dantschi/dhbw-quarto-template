@@ -7,12 +7,16 @@ alwaysApply: false
 # Tech-Stack
 
 - **Framework:** Quarto (Websites, PDFs, Reveal.js)
-- **Sprachen:** Markdown (`.qmd`), SCSS; weitere Sprachen je nach Modul (z. B. C, Assembler, Python)
-- **Diagramme:** Mermaid.js nativ in Quarto (` ```mermaid `). Die globalen Farben für Mermaid (Weiß/Grau) werden zentral über SCSS-Variablen in der `slides.scss`/`custom.scss` erzwungen. Didaktische Hervorhebungen (z. B. der aktive Datenpfad) erfolgen weiterhin im Markdown mit dem DHBW-Rot. Bei Inline-Styles **immer** `!important` anhängen, damit sie die SCSS-Regeln überschreiben:
+- **Sprachen:** Markdown (`.qmd`), SCSS; ggf. modulspezifischer Quellcode und Python für Hilfsskripte
+- **Diagramme:** Mermaid.js nativ in Quarto — Fence **immer** mit Engine-Klammern (` ```{mermaid} `). Ohne `{}` wird der Block oft nur als Syntax-Highlighting-Code gerendert, nicht als Diagramm. **Kein UTF-8-BOM** in `.qmd`-Dateien (z. B. durch PowerShell `Set-Content -Encoding UTF8`) — sonst erkennt Quarto die Mermaid-Engine nicht und rendert `{mermaid}` als Codeblock. Skalierung über `assets/scripts/mermaid-fit.html` und SCSS — **keine** manuelle `fontSize` per Mermaid-Init. Farben (Weiß/Grau) zentral über SCSS; didaktische Akzente mit DHBW-Rot und `!important`:
 
-```mermaid
-style Beispiel fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important;
+````markdown
+```{mermaid}
+graph LR
+  A[Eingang] --> B[Ausgang]
+  style B fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important
 ```
+````
 
 # Quarto / Markdown
 
@@ -26,3 +30,9 @@ style Beispiel fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important;
 Hier auf die Verwechslungsgefahr verwandter Fachbegriffe hinweisen.
 :::
 ```
+
+# Quarto / Reveal.js Guidelines
+
+- **Folien-Layout:** Nutze NIEMALS `center: true` in der `_quarto.yml` oder im YAML-Header, da dies zu vertikalem Überlauf führt. Das Format ist fest auf 16:9 (1280×720) eingestellt.
+- **Mermaid-Diagramme:** Setze NIEMALS eine manuelle `fontSize` über Mermaid-Init-Direktiven. Die Skalierung erfolgt automatisch. Für PDF-Handouts sind `theme: base` und DHBW-`themeVariables` (Farben) sowie `%%| fig-width: 5.2` erlaubt — sonst greifen Mermaid-Defaultfarben und breite PNGs.
+- **Überlauf:** Wenn eine Folie extrem viel Text oder einen riesigen Code-Block enthält, füge der Folien-Überschrift zwingend die Klasse `{.scrollable}` hinzu, um das Abschneiden von Inhalten zu verhindern.

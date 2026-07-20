@@ -1,6 +1,6 @@
 ---
 description: Design-Richtlinien Apple-Look + DHBW für Folien, Website und SCSS
-globs: "**/*.{scss,css,qmd}"
+globs: "**/*.{scss,css,qmd,svg}"
 alwaysApply: false
 ---
 
@@ -9,7 +9,7 @@ alwaysApply: false
 Ästhetik: minimalistisch, modern („Apple-Look“ / Jony Ive).
 
 - Viel Whitespace, weiche Schatten, abgerundete Ecken — keine harten Rahmen
-- Typografie: Sans-Serif (Inter / San Francisco), Zeilenabstand 1.6
+- Typografie: Sans-Serif (Inter / San Francisco), Zeilenabstand 1.4 auf Folien
 
 ## Farben (strikt)
 
@@ -21,7 +21,61 @@ alwaysApply: false
 | Sekundärtext | `#86868B` | Captions, Meta |
 | Akzent DHBW Rot | `#E2001A` | Nur sparsam: Links, Highlights, Fortschrittsbalken, Mermaid-Akzente |
 
+## Typografie auf Folien
+
+- Kein flächiges `**Label:**`-Bolding in Bullet Points (wirkt „laut“ und erschwert das Lesen)
+- Listen standardmäßig in normaler Schriftstärke; Bold nur sparsam für echte Kontraste (max. 0–1 Hervorhebung pro Folie)
+- Überschriften (`#` / `##`) behalten `font-weight: 600`
+
+## Platzknappheit & Layout
+
+Reihenfolge bei Overflow (Titel + Bullets + Diagramm/Code):
+
+1. Inhalt kürzen oder Diagramm vereinfachen
+2. Bei flachen Ketten eher `graph TD` (höhere Lesbarkeit) als sehr breites `graph LR`
+3. Gezielt Zweispaltigkeit (`:::: {.columns}`)
+
+Zweispaltigkeit ist die **Ausnahme**, nicht der Standard:
+
+- Links: max. 3–5 kurze Bullets
+- Rechts: kurzer **Code** oder kompakte **Tabelle**
+- **Nicht** ` ```{mermaid} ` in `:::: {.columns}` legen — Quarto führt die Mermaid-Engine dort oft nicht aus (wird zum Codeblock)
+- Mermaid unter die Bullets (volle Breite) oder auf eine eigene Folie
+- Schrift nur leicht kleiner, wenn nötig — Hörsaal-Lesbarkeit beachten
+
 ## Mermaid
 
-- Die globalen Farben für Mermaid (Weiß/Grau) werden zentral über SCSS-Variablen in der `slides.scss`/`custom.scss` erzwungen. Didaktische Hervorhebungen (z. B. der aktive Datenpfad) erfolgen weiterhin im Markdown mit dem DHBW-Rot (`style [Knoten] fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important;`).
-- Bei Inline-Styles **immer** `!important` anhängen, damit sie die SCSS-Regeln überschreiben.
+- Fence immer mit Engine-Klammern: ` ```{mermaid} ` (ohne `{}` wird Mermaid oft als Codeblock gerendert)
+- **Keine** manuelle `fontSize` über `%%{init: …}%%` — Skalierung nur über SCSS / `mermaid-fit`
+- Palette: Weiß / `#E5E5EA` / `#F5F5F7` / sparsam `#E2001A` — kein Lila/Magenta
+- Cluster-Tokens in SCSS: `$mermaid-fg-color--lighter: #E5E5EA`, `$mermaid-fg-color--lightest: #F5F5F7`
+- Folien: SVG-Overrides unter `.reveal .mermaid` / `.mermaid-fit` in `slides.scss` — **kein** globales `max-height`
+- Didaktische Hervorhebungen im Markdown mit DHBW-Rot und **immer** `!important`:  
+  `style [Knoten] fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important;`
+
+## Reveal.js-Leinwand
+
+- Reveal.js-Leinwand: `auto-stretch: false` in `_quarto.yml` — sonst setzt Quarto `r-stretch` auf das letzte Bild und SVG-Schaltungen kollabieren oft auf Höhe 0 (unsichtbar).
+- NIEMALS `center: true` (YAML) — verursacht vertikalen Überlauf; Format fest 16:9 (`1280`×`720`, `margin: 0.08`)
+- Bei extrem dichtem Inhalt (lange Codeblöcke): Überschrift mit `{.scrollable}`
+
+### Workflow: Logikschaltungen & SVG-Generierung
+
+- **Trigger:** Wenn der User nach einer "Logikschaltung", einem "Gatter-Layout" oder dem "Zeichnen einer Schaltung" fragt, generierst du NIEMALS Mermaid-Code, sondern schreibst IMMER direkt eine saubere, rohe `.svg`-Datei in den Ordner `assets/images/`.
+- **DIN-Norm (IEC 60617):** Verwende ZWINGEND die europäische Norm für Schaltsymbole.
+  - Logikgatter sind strikt rechteckige Boxen (`<rect>`).
+  - Text-Symbole zentriert in der Box: AND = `&`, OR = `>=1`, XOR = `=1`, Buffer = `1`.
+  - Negationen (z. B. bei NAND, NOR, NOT) werden NICHT durch amerikanische Formen, sondern durch einen kleinen Kreis (`<circle>`) direkt am Ausgang der Rechtecke gezeichnet.
+- **Styling (DHBW/Apple):**
+  - Gatter-Hintergrund: `#FFFFFF`
+  - Gatter-Rahmen (Stroke): `#E5E5EA` (stroke-width: 2)
+  - Verbindungslinien und Pfeile: `#86868B`
+  - Text (Labels & Symbole): `#1D1D1F`, Schriftart `Inter, sans-serif`
+  - Lege am Anfang des SVGs einen `<style>`-Block für diese Farben an.
+  - XML: Das AND-Symbol **immer** als `&amp;` escapen (`<text>&amp;</text>`), sonst fehlt das Zeichen in PDF-Konvertern (svglib/rsvg).
+- **Einbindung in Folien:** `![Beschreibung](../assets/images/dateiname.svg)` — kein Mermaid; bei Bedarf explizit `{.nostretch}`.
+- **Agentic Self-Correction & Browser-Check (PFLICHT):**
+  1. Berechne die X/Y-Koordinaten für Boxen und Pfade (`<path>`) systematisch. Führe Linien immer rechtwinklig (orthogonal).
+  2. Speichere das generierte SVG zunächst temporär ab.
+  3. Nutze deine internen Browser-/Terminal-Tools, um das SVG zu validieren. Prüfe logisch, ob sich `<rect>`-Koordinaten überlappen oder Linien quer durch Boxen laufen.
+  4. Korrigiere die Koordinaten iterativ, bis das Layout sauber, lesbar und kreuzungsfrei ist, bevor du dem User Vollzug meldest. Binde das finale SVG dann als `![Beschreibung](assets/images/dateiname.svg)` in die angeforderte Markdown-Folie ein.

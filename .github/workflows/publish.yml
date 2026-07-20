@@ -12,6 +12,7 @@ permissions:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    # Früher abbrechen statt bis 6h zu hängen
     timeout-minutes: 45
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -29,7 +30,7 @@ jobs:
       - name: Render website
         uses: quarto-dev/quarto-actions/render@v2
 
-      # --- PDF-Handouts: Fehler sind Warnungen; Website wird trotzdem veröffentlicht ---
+      # --- PDF-Handout (kann an Mermaid/Chrome scheitern; Website trotzdem publishen) ---
       - name: Install Chrome Headless Shell (Mermaid → PNG)
         timeout-minutes: 10
         run: quarto install chrome-headless-shell --no-prompt
@@ -40,12 +41,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends librsvg2-bin
 
-      # Optional/vorbefüllt; Quarto kann fehlende Pakete beim Render oft selbst nachziehen.
-      # || true: CTAN-/Spiegel-Ausfälle sollen den Job nicht hart abbrechen.
+      # Optionaler Vorsorge-Schritt: Quarto/TinyTeX kann fehlende Pakete oft selbst nachziehen.
+      # || true verhindert Abbruch bei temporären CTAN-Spiegel-Problemen.
       - name: Install LaTeX packages for handout
         timeout-minutes: 10
         run: |
           tlmgr update --self || true
+          # tex-gyre: TeX Gyre Heros/Cursor (PDF-Fonts in _quarto*.yml)
           tlmgr install \
             tcolorbox needspace sectsty xcolor pgf environ trimspaces \
             pdfcol fancyvrb framed booktabs setspace float mdwtools \
@@ -54,58 +56,52 @@ jobs:
 
       - name: Render PDF handouts
         id: handout
-        timeout-minutes: 25
+        # Bei Hänger (z. B. Mermaid/Chrome) nach 20 Min abbrechen — nicht 6h warten
+        timeout-minutes: 20
+        continue-on-error: true
         run: |
-          set -u
-          shopt -s nullglob
-          files=(vorlesungen/*.qmd)
-          if [ ${#files[@]} -eq 0 ]; then
-            echo "::warning::Keine .qmd-Dateien in vorlesungen/ — überspringe Handouts."
-            echo "handout_ok=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
+          set -uo pipefail
           failed=0
-          for f in "${files[@]}"; do
-            echo "::group::Handout: $f"
-            if quarto render "$f" --profile handout --to pdf; then
-              echo "OK: $f"
-            else
-              echo "::warning::PDF-Handout fehlgeschlagen: $f"
+          shopt -s nullglob
+          for qmd in vorlesungen/*.qmd; do
+            echo "Rendering handout: $qmd"
+            if ! quarto render "$qmd" --profile handout --to pdf; then
+              echo "::warning::Handout fehlgeschlagen: $qmd"
               failed=1
             fi
-            echo "::endgroup::"
           done
-
           if [ "$failed" -ne 0 ]; then
-            echo "handout_ok=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::Mindestens ein PDF-Handout ist fehlgeschlagen. Website wird trotzdem veröffentlicht."
-          else
-            echo "handout_ok=true" >> "$GITHUB_OUTPUT"
+            exit 1
           fi
 
+      # Erfolgreiche PDFs anhängen, auch wenn einzelne Handouts fehlgeschlagen sind
       - name: Attach handout PDFs to website
-        if: always()
+        if: always() && !cancelled()
         run: |
-          set -u
-          shopt -s nullglob
           mkdir -p _site/vorlesungen
+          shopt -s nullglob
           pdfs=(_handout/vorlesungen/*.pdf)
           if [ ${#pdfs[@]} -eq 0 ]; then
-            echo "Keine Handout-PDFs zum Kopieren."
+            echo "Keine Handout-PDFs vorhanden."
             exit 0
           fi
           for pdf in "${pdfs[@]}"; do
-            base="$(basename "$pdf" .pdf)"
+            base=$(basename "$pdf" .pdf)
             cp "$pdf" "_site/vorlesungen/${base}-handout.pdf"
-            echo "Kopiert: ${base}-handout.pdf"
           done
           ls -la _site/vorlesungen/*-handout.pdf
 
-      - name: Publish to GitHub Pages
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-          render: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Deaktiviert, solange das Repository privat ist (GitHub Pages nicht verfügbar).
+      # - name: Publish to GitHub Pages
+      #   uses: quarto-dev/quarto-actions/publish@v2
+      #   with:
+      #     target: gh-pages
+      #     render: false
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Fehlendes PDF ist nur eine Warnung — Website-Build (und künftig Publish) bleiben grün.
+      - name: Warn if handout PDF did not build
+        if: steps.handout.outcome != 'success'
+        run: |
+          echo "::warning::Mindestens ein PDF-Handout ist fehlgeschlagen oder timed out (siehe Schritt „Render PDF handouts“)."

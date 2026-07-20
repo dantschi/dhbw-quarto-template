@@ -56,9 +56,16 @@ ehthumbs.db
 desktop.ini
 
 # -------------------------------------------------------------------
-# 5. Lokale Kompilate & Binärdateien (C / Assembler)
+# 5. Lokale Arbeitsartefakte (nicht Teil des Templates)
 # -------------------------------------------------------------------
-# Falls du C-Code oder Assembler lokal kompilierst,
+.cursor/slide-review/
+assets/dhbw_logo.svg
+assets/images/
+
+# -------------------------------------------------------------------
+# 6. Lokale Kompilate & Binärdateien
+# -------------------------------------------------------------------
+# Falls Sie Quellcode lokal kompilieren,
 # sollen die ausführbaren Dateien nicht ins Git-Repo.
 *.o
 *.out

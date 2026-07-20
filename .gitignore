@@ -38,10 +38,11 @@ vorlesungen/*.pdf
 # -------------------------------------------------------------------
 # Lokale Workspace-Einstellungen
 .vscode/
+.idea/
 
-# ACHTUNG: Die Datei .cursorrules wird hier ABSICHTLICH NICHT
-# aufgeführt, da sie zwingend mit ins Repository soll, damit das
-# KI-Wissen für zukünftige Semester erhalten bleibt.
+# Cursor-Rules unter .cursor/rules/ gehören ins Repo.
+# Nur lokale Review-/Render-Artefakte ignorieren:
+.cursor/slide-review/
 
 # -------------------------------------------------------------------
 # 4. Betriebssystem-Dateien
@@ -56,18 +57,16 @@ ehthumbs.db
 desktop.ini
 
 # -------------------------------------------------------------------
-# 5. Lokale Arbeitsartefakte (nicht Teil des Templates)
+# 5. Python & lokale Kompilate
 # -------------------------------------------------------------------
-.cursor/slide-review/
-assets/images/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
 
-# -------------------------------------------------------------------
-# 6. Lokale Kompilate & Binärdateien
-# -------------------------------------------------------------------
 # Falls Sie Quellcode lokal kompilieren,
 # sollen die ausführbaren Dateien nicht ins Git-Repo.
 *.o
-*.out
 *.exe
 *.bin
 *.hex

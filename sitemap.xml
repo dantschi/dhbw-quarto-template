@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://[GITHUB-USER].github.io/[REPO]/index.html</loc>
-    <lastmod>2026-07-24T07:25:38.660Z</lastmod>
+    <loc>https://[GITHUB-USER].github.io/[REPO]/vorlesungen/01_kickoff.html</loc>
+    <lastmod>2026-07-24T07:50:43.760Z</lastmod>
   </url>
   <url>
-    <loc>https://[GITHUB-USER].github.io/[REPO]/vorlesungen/01_kickoff.html</loc>
-    <lastmod>2026-07-24T07:25:38.660Z</lastmod>
+    <loc>https://[GITHUB-USER].github.io/[REPO]/index.html</loc>
+    <lastmod>2026-07-24T07:50:43.759Z</lastmod>
   </url>
 </urlset>

@@ -71,3 +71,8 @@ venv/
 *.bin
 *.hex
 **/*.quarto_ipynb
+
+# Labor-/Übungsblatt-PDFs (Build-Artefakte)
+labs/*.pdf
+labs/*.tex
+labs/_output/

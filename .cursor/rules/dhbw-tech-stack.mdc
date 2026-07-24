@@ -23,6 +23,7 @@ graph LR
 - Neue Reveal.js-Folien immer mit `---` oder `##` (Level-2-Header) trennen
 - Sprechtexte für den Dozenten **immer** in `::: notes` … `:::` — darin didaktische Tipps (z. B. Verwechslungsgefahr verwandter Begriffe)
 - Pro Vorlesung zwei Formate: `revealjs` (Vortrag, Notes nur Speaker View) und `handout-revealjs` (Skript: Folie oben, Notes unten; PDF über Druckansicht **E**, A4 Hochformat)
+- **Übungsblätter** unter `labs/lab_NN_….qmd`: Lösungen in `::: {.content-visible when-profile="solution"} … :::`; Studierende ohne Profil, Musterlösung mit `--profile solution` (siehe `labs/_quarto-solution.yml`, `build_labs.sh`)
 - Code-Blöcke immer mit passender Sprache taggen für Syntax-Highlighting
 
 ```markdown

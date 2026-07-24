@@ -20,7 +20,8 @@ GitHub-Template-Repository für Vorlesungswebsites an der **DHBW Stuttgart**: Qu
 | Website | Quarto-Projekt (`_quarto.yml`); Startseite = diese README via `index.qmd` |
 | Folien | Reveal.js unter `vorlesungen/*.qmd`, Design in `assets/styles/` |
 | Handout | Profil `handout` (`_quarto-handout.yml`) → PDF mit Folie + Dozentennotizen |
-| CI/CD | `.github/workflows/publish.yml` → Website auf `gh-pages` + PDF-Handout |
+| Übungsblätter | `labs/*.qmd` mit Profil `solution` (Studierende / Musterlösung) |
+| CI/CD | `.github/workflows/publish.yml` → Website auf `gh-pages` + Handout- + Lab-PDFs |
 | KI-Kontext | Cursor-Rules unter `.cursor/rules/` |
 
 ## Neues Modul anlegen
@@ -30,7 +31,8 @@ GitHub-Template-Repository für Vorlesungswebsites an der **DHBW Stuttgart**: Qu
 3. **TODO — ERSETZEN:** Alle `[…]`-Platzhalter in `_quarto.yml`, in diesem Dateiteil unten (Kursinhalt), in `vorlesungen/01_kickoff.qmd` und optional in `.cursor/rules/`.
 4. **TODO — LÖSCHEN:** Diesen gesamten Template-Abschnitt (bis `TEMPLATE-ENDE`) entfernen.
 5. Weitere Vorlesungen als `vorlesungen/0N_….qmd` anlegen (`format: revealjs`, Notizen in `::: notes`).
-6. Design/Mermaid in `assets/styles/` möglichst unverändert lassen.
+6. Übungsblätter als `labs/lab_NN_….qmd` anlegen (Lösungen in `::: {.content-visible when-profile="solution"}`).
+7. Design/Mermaid in `assets/styles/` möglichst unverändert lassen.
 
 | Datei | Aktion |
 |-------|--------|
@@ -39,6 +41,7 @@ GitHub-Template-Repository für Vorlesungswebsites an der **DHBW Stuttgart**: Qu
 | `README.md` (Kursinhalt unten) | **Ersetzen:** Beschreibung, Literatur, Tools |
 | `index.qmd` | Titel anpassen; behält `{{< include README.md >}}` |
 | `vorlesungen/01_kickoff.qmd` | **Ersetzen:** Folieninhalt und Notizen |
+| `labs/lab_01_beispiel.qmd` | **Ersetzen** oder weitere `lab_NN_….qmd` ergänzen |
 | `.cursor/rules/dhbw-*.mdc` | optional **Ersetzen:** Modulbezug |
 
 ## Lokal arbeiten
@@ -48,25 +51,34 @@ quarto preview
 quarto preview vorlesungen/01_kickoff.qmd
 quarto render vorlesungen/01_kickoff.qmd --profile handout --to pdf
 # → _handout/vorlesungen/01_kickoff.pdf
+
+# Übungsblätter: Studierende bzw. Musterlösung
+quarto render labs/lab_01_beispiel.qmd --to pdf
+quarto render labs/lab_01_beispiel.qmd --to pdf --profile solution
+# oder beide Varianten gebündelt:
+./build_labs.sh
+# → labs/_output/*-studierende.pdf und *-musterloesung.pdf
 ```
 
 PDF-Handout: Quarto, TinyTeX/LaTeX; für Mermaid: `quarto install chrome-headless-shell`.
 
+**Übungsblätter:** Lösungen stehen in Divs mit `when-profile="solution"` und erscheinen nur mit `--profile solution` (siehe `labs/_quarto-solution.yml`). Dateien mit `template` im Namen werden in der CI übersprungen.
 ## Publish mit GitHub Actions
 
 Workflow: [`.github/workflows/publish.yml`](.github/workflows/publish.yml)
 
 **Trigger:** Push auf `main` oder manuell (*Actions* → *Publish Quarto Website*).
 
-**Ablauf:** Website rendern → alle `vorlesungen/*.qmd` als PDF-Handout bauen → PDFs nach `_site/vorlesungen/*-handout.pdf` → Publish auf Branch **`gh-pages`**.
+**Ablauf:** Website rendern → PDF-Handouts für alle `vorlesungen/*.qmd` → Übungsblatt-PDFs (Studierende + Musterlösung) nach `_site/labs/` → Publish auf Branch **`gh-pages`**.
 
-Scheitert ein Handout (z. B. Mermaid/Chrome), erscheint eine **Warnung**; die Website wird trotzdem veröffentlicht und der Job bleibt grün.
+Scheitert ein Handout oder Übungsblatt (z. B. Mermaid/Chrome), erscheint eine **Warnung**; die Website wird trotzdem veröffentlicht und der Job bleibt grün.
 
-Nach dem Publish sind Folien und Handout z. B. erreichbar unter:
+Nach dem Publish sind Materialien z. B. erreichbar unter:
 
 - Folien: [`vorlesungen/01_kickoff.html`](vorlesungen/01_kickoff.html)
 - PDF-Handout: [`vorlesungen/01_kickoff-handout.pdf`](vorlesungen/01_kickoff-handout.pdf)
-
+- Übungsblatt: [`labs/lab_01_beispiel.pdf`](labs/lab_01_beispiel.pdf)
+- Musterlösung: [`labs/lab_01_beispiel-musterloesung.pdf`](labs/lab_01_beispiel-musterloesung.pdf)
 Vollständige URL typischerweise `https://[GITHUB-USER].github.io/[REPO]/` (Startseite = Inhalt dieser README über `index.qmd`).
 
 **Einmalig:** Branch `gh-pages` vorhanden; *Settings → Pages* → Deploy from branch `gh-pages`; Actions mit Schreibrechten; für öffentliche Kursseiten Repo **public** stellen.
@@ -92,9 +104,10 @@ Herzlich willkommen zur Vorlesung **[Modulname] ([Modulkürzel])** an der Dualen
 |--------|------|
 | Folien (Reveal.js) | [Kickoff](vorlesungen/01_kickoff.html) |
 | PDF-Handout (Skript) | [Kickoff-Handout (PDF)](vorlesungen/01_kickoff-handout.pdf) |
+| Übungsblatt | [Beispielblatt (PDF)](labs/lab_01_beispiel.pdf) |
+| Musterlösung | [Beispielblatt Musterlösung (PDF)](labs/lab_01_beispiel-musterloesung.pdf) |
 
-Das PDF-Handout enthält die Folien inklusive Dozentennotizen und wird bei jedem Publish über GitHub Actions aktualisiert.
-
+Das PDF-Handout enthält die Folien inklusive Dozentennotizen. Übungsblätter und Musterlösungen werden bei jedem Publish über GitHub Actions aktualisiert.
 ## Literatur
 
 Die zentrale Referenz dieses Moduls ist:

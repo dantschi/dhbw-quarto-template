@@ -4,146 +4,83 @@
     "href": "vorlesungen/01_kickoff.html#willkommen-zur-modulkürzel",
     "title": "01 · Kickoff",
     "section": "Willkommen zur [Modulkürzel]",
-    "text": "Willkommen zur [Modulkürzel]\n\nModul: [Modulname]\nFokus: [Schwerpunkt / Themenfeld]\nZielgruppe: [Zielgruppe, z. B. Bachelor …]\n\n\nKurzer Begrüßungstext und organisatorischer Einstieg. Lernziele und Semesterrahmen kurz einordnen.",
-    "crumbs": [
-      "Vorlesungen",
-      "01 · Kickoff"
-    ]
+    "text": "Willkommen zur [Modulkürzel]\n\nModul: [Modulname]\nFokus: [Schwerpunkt / Themenfeld]\nZielgruppe: [Zielgruppe, z. B. Bachelor …]\n\n\nKurzer Begrüßungstext und organisatorischer Einstieg. Lernziele und Semesterrahmen kurz einordnen."
   },
   {
     "objectID": "vorlesungen/01_kickoff.html#was-sie-erwarten-können",
     "href": "vorlesungen/01_kickoff.html#was-sie-erwarten-können",
     "title": "01 · Kickoff",
     "section": "Was Sie erwarten können",
-    "text": "Was Sie erwarten können\n\n[Themenblock 1]\n[Themenblock 2]\n[Themenblock 3]\n[Themenblock 4]\n\n\nRoten Faden des Semesters skizzieren und Erwartungen an Vorbereitung sowie Mitarbeit klären.",
-    "crumbs": [
-      "Vorlesungen",
-      "01 · Kickoff"
-    ]
+    "text": "Was Sie erwarten können\n\n[Themenblock 1]\n[Themenblock 2]\n[Themenblock 3]\n[Themenblock 4]\n\n\nRoten Faden des Semesters skizzieren und Erwartungen an Vorbereitung sowie Mitarbeit klären."
   },
   {
     "objectID": "vorlesungen/01_kickoff.html#didaktischer-aufbau",
     "href": "vorlesungen/01_kickoff.html#didaktischer-aufbau",
     "title": "01 · Kickoff",
     "section": "Didaktischer Aufbau",
-    "text": "Didaktischer Aufbau\nWir bauen Verständnis Schicht für Schicht auf:\n\\[\\text{[Ebene 1]} \\rightarrow \\text{[Ebene 2]} \\rightarrow \\text{[Ebene 3]} \\rightarrow \\text{[Ebene 4]}\\]\n\nDiesen Aufbau als roten Faden etablieren und an einem kurzen Beispiel aus dem Modul veranschaulichen.",
-    "crumbs": [
-      "Vorlesungen",
-      "01 · Kickoff"
-    ]
+    "text": "Didaktischer Aufbau\nWir bauen Verständnis Schicht für Schicht auf:\n\\[\\text{[Ebene 1]} \\rightarrow \\text{[Ebene 2]} \\rightarrow \\text{[Ebene 3]} \\rightarrow \\text{[Ebene 4]}\\]\n\nDiesen Aufbau als roten Faden etablieren und an einem kurzen Beispiel aus dem Modul veranschaulichen."
   },
   {
     "objectID": "vorlesungen/01_kickoff.html#beispiel-übersicht",
     "href": "vorlesungen/01_kickoff.html#beispiel-übersicht",
     "title": "01 · Kickoff",
     "section": "Beispiel: Übersicht",
-    "text": "Beispiel: Übersicht\n\n\n\n\n\n%%{init: {'theme': 'base', 'themeVariables': {'background': '#FFFFFF', 'primaryColor': '#FFFFFF', 'primaryBorderColor': '#E5E5EA', 'primaryTextColor': '#1D1D1F', 'lineColor': '#86868B', 'secondaryColor': '#F5F5F7', 'tertiaryColor': '#FFFFFF', 'mainBkg': '#FFFFFF', 'nodeBorder': '#E5E5EA', 'clusterBkg': '#F5F5F7', 'clusterBorder': '#E5E5EA', 'titleColor': '#1D1D1F', 'edgeLabelBackground': '#FFFFFF'}}}%%\ngraph LR\n  A[Konzept A] --&gt; B[Konzept B]\n  B --&gt; C[Konzept C]\n  style A fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px\n  style B fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important\n  style C fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px\n\n\n\n\n\n\n\nBetonen, dass dies eine vereinfachte Übersicht ist. Später mit detaillierteren Darstellungen gegenüberstellen.",
-    "crumbs": [
-      "Vorlesungen",
-      "01 · Kickoff"
-    ]
+    "text": "Beispiel: Übersicht\n\n\n\n\n\n%%{init: {'theme': 'base', 'themeVariables': {'background': '#FFFFFF', 'primaryColor': '#FFFFFF', 'primaryBorderColor': '#E5E5EA', 'primaryTextColor': '#1D1D1F', 'lineColor': '#86868B', 'secondaryColor': '#F5F5F7', 'tertiaryColor': '#FFFFFF', 'mainBkg': '#FFFFFF', 'nodeBorder': '#E5E5EA', 'clusterBkg': '#F5F5F7', 'clusterBorder': '#E5E5EA', 'titleColor': '#1D1D1F', 'edgeLabelBackground': '#FFFFFF'}}}%%\ngraph LR\n  A[Konzept A] --&gt; B[Konzept B]\n  B --&gt; C[Konzept C]\n  style A fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px\n  style B fill:#FFFFFF,stroke:#E2001A,stroke-width:2px !important\n  style C fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1.5px\n\n\n\n\n\n\n\nBetonen, dass dies eine vereinfachte Übersicht ist. Später mit detaillierteren Darstellungen gegenüberstellen."
   },
   {
     "objectID": "vorlesungen/01_kickoff.html#tools-im-kurs",
     "href": "vorlesungen/01_kickoff.html#tools-im-kurs",
     "title": "01 · Kickoff",
     "section": "Tools im Kurs",
-    "text": "Tools im Kurs\n\n[Tool 1] – [Beschreibung/Tools]\n[Tool 2] – [Beschreibung/Tools]\n\n\nWichtigste Tools kurz zeigen. Studierende sollen sie früh einrichten bzw. bookmarken.",
-    "crumbs": [
-      "Vorlesungen",
-      "01 · Kickoff"
-    ]
+    "text": "Tools im Kurs\n\n[Tool 1] – [Beschreibung/Tools]\n[Tool 2] – [Beschreibung/Tools]\n\n\nWichtigste Tools kurz zeigen. Studierende sollen sie früh einrichten bzw. bookmarken."
   },
   {
     "objectID": "vorlesungen/01_kickoff.html#literatur",
     "href": "vorlesungen/01_kickoff.html#literatur",
     "title": "01 · Kickoff",
     "section": "Literatur",
-    "text": "Literatur\n[Autor:innen]\n[Werktitel]\n\nZentrale Referenz vorstellen und empfehlen, parallel zur Vorlesung zu lesen.",
-    "crumbs": [
-      "Vorlesungen",
-      "01 · Kickoff"
-    ]
+    "text": "Literatur\n[Autor:innen]\n[Werktitel]\n\nZentrale Referenz vorstellen und empfehlen, parallel zur Vorlesung zu lesen."
   },
   {
     "objectID": "vorlesungen/01_kickoff.html#nächste-schritte",
     "href": "vorlesungen/01_kickoff.html#nächste-schritte",
     "title": "01 · Kickoff",
     "section": "Nächste Schritte",
-    "text": "Nächste Schritte\n\nOrganisationsfragen klären\nMaterialien / Tools einrichten\nErste Übungen vorbereiten\n\n\nRaum für Fragen lassen. Auf OER-Lizenz (CC BY 4.0) und die Kurswebsite hinweisen.",
-    "crumbs": [
-      "Vorlesungen",
-      "01 · Kickoff"
-    ]
+    "text": "Nächste Schritte\n\nOrganisationsfragen klären\nMaterialien / Tools einrichten\nErste Übungen vorbereiten\n\n\nRaum für Fragen lassen. Auf OER-Lizenz (CC BY 4.0) und die Kurswebsite hinweisen."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "[Modulname] ([Modulkürzel])",
     "section": "",
-    "text": "Hinweis: Dies ist ein inoffizielles Dozenten-Template, keine offizielle DHBW-Software.\n\n\nHinweis zur Startseite: Diese README.md wird von index.qmd eingebunden und ist damit der Inhalt der GitHub-Pages-Startseite (und der Repo-README auf GitHub). Nach dem Einrichten Ihres Moduls den gesamten Template-Block (TODO — LÖSCHEN) entfernen und unten nur noch den Kursinhalt belassen (TODO — ERSETZEN).\n\nGitHub-Template-Repository für Vorlesungswebsites an der DHBW Stuttgart: Quarto-Website, Reveal.js-Folien (Apple-/DHBW-Design) und automatisches Publish inkl. PDF-Handout über GitHub Actions.\n\n\n\n\n\n\n\n\n\nBereich\nInhalt\n\n\n\n\nWebsite\nQuarto-Projekt (_quarto.yml); Startseite = diese README via index.qmd\n\n\nFolien\nReveal.js unter vorlesungen/*.qmd, Design in assets/styles/\n\n\nHandout\nProfil handout (_quarto-handout.yml) → PDF mit Folie + Dozentennotizen\n\n\nÜbungsblätter\nlabs/*.qmd mit Profil solution (Studierende / Musterlösung)\n\n\nCI/CD\n.github/workflows/publish.yml → Website auf gh-pages + Handout- + Lab-PDFs\n\n\nKI-Kontext\nCursor-Rules unter .cursor/rules/\n\n\n\n\n\n\n\nAuf GitHub Use this template → neues Repository erstellen.\nRepository klonen; mit Quarto lokal arbeiten.\nTODO — ERSETZEN: Alle […]-Platzhalter in _quarto.yml, in diesem Dateiteil unten (Kursinhalt), in vorlesungen/01_kickoff.qmd und optional in .cursor/rules/.\nTODO — LÖSCHEN: Diesen gesamten Template-Abschnitt (bis TEMPLATE-ENDE) entfernen.\nWeitere Vorlesungen als vorlesungen/0N_….qmd anlegen (format: revealjs, Notizen in ::: notes).\nÜbungsblätter als labs/lab_NN_….qmd anlegen (Lösungen in ::: {.content-visible when-profile=\"solution\"}).\nDesign/Mermaid in assets/styles/ möglichst unverändert lassen.\n\n\n\n\n\n\n\n\nDatei\nAktion\n\n\n\n\n_quarto.yml\nErsetzen: [Modulname], [Modulkürzel], [GITHUB-USER], [REPO]\n\n\nREADME.md (dieser Block)\nLöschen nach dem Einrichten\n\n\nREADME.md (Kursinhalt unten)\nErsetzen: Beschreibung, Literatur, Tools\n\n\nindex.qmd\nTitel anpassen; behält {{&lt; include README.md &gt;}}\n\n\nvorlesungen/01_kickoff.qmd\nErsetzen: Folieninhalt und Notizen\n\n\nlabs/lab_01_beispiel.qmd\nErsetzen oder weitere lab_NN_….qmd ergänzen\n\n\n.cursor/rules/dhbw-*.mdc\noptional Ersetzen: Modulbezug\n\n\n\n\n\n\nquarto preview\nquarto preview vorlesungen/01_kickoff.qmd\nquarto render vorlesungen/01_kickoff.qmd --profile handout --to pdf\n# → _handout/vorlesungen/01_kickoff.pdf\n\n# Übungsblätter: Studierende bzw. Musterlösung\nquarto render labs/lab_01_beispiel.qmd --to pdf\nquarto render labs/lab_01_beispiel.qmd --to pdf --profile solution\n# oder beide Varianten gebündelt:\n./build_labs.sh\n# → labs/_output/*-studierende.pdf und *-musterloesung.pdf\nPDF-Handout: Quarto, TinyTeX/LaTeX; für Mermaid: quarto install chrome-headless-shell.\nÜbungsblätter: Lösungen stehen in Divs mit when-profile=\"solution\" und erscheinen nur mit --profile solution (siehe labs/_quarto-solution.yml). Dateien mit template im Namen werden in der CI übersprungen. ## Publish mit GitHub Actions\nWorkflow: .github/workflows/publish.yml\nTrigger: Push auf main oder manuell (Actions → Publish Quarto Website).\nAblauf: Website rendern → PDF-Handouts für alle vorlesungen/*.qmd → Übungsblatt-PDFs (Studierende + Musterlösung) nach _site/labs/ → Publish auf Branch gh-pages.\nScheitert ein Handout oder Übungsblatt (z. B. Mermaid/Chrome), erscheint eine Warnung; die Website wird trotzdem veröffentlicht und der Job bleibt grün.\nNach dem Publish sind Materialien z. B. erreichbar unter:\n\nFolien: vorlesungen/01_kickoff.html\nPDF-Handout: vorlesungen/01_kickoff-handout.pdf\nÜbungsblatt: labs/lab_01_beispiel.pdf\nMusterlösung: labs/lab_01_beispiel-musterloesung.pdf Vollständige URL typischerweise https://[GITHUB-USER].github.io/[REPO]/ (Startseite = Inhalt dieser README über index.qmd).\n\nEinmalig: Branch gh-pages vorhanden; Settings → Pages → Deploy from branch gh-pages; Actions mit Schreibrechten; für öffentliche Kursseiten Repo public stellen.\nHinweis: Dies ist ein inoffizielles Dozenten-Template, keine offizielle DHBW-Software. Das DHBW-Logo (assets/dhbw_logo.svg) und andere geschützte Markenzeichen sind nicht Teil der CC-BY-Lizenz — siehe LICENSE und den Abschnitt OER & Lizenz unten.",
-    "crumbs": [
-      "Startseite"
-    ]
+    "text": "Herzlich willkommen zur Vorlesung [Modulname] ([Modulkürzel]) an der Dualen Hochschule Baden-Württemberg Stuttgart[, Studiengang …].\nDozent:in: [Dozent:in]\nKurswebsite: [[GITHUB-USER].github.io/[REPO]](https://[GITHUB-USER].github.io/[REPO]/\nHinweis: Quellen im Repo unter vorlesungen/ und labs/.\nRepository: github.com/[GITHUB-USER]/[REPO]\n[Beschreibung]\n\nTemplate-Hinweis: Einrichtungsanleitung und technische Doku stehen in TEMPLATE.md. Diese Datei (README.md) ist die GitHub-Pages-Startseite — bitte wie bei einem fertigen Kurs pflegen (Platzhalter ersetzen, Einheiten-Tabelle erweitern).\n\n\n\nDer rote Faden der Veranstaltung:\n[Ebene 1] → [Ebene 2] → [Ebene 3] → [Ebene 4]\nPro Einheit: Folien (Reveal.js), Handout-PDF sowie Übungsblatt (Studierende / Musterlösung). Links verweisen auf die Kurswebsite (relativ, funktioniert lokal und auf Pages).\n\n\n\nEinheit\nThema\nSchwerpunkt\nFolien\nHandout\nÜbungsblatt\nMusterlösung\n\n\n\n\n1\n[Thema Einheit 1]\n[Schwerpunkt]\nHTML\nPDF\nPDF\nPDF\n\n\n2\n[Thema Einheit 2]\n[Schwerpunkt]\nHTML\nPDF\nPDF\nPDF\n\n\n\nHinweise: Folien im Browser öffnen (Speaker View: Taste S). Handout-PDF = Folieninhalt mit Skriptnotizen. Quelltexte unter vorlesungen/ und labs/.\n\n\n\n\n\nDokument\nStudierende\nMusterlösung\n\n\n\n\nProbeklausur\nPDF\nPDF\n\n\n\n(Zeile entfernen oder anpassen, wenn keine Probeklausur vorgesehen ist.)\n\n\n\n\nZentrale Referenz dieses Moduls:\n\n[Autor:innen]\n[Werktitel]\n[Verlag]\n\nDefinitionen, Terminologie und didaktischer Aufbau orientieren sich an diesem Standardwerk.\nZur Vertiefung empfohlen:\n\n[Autor:innen Vertiefung]\n[Werktitel Vertiefung]\n[Verlag]\n\n\n\n\n\n\n\nTool\nEinsatz\nLink\n\n\n\n\n[Tool 1]\n[Beschreibung/Tools]\n[Link]\n\n\n[Tool 2]\n[Beschreibung/Tools]\n[Link]\n\n\n\n\n\n\nDieses Vorlesungsmaterial ist eine Open Educational Resource (OER). Die Vorlesungsinhalte – Texte, Code und Diagramme – stehen unter der Lizenz Creative Commons Attribution 4.0 International (CC BY 4.0).\nSie dürfen diese Inhalte teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei LICENSE im Repository.\nAusnahme: Hochschullogos und andere geschützte Markenzeichen (einschließlich des DHBW-Logos) sind von dieser Lizenz ausdrücklich ausgenommen. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden."
   },
   {
-    "objectID": "index.html#was-enthalten-ist",
-    "href": "index.html#was-enthalten-ist",
+    "objectID": "index.html#kursübersicht",
+    "href": "index.html#kursübersicht",
     "title": "[Modulname] ([Modulkürzel])",
     "section": "",
-    "text": "Bereich\nInhalt\n\n\n\n\nWebsite\nQuarto-Projekt (_quarto.yml); Startseite = diese README via index.qmd\n\n\nFolien\nReveal.js unter vorlesungen/*.qmd, Design in assets/styles/\n\n\nHandout\nProfil handout (_quarto-handout.yml) → PDF mit Folie + Dozentennotizen\n\n\nÜbungsblätter\nlabs/*.qmd mit Profil solution (Studierende / Musterlösung)\n\n\nCI/CD\n.github/workflows/publish.yml → Website auf gh-pages + Handout- + Lab-PDFs\n\n\nKI-Kontext\nCursor-Rules unter .cursor/rules/",
-    "crumbs": [
-      "Startseite"
-    ]
+    "text": "Der rote Faden der Veranstaltung:\n[Ebene 1] → [Ebene 2] → [Ebene 3] → [Ebene 4]\nPro Einheit: Folien (Reveal.js), Handout-PDF sowie Übungsblatt (Studierende / Musterlösung). Links verweisen auf die Kurswebsite (relativ, funktioniert lokal und auf Pages).\n\n\n\nEinheit\nThema\nSchwerpunkt\nFolien\nHandout\nÜbungsblatt\nMusterlösung\n\n\n\n\n1\n[Thema Einheit 1]\n[Schwerpunkt]\nHTML\nPDF\nPDF\nPDF\n\n\n2\n[Thema Einheit 2]\n[Schwerpunkt]\nHTML\nPDF\nPDF\nPDF\n\n\n\nHinweise: Folien im Browser öffnen (Speaker View: Taste S). Handout-PDF = Folieninhalt mit Skriptnotizen. Quelltexte unter vorlesungen/ und labs/.\n\n\n\n\n\nDokument\nStudierende\nMusterlösung\n\n\n\n\nProbeklausur\nPDF\nPDF\n\n\n\n(Zeile entfernen oder anpassen, wenn keine Probeklausur vorgesehen ist.)"
   },
   {
-    "objectID": "index.html#neues-modul-anlegen",
-    "href": "index.html#neues-modul-anlegen",
+    "objectID": "index.html#literatur",
+    "href": "index.html#literatur",
     "title": "[Modulname] ([Modulkürzel])",
     "section": "",
-    "text": "Auf GitHub Use this template → neues Repository erstellen.\nRepository klonen; mit Quarto lokal arbeiten.\nTODO — ERSETZEN: Alle […]-Platzhalter in _quarto.yml, in diesem Dateiteil unten (Kursinhalt), in vorlesungen/01_kickoff.qmd und optional in .cursor/rules/.\nTODO — LÖSCHEN: Diesen gesamten Template-Abschnitt (bis TEMPLATE-ENDE) entfernen.\nWeitere Vorlesungen als vorlesungen/0N_….qmd anlegen (format: revealjs, Notizen in ::: notes).\nÜbungsblätter als labs/lab_NN_….qmd anlegen (Lösungen in ::: {.content-visible when-profile=\"solution\"}).\nDesign/Mermaid in assets/styles/ möglichst unverändert lassen.\n\n\n\n\n\n\n\n\nDatei\nAktion\n\n\n\n\n_quarto.yml\nErsetzen: [Modulname], [Modulkürzel], [GITHUB-USER], [REPO]\n\n\nREADME.md (dieser Block)\nLöschen nach dem Einrichten\n\n\nREADME.md (Kursinhalt unten)\nErsetzen: Beschreibung, Literatur, Tools\n\n\nindex.qmd\nTitel anpassen; behält {{&lt; include README.md &gt;}}\n\n\nvorlesungen/01_kickoff.qmd\nErsetzen: Folieninhalt und Notizen\n\n\nlabs/lab_01_beispiel.qmd\nErsetzen oder weitere lab_NN_….qmd ergänzen\n\n\n.cursor/rules/dhbw-*.mdc\noptional Ersetzen: Modulbezug",
-    "crumbs": [
-      "Startseite"
-    ]
+    "text": "Zentrale Referenz dieses Moduls:\n\n[Autor:innen]\n[Werktitel]\n[Verlag]\n\nDefinitionen, Terminologie und didaktischer Aufbau orientieren sich an diesem Standardwerk.\nZur Vertiefung empfohlen:\n\n[Autor:innen Vertiefung]\n[Werktitel Vertiefung]\n[Verlag]"
   },
   {
-    "objectID": "index.html#lokal-arbeiten",
-    "href": "index.html#lokal-arbeiten",
+    "objectID": "index.html#tools-und-ressourcen",
+    "href": "index.html#tools-und-ressourcen",
     "title": "[Modulname] ([Modulkürzel])",
     "section": "",
-    "text": "quarto preview\nquarto preview vorlesungen/01_kickoff.qmd\nquarto render vorlesungen/01_kickoff.qmd --profile handout --to pdf\n# → _handout/vorlesungen/01_kickoff.pdf\n\n# Übungsblätter: Studierende bzw. Musterlösung\nquarto render labs/lab_01_beispiel.qmd --to pdf\nquarto render labs/lab_01_beispiel.qmd --to pdf --profile solution\n# oder beide Varianten gebündelt:\n./build_labs.sh\n# → labs/_output/*-studierende.pdf und *-musterloesung.pdf\nPDF-Handout: Quarto, TinyTeX/LaTeX; für Mermaid: quarto install chrome-headless-shell.\nÜbungsblätter: Lösungen stehen in Divs mit when-profile=\"solution\" und erscheinen nur mit --profile solution (siehe labs/_quarto-solution.yml). Dateien mit template im Namen werden in der CI übersprungen. ## Publish mit GitHub Actions\nWorkflow: .github/workflows/publish.yml\nTrigger: Push auf main oder manuell (Actions → Publish Quarto Website).\nAblauf: Website rendern → PDF-Handouts für alle vorlesungen/*.qmd → Übungsblatt-PDFs (Studierende + Musterlösung) nach _site/labs/ → Publish auf Branch gh-pages.\nScheitert ein Handout oder Übungsblatt (z. B. Mermaid/Chrome), erscheint eine Warnung; die Website wird trotzdem veröffentlicht und der Job bleibt grün.\nNach dem Publish sind Materialien z. B. erreichbar unter:\n\nFolien: vorlesungen/01_kickoff.html\nPDF-Handout: vorlesungen/01_kickoff-handout.pdf\nÜbungsblatt: labs/lab_01_beispiel.pdf\nMusterlösung: labs/lab_01_beispiel-musterloesung.pdf Vollständige URL typischerweise https://[GITHUB-USER].github.io/[REPO]/ (Startseite = Inhalt dieser README über index.qmd).\n\nEinmalig: Branch gh-pages vorhanden; Settings → Pages → Deploy from branch gh-pages; Actions mit Schreibrechten; für öffentliche Kursseiten Repo public stellen.\nHinweis: Dies ist ein inoffizielles Dozenten-Template, keine offizielle DHBW-Software. Das DHBW-Logo (assets/dhbw_logo.svg) und andere geschützte Markenzeichen sind nicht Teil der CC-BY-Lizenz — siehe LICENSE und den Abschnitt OER & Lizenz unten.",
-    "crumbs": [
-      "Startseite"
-    ]
+    "text": "Tool\nEinsatz\nLink\n\n\n\n\n[Tool 1]\n[Beschreibung/Tools]\n[Link]\n\n\n[Tool 2]\n[Beschreibung/Tools]\n[Link]"
   },
   {
-    "objectID": "index.html#materialien",
-    "href": "index.html#materialien",
+    "objectID": "index.html#oer-und-lizenz",
+    "href": "index.html#oer-und-lizenz",
     "title": "[Modulname] ([Modulkürzel])",
-    "section": "Materialien",
-    "text": "Materialien\n\n\n\nFormat\nLink\n\n\n\n\nFolien (Reveal.js)\nKickoff\n\n\nPDF-Handout (Skript)\nKickoff-Handout (PDF)\n\n\nÜbungsblatt\nBeispielblatt (PDF)\n\n\nMusterlösung\nBeispielblatt Musterlösung (PDF)\n\n\n\nDas PDF-Handout enthält die Folien inklusive Dozentennotizen. Übungsblätter und Musterlösungen werden bei jedem Publish über GitHub Actions aktualisiert. ## Literatur\nDie zentrale Referenz dieses Moduls ist:\n\n[Autor:innen]\n[Werktitel]\n[Verlag]\n\nDefinitionen, Terminologie und didaktischer Aufbau orientieren sich an diesem Standardwerk.",
-    "crumbs": [
-      "Startseite"
-    ]
-  },
-  {
-    "objectID": "index.html#tools-ressourcen",
-    "href": "index.html#tools-ressourcen",
-    "title": "[Modulname] ([Modulkürzel])",
-    "section": "Tools & Ressourcen",
-    "text": "Tools & Ressourcen\n\n\n\nTool\nEinsatz\nLink\n\n\n\n\n[Tool 1]\n[Beschreibung/Tools]\n[Link]\n\n\n[Tool 2]\n[Beschreibung/Tools]\n[Link]",
-    "crumbs": [
-      "Startseite"
-    ]
-  },
-  {
-    "objectID": "index.html#oer-lizenz",
-    "href": "index.html#oer-lizenz",
-    "title": "[Modulname] ([Modulkürzel])",
-    "section": "OER & Lizenz",
-    "text": "OER & Lizenz\nDieses Vorlesungsmaterial ist eine Open Educational Resource (OER). Die Vorlesungsinhalte – Texte, Code und Diagramme – stehen unter der Lizenz Creative Commons Attribution 4.0 International (CC BY 4.0).\nSie dürfen diese Inhalte teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei LICENSE im Repository.\nAusnahme: Hochschullogos und andere geschützte Markenzeichen (einschließlich des DHBW-Logos) sind von dieser Lizenz ausdrücklich ausgenommen. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden.",
-    "crumbs": [
-      "Startseite"
-    ]
+    "section": "",
+    "text": "Dieses Vorlesungsmaterial ist eine Open Educational Resource (OER). Die Vorlesungsinhalte – Texte, Code und Diagramme – stehen unter der Lizenz Creative Commons Attribution 4.0 International (CC BY 4.0).\nSie dürfen diese Inhalte teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei LICENSE im Repository.\nAusnahme: Hochschullogos und andere geschützte Markenzeichen (einschließlich des DHBW-Logos) sind von dieser Lizenz ausdrücklich ausgenommen. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden."
   }
 ]

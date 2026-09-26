@@ -2,61 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>[Modulname] ([Modulkürzel]) – [Modulname]</title>
+<title>[Modulname]</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -75,16 +43,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f10d8de24a925c9b91f9429851c91b98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9f7d05dafd2a20d316707b97cb274d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -113,298 +81,138 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Startseite</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">[Modulkürzel]</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Startseite</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/[GITHUB-USER]/[REPO]"> 
+<span class="menu-text">Repository</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">[Modulname]</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Startseite</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Vorlesungen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vorlesungen/01_kickoff.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">01 · Kickoff</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#dhbw-quarto-vorlesungstemplate" id="toc-dhbw-quarto-vorlesungstemplate" class="nav-link active" data-scroll-target="#dhbw-quarto-vorlesungstemplate">DHBW Quarto Vorlesungstemplate</a>
-  <ul class="collapse">
-  <li><a href="#was-enthalten-ist" id="toc-was-enthalten-ist" class="nav-link" data-scroll-target="#was-enthalten-ist">Was enthalten ist</a></li>
-  <li><a href="#neues-modul-anlegen" id="toc-neues-modul-anlegen" class="nav-link" data-scroll-target="#neues-modul-anlegen">Neues Modul anlegen</a></li>
-  <li><a href="#lokal-arbeiten" id="toc-lokal-arbeiten" class="nav-link" data-scroll-target="#lokal-arbeiten">Lokal arbeiten</a></li>
-  </ul></li>
-  <li><a href="#modulname-modulkürzel" id="toc-modulname-modulkürzel" class="nav-link" data-scroll-target="#modulname-modulkürzel">[Modulname] ([Modulkürzel])</a>
-  <ul class="collapse">
-  <li><a href="#materialien" id="toc-materialien" class="nav-link" data-scroll-target="#materialien">Materialien</a></li>
-  <li><a href="#tools-ressourcen" id="toc-tools-ressourcen" class="nav-link" data-scroll-target="#tools-ressourcen">Tools &amp; Ressourcen</a></li>
-  <li><a href="#oer-lizenz" id="toc-oer-lizenz" class="nav-link" data-scroll-target="#oer-lizenz">OER &amp; Lizenz</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">[Modulname] ([Modulkürzel])</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<!-- ==========================================================================
-     TODO — LÖSCHEN (nach dem Kopieren des Templates)
-     Gesamten Block von TEMPLATE-START bis TEMPLATE-ENDE entfernen,
-     damit er nicht auf der GitHub-Pages-Startseite erscheint.
-     ========================================================================== -->
-<!-- TEMPLATE-START -->
-<section id="dhbw-quarto-vorlesungstemplate" class="level1">
-<h1>DHBW Quarto Vorlesungstemplate</h1>
-<blockquote class="blockquote">
-<p><strong>Hinweis:</strong> Dies ist ein <strong>inoffizielles Dozenten-Template</strong>, keine offizielle DHBW-Software.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>Hinweis zur Startseite:</strong> Diese <code>README.md</code> wird von <code>index.qmd</code> eingebunden und ist damit der Inhalt der <strong>GitHub-Pages-Startseite</strong> (und der Repo-README auf GitHub). Nach dem Einrichten Ihres Moduls den gesamten Template-Block (<strong>TODO — LÖSCHEN</strong>) entfernen und unten nur noch den Kursinhalt belassen (<strong>TODO — ERSETZEN</strong>).</p>
-</blockquote>
-<p>GitHub-Template-Repository für Vorlesungswebsites an der <strong>DHBW Stuttgart</strong>: Quarto-Website, Reveal.js-Folien (Apple-/DHBW-Design) und automatisches Publish inkl. PDF-Handout über GitHub Actions.</p>
-<section id="was-enthalten-ist" class="level2">
-<h2 class="anchored" data-anchor-id="was-enthalten-ist">Was enthalten ist</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 52%">
-<col style="width: 47%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Bereich</th>
-<th>Inhalt</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Website</td>
-<td>Quarto-Projekt (<code>_quarto.yml</code>); Startseite = diese README via <code>index.qmd</code></td>
-</tr>
-<tr class="even">
-<td>Folien</td>
-<td>Reveal.js unter <code>vorlesungen/*.qmd</code>, Design in <code>assets/styles/</code></td>
-</tr>
-<tr class="odd">
-<td>Handout</td>
-<td>Profil <code>handout</code> (<code>_quarto-handout.yml</code>) → PDF mit Folie + Dozentennotizen</td>
-</tr>
-<tr class="even">
-<td>Übungsblätter</td>
-<td><code>labs/*.qmd</code> mit Profil <code>solution</code> (Studierende / Musterlösung)</td>
-</tr>
-<tr class="odd">
-<td>CI/CD</td>
-<td><code>.github/workflows/publish.yml</code> → Website auf <code>gh-pages</code> + Handout- + Lab-PDFs</td>
-</tr>
-<tr class="even">
-<td>KI-Kontext</td>
-<td>Cursor-Rules unter <code>.cursor/rules/</code></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="neues-modul-anlegen" class="level2">
-<h2 class="anchored" data-anchor-id="neues-modul-anlegen">Neues Modul anlegen</h2>
-<ol type="1">
-<li>Auf GitHub <strong>Use this template</strong> → neues Repository erstellen.</li>
-<li>Repository klonen; mit <a href="https://quarto.org/">Quarto</a> lokal arbeiten.</li>
-<li><strong>TODO — ERSETZEN:</strong> Alle <code>[…]</code>-Platzhalter in <code>_quarto.yml</code>, in diesem Dateiteil unten (Kursinhalt), in <code>vorlesungen/01_kickoff.qmd</code> und optional in <code>.cursor/rules/</code>.</li>
-<li><strong>TODO — LÖSCHEN:</strong> Diesen gesamten Template-Abschnitt (bis <code>TEMPLATE-ENDE</code>) entfernen.</li>
-<li>Weitere Vorlesungen als <code>vorlesungen/0N_….qmd</code> anlegen (<code>format: revealjs</code>, Notizen in <code>::: notes</code>).</li>
-<li>Übungsblätter als <code>labs/lab_NN_….qmd</code> anlegen (Lösungen in <code>::: {.content-visible when-profile="solution"}</code>).</li>
-<li>Design/Mermaid in <code>assets/styles/</code> möglichst unverändert lassen.</li>
-</ol>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 46%">
-<col style="width: 53%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Datei</th>
-<th>Aktion</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>_quarto.yml</code></td>
-<td><strong>Ersetzen:</strong> <code>[Modulname]</code>, <code>[Modulkürzel]</code>, <code>[GITHUB-USER]</code>, <code>[REPO]</code></td>
-</tr>
-<tr class="even">
-<td><code>README.md</code> (dieser Block)</td>
-<td><strong>Löschen</strong> nach dem Einrichten</td>
-</tr>
-<tr class="odd">
-<td><code>README.md</code> (Kursinhalt unten)</td>
-<td><strong>Ersetzen:</strong> Beschreibung, Literatur, Tools</td>
-</tr>
-<tr class="even">
-<td><code>index.qmd</code></td>
-<td>Titel anpassen; behält <code>{{&lt; include README.md &gt;}}</code></td>
-</tr>
-<tr class="odd">
-<td><code>vorlesungen/01_kickoff.qmd</code></td>
-<td><strong>Ersetzen:</strong> Folieninhalt und Notizen</td>
-</tr>
-<tr class="even">
-<td><code>labs/lab_01_beispiel.qmd</code></td>
-<td><strong>Ersetzen</strong> oder weitere <code>lab_NN_….qmd</code> ergänzen</td>
-</tr>
-<tr class="odd">
-<td><code>.cursor/rules/dhbw-*.mdc</code></td>
-<td>optional <strong>Ersetzen:</strong> Modulbezug</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="lokal-arbeiten" class="level2">
-<h2 class="anchored" data-anchor-id="lokal-arbeiten">Lokal arbeiten</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview vorlesungen/01_kickoff.qmd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render vorlesungen/01_kickoff.qmd <span class="at">--profile</span> handout <span class="at">--to</span> pdf</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># → _handout/vorlesungen/01_kickoff.pdf</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Übungsblätter: Studierende bzw. Musterlösung</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render labs/lab_01_beispiel.qmd <span class="at">--to</span> pdf</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render labs/lab_01_beispiel.qmd <span class="at">--to</span> pdf <span class="at">--profile</span> solution</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># oder beide Varianten gebündelt:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">./build_labs.sh</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># → labs/_output/*-studierende.pdf und *-musterloesung.pdf</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>PDF-Handout: Quarto, TinyTeX/LaTeX; für Mermaid: <code>quarto install chrome-headless-shell</code>.</p>
-<p><strong>Übungsblätter:</strong> Lösungen stehen in Divs mit <code>when-profile="solution"</code> und erscheinen nur mit <code>--profile solution</code> (siehe <code>labs/_quarto-solution.yml</code>). Dateien mit <code>template</code> im Namen werden in der CI übersprungen. ## Publish mit GitHub Actions</p>
-<p>Workflow: <a href=".github/workflows/publish.yml"><code>.github/workflows/publish.yml</code></a></p>
-<p><strong>Trigger:</strong> Push auf <code>main</code> oder manuell (<em>Actions</em> → <em>Publish Quarto Website</em>).</p>
-<p><strong>Ablauf:</strong> Website rendern → PDF-Handouts für alle <code>vorlesungen/*.qmd</code> → Übungsblatt-PDFs (Studierende + Musterlösung) nach <code>_site/labs/</code> → Publish auf Branch <strong><code>gh-pages</code></strong>.</p>
-<p>Scheitert ein Handout oder Übungsblatt (z. B. Mermaid/Chrome), erscheint eine <strong>Warnung</strong>; die Website wird trotzdem veröffentlicht und der Job bleibt grün.</p>
-<p>Nach dem Publish sind Materialien z. B. erreichbar unter:</p>
-<ul>
-<li>Folien: <a href="vorlesungen/01_kickoff.html"><code>vorlesungen/01_kickoff.html</code></a></li>
-<li>PDF-Handout: <a href="vorlesungen/01_kickoff-handout.pdf"><code>vorlesungen/01_kickoff-handout.pdf</code></a></li>
-<li>Übungsblatt: <a href="labs/lab_01_beispiel.pdf"><code>labs/lab_01_beispiel.pdf</code></a></li>
-<li>Musterlösung: <a href="labs/lab_01_beispiel-musterloesung.pdf"><code>labs/lab_01_beispiel-musterloesung.pdf</code></a> Vollständige URL typischerweise <code>https://[GITHUB-USER].github.io/[REPO]/</code> (Startseite = Inhalt dieser README über <code>index.qmd</code>).</li>
-</ul>
-<p><strong>Einmalig:</strong> Branch <code>gh-pages</code> vorhanden; <em>Settings → Pages</em> → Deploy from branch <code>gh-pages</code>; Actions mit Schreibrechten; für öffentliche Kursseiten Repo <strong>public</strong> stellen.</p>
-<p><strong>Hinweis:</strong> Dies ist ein <strong>inoffizielles Dozenten-Template</strong>, keine offizielle DHBW-Software. Das DHBW-Logo (<code>assets/dhbw_logo.svg</code>) und andere geschützte Markenzeichen sind nicht Teil der CC-BY-Lizenz — siehe <a href="LICENSE"><code>LICENSE</code></a> und den Abschnitt <em>OER &amp; Lizenz</em> unten.</p>
-<!-- TEMPLATE-ENDE -->
-<!-- ==========================================================================
-     TODO — ERSETZEN (Kursinhalt für Studierende / GitHub Pages)
-     Platzhalter […] durch Ihre Moduldaten ersetzen.
-     ========================================================================== -->
-</section>
-</section>
 <section id="modulname-modulkürzel" class="level1">
 <h1>[Modulname] ([Modulkürzel])</h1>
-<p>Herzlich willkommen zur Vorlesung <strong>[Modulname] ([Modulkürzel])</strong> an der Dualen Hochschule Baden-Württemberg Stuttgart.</p>
+<p>Herzlich willkommen zur Vorlesung <strong>[Modulname] ([Modulkürzel])</strong> an der Dualen Hochschule Baden-Württemberg Stuttgart[, Studiengang …].</p>
+<p><strong>Dozent:in:</strong> [Dozent:in]<br>
+<strong>Kurswebsite:</strong> [[GITHUB-USER].github.io/[REPO]](https://[GITHUB-USER].github.io/[REPO]/<br>
+<em>Hinweis: Quellen im Repo unter <a href="vorlesungen/"><code>vorlesungen/</code></a> und <a href="labs/"><code>labs/</code></a>.</em><br>
+<strong>Repository:</strong> <a href="https://github.com/%5BGITHUB-USER%5D/%5BREPO%5D">github.com/[GITHUB-USER]/[REPO]</a></p>
 <p>[Beschreibung]</p>
-<section id="materialien" class="level2">
-<h2 class="anchored" data-anchor-id="materialien">Materialien</h2>
+<blockquote class="blockquote">
+<p><strong>Template-Hinweis:</strong> Einrichtungsanleitung und technische Doku stehen in <a href="TEMPLATE.md"><code>TEMPLATE.md</code></a>. Diese Datei (<code>README.md</code>) ist die <strong>GitHub-Pages-Startseite</strong> — bitte wie bei einem fertigen Kurs pflegen (Platzhalter ersetzen, Einheiten-Tabelle erweitern).</p>
+</blockquote>
+<section id="kursübersicht" class="level2">
+<h2 class="anchored" data-anchor-id="kursübersicht">Kursübersicht</h2>
+<p>Der rote Faden der Veranstaltung:</p>
+<p><strong>[Ebene 1] → [Ebene 2] → [Ebene 3] → [Ebene 4]</strong></p>
+<p>Pro Einheit: Folien (Reveal.js), Handout-PDF sowie Übungsblatt (Studierende / Musterlösung). Links verweisen auf die Kurswebsite (relativ, funktioniert lokal und auf Pages).</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Format</th>
-<th>Link</th>
+<th style="text-align: right;">Einheit</th>
+<th>Thema</th>
+<th>Schwerpunkt</th>
+<th style="text-align: center;">Folien</th>
+<th style="text-align: center;">Handout</th>
+<th style="text-align: center;">Übungsblatt</th>
+<th style="text-align: center;">Musterlösung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Folien (Reveal.js)</td>
-<td><a href="vorlesungen/01_kickoff.html">Kickoff</a></td>
+<td style="text-align: right;">1</td>
+<td>[Thema Einheit 1]</td>
+<td>[Schwerpunkt]</td>
+<td style="text-align: center;"><a href="vorlesungen/01_kickoff.html">HTML</a></td>
+<td style="text-align: center;"><a href="vorlesungen/01_kickoff-handout.pdf">PDF</a></td>
+<td style="text-align: center;"><a href="labs/lab_01_beispiel.pdf">PDF</a></td>
+<td style="text-align: center;"><a href="labs/lab_01_beispiel-musterloesung.pdf">PDF</a></td>
 </tr>
 <tr class="even">
-<td>PDF-Handout (Skript)</td>
-<td><a href="vorlesungen/01_kickoff-handout.pdf">Kickoff-Handout (PDF)</a></td>
-</tr>
-<tr class="odd">
-<td>Übungsblatt</td>
-<td><a href="labs/lab_01_beispiel.pdf">Beispielblatt (PDF)</a></td>
-</tr>
-<tr class="even">
-<td>Musterlösung</td>
-<td><a href="labs/lab_01_beispiel-musterloesung.pdf">Beispielblatt Musterlösung (PDF)</a></td>
+<td style="text-align: right;">2</td>
+<td>[Thema Einheit 2]</td>
+<td>[Schwerpunkt]</td>
+<td style="text-align: center;"><a href="vorlesungen/02_….html">HTML</a></td>
+<td style="text-align: center;"><a href="vorlesungen/02_…-handout.pdf">PDF</a></td>
+<td style="text-align: center;"><a href="labs/lab_02_….pdf">PDF</a></td>
+<td style="text-align: center;"><a href="labs/lab_02_…-musterloesung.pdf">PDF</a></td>
 </tr>
 </tbody>
 </table>
-<p>Das PDF-Handout enthält die Folien inklusive Dozentennotizen. Übungsblätter und Musterlösungen werden bei jedem Publish über GitHub Actions aktualisiert. ## Literatur</p>
-<p>Die zentrale Referenz dieses Moduls ist:</p>
+<p><strong>Hinweise:</strong> Folien im Browser öffnen (Speaker View: Taste <strong>S</strong>). Handout-PDF = Folieninhalt mit Skriptnotizen. Quelltexte unter <a href="vorlesungen/"><code>vorlesungen/</code></a> und <a href="labs/"><code>labs/</code></a>.</p>
+<section id="probeklausur" class="level3">
+<h3 class="anchored" data-anchor-id="probeklausur">Probeklausur</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dokument</th>
+<th style="text-align: center;">Studierende</th>
+<th style="text-align: center;">Musterlösung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probeklausur</td>
+<td style="text-align: center;"><a href="labs/probeklausur.pdf">PDF</a></td>
+<td style="text-align: center;"><a href="labs/probeklausur-musterloesung.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+<p><em>(Zeile entfernen oder anpassen, wenn keine Probeklausur vorgesehen ist.)</em></p>
+</section>
+</section>
+<section id="literatur" class="level2">
+<h2 class="anchored" data-anchor-id="literatur">Literatur</h2>
+<p>Zentrale Referenz dieses Moduls:</p>
 <blockquote class="blockquote">
 <p><strong>[Autor:innen]</strong><br>
 <em>[Werktitel]</em><br>
 [Verlag]</p>
 </blockquote>
 <p>Definitionen, Terminologie und didaktischer Aufbau orientieren sich an diesem Standardwerk.</p>
+<p>Zur Vertiefung empfohlen:</p>
+<blockquote class="blockquote">
+<p><strong>[Autor:innen Vertiefung]</strong><br>
+<em>[Werktitel Vertiefung]</em><br>
+[Verlag]</p>
+</blockquote>
 </section>
-<section id="tools-ressourcen" class="level2">
-<h2 class="anchored" data-anchor-id="tools-ressourcen">Tools &amp; Ressourcen</h2>
+<section id="tools-und-ressourcen" class="level2">
+<h2 class="anchored" data-anchor-id="tools-und-ressourcen">Tools und Ressourcen</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -427,8 +235,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="oer-lizenz" class="level2">
-<h2 class="anchored" data-anchor-id="oer-lizenz">OER &amp; Lizenz</h2>
+<section id="oer-und-lizenz" class="level2">
+<h2 class="anchored" data-anchor-id="oer-und-lizenz">OER und Lizenz</h2>
 <p>Dieses Vorlesungsmaterial ist eine <strong>Open Educational Resource (OER)</strong>. Die Vorlesungsinhalte – Texte, Code und Diagramme – stehen unter der Lizenz <strong><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a></strong>.</p>
 <p>Sie dürfen diese Inhalte teilen und bearbeiten, sofern Sie die Urheberschaft angemessen nennen. Der vollständige Lizenztext liegt in der Datei <a href="LICENSE"><code>LICENSE</code></a> im Repository.</p>
 <p><strong>Ausnahme:</strong> Hochschullogos und andere geschützte Markenzeichen (einschließlich des DHBW-Logos) sind von dieser Lizenz <strong>ausdrücklich ausgenommen</strong>. Sie unterliegen dem Markenrecht der jeweiligen Rechteinhaber und dürfen ohne deren Genehmigung nicht übernommen oder weiterverwendet werden.</p>

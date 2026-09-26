@@ -6,32 +6,43 @@ project:
     - "vorlesungen/"
     - "!labs/"
 
+# WaveDrom + PlantUML (Kroki) via quarto-livefigures; Mermaid bleibt Quarto-nativ.
+# Syntax: ```{.wavedrom} / ```{.plantuml} — Klassenform mit Punkt (siehe .cursor/rules/dhbw-diagramme.mdc).
+filters:
+  - at: pre-ast
+    path: livefigures
+
+livefigures:
+  kroki-url: https://kroki.io
+
 website:
   title: "[Modulname]"
   description: "Vorlesung [Modulname] ([Modulkürzel]) an der DHBW Stuttgart"
   site-url: https://[GITHUB-USER].github.io/[REPO]/
   favicon: assets/dhbw_logo.svg
-  sidebar:
-    style: floating
-    contents:
-      - href: index.qmd
-        text: "Startseite"
-      - section: "Vorlesungen"
-        contents: vorlesungen/*
+  # Keine Sidebar: Startseite = README-ähnlich, Folien direkt verlinkt
+  navbar:
+    background: light
+    title: "[Modulkürzel]"
+    left:
+      - text: "Startseite"
+        href: index.qmd
+      - text: "Repository"
+        href: https://github.com/[GITHUB-USER]/[REPO]
+  page-navigation: false
   page-footer:
     left: "[Modulkürzel] · DHBW Stuttgart"
     right: "CC BY 4.0"
 
 format:
   # ---------------------------------------------------------------------------
-  # Website (HTML) — Startseite & Inhaltsseiten
-  # Pfade relativ (ohne führendes /), sonst bricht CSS auf GitHub Pages.
+  # Website (HTML) — lean, README-ähnlich
   # ---------------------------------------------------------------------------
   html:
     theme:
       - cosmo
       - assets/styles/custom.scss
-    toc: true
+    toc: false
     mainfont: Inter
     include-in-header:
       - text: |

@@ -4,6 +4,9 @@
 # Das interne Verzeichnis von Quarto (Zustand, Preview-Server)
 /.quarto/
 
+# Gemeinsame, heruntergeladene Build-Toolchain
+/.tools/
+
 # Das Standard-Ausgabeverzeichnis der generierten Website
 /_site/
 

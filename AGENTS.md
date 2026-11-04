@@ -84,6 +84,7 @@ Gilt für Quarto-, Markdown- und Stylesheet-Dateien (`**/*.{qmd,scss,css,md}`).
 ### Tech-Stack
 
 - **Framework:** Quarto (Websites, PDFs, Reveal.js)
+- **Build-Umgebung:** Gemeinsames, versionsgebundenes Setup in `scripts/setup.sh`; vor Renderläufen `source scripts/activate.sh` ausführen. Unterstützte Plattformen, Systemabhängigkeiten und Werkzeugversionen stehen in [TEMPLATE.md](TEMPLATE.md#build-umgebung-einrichten). Nutze dieselben Werkzeuge für Cloud und CI; installiere oder aktualisiere Browser, Node oder TeX-Pakete nicht unabhängig davon.
 - **Sprachen:** Markdown (`.qmd`), SCSS; ggf. modulspezifischer Quellcode und Python für Hilfsskripte
 - **Diagramme:** Werkzeug nach dem fachlichen Inhalt wählen, siehe [Diagramm-Entscheidungsbaum](#diagramm-entscheidungsbaum). Mermaid nativ in Quarto; WaveDrom/PlantUML über Extension `seandavi/quarto-livefigures` (Filter in `_quarto.yml`, Node ≥ 18).
 - **Kodierung:** `.qmd` als UTF-8 ohne BOM speichern; die [Folienregeln](vorlesungen/AGENTS.md#utf-8-bei-folien-edits) beschreiben Prüfung und Reparatur.
@@ -97,11 +98,16 @@ Gilt für Quarto-, Markdown- und Stylesheet-Dateien (`**/*.{qmd,scss,css,md}`).
 
 ### Ausgabeformate und Prüfung
 
+Verwende nach Einrichtung und Aktivierung der gemeinsamen Build-Umgebung `python3 scripts/build-materials.py all` als vollständige Prüfung für Cloud und CI. Der Build muss für alle vorhandenen passenden Quellen Website, PDF-Handouts sowie Studierenden- und Lösungsversionen der Übungsblätter erfolgreich erzeugen. Für gezielte Arbeitsstände sind die Teilbefehle `website`, `handouts` und `labs` verfügbar; `bash build_labs.sh` ruft denselben Lab-Build auf.
+
 | Zweck | Aufruf aus dem Repository-Stamm | Erwartete Ausgabe |
 |-------|--------------------------------|-------------------|
-| Vortrag mit Notizen nur in der Speaker View | `quarto render vorlesungen/01_kickoff.qmd --to revealjs` | `_site/vorlesungen/01_kickoff.html` |
-| Reguläres PDF-Handout mit Folieninhalt und Lernnotizen | `quarto render vorlesungen/01_kickoff.qmd --profile handout --to pdf` | `_handout/vorlesungen/01_kickoff.pdf` |
+| Website und Vorträge mit Notizen nur in der Speaker View | `python3 scripts/build-materials.py website` | u. a. `_site/vorlesungen/01_kickoff.html` |
+| Reguläre PDF-Handouts mit Folieninhalt und Lernnotizen | `python3 scripts/build-materials.py handouts` | u. a. `_site/vorlesungen/01_kickoff-handout.pdf`; zusätzlich `_handout/vorlesungen/01_kickoff.pdf` |
+| Übungsblätter und Musterlösungen | `python3 scripts/build-materials.py labs` | u. a. `_site/labs/lab_01_beispiel.pdf` und `lab_01_beispiel-musterloesung.pdf`; zusätzlich `labs/_output/*-{studierende,musterloesung}.pdf` |
 | Optionales HTML-Handout mit sichtbaren Notizen | `quarto render vorlesungen/01_kickoff.qmd --profile handout --to revealjs` | `_handout/vorlesungen/01_kickoff.html` |
+
+Der gemeinsame Build verarbeitet Vorlesungen und nummerierte Übungsblätter bzw. `probeklausur.qmd` auch in Unterordnern, schließt Vorlagen aus und übernimmt nur frisch erfolgreich gerenderte Ergebnisse. Verwende alte PDFs im Quellordner nicht als Erfolgsnachweis. Fehlende oder leere Pflichtausgaben und Renderfehler dürfen nicht übersprungen werden; ein fehlgeschlagener Build darf keine Veröffentlichung auslösen. Die Veröffentlichung verwendet ausschließlich die geprüften Dateien aus `_site/`.
 
 Verwende für neue Vorlesungen standardmäßig Vortrag und reguläres PDF-Handout. Das zusätzliche Erweiterungsformat `handout-revealjs` ist eine abweichende Variante; seine Einstellungen nicht mit dem Profil `handout` vermischen. A4-Hochformat und Notizdarstellung werden im jeweiligen Handout konfiguriert. Layoutvorgaben für den Vortrag stehen unter [Reveal.js-Leinwand](#revealjs-leinwand).
 

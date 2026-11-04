@@ -44,8 +44,8 @@ vorlesungen/*.pdf
 .vscode/
 .idea/
 
-# Cursor-Rules unter .cursor/rules/ gehören ins Repo.
-# Nur lokale Review-/Render-Artefakte ignorieren:
+# KI-Projektregeln werden als AGENTS.md versioniert.
+# Lokale Review-/Render-Artefakte ignorieren:
 .cursor/slide-review/
 
 # -------------------------------------------------------------------

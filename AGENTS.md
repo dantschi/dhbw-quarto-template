@@ -48,7 +48,11 @@ Unterstütze den Entwurf von Vorlesungsmaterial für das in `README.md` beschrie
 
 ### Präzise Terminologie
 
-Strikt korrekte Fachbegriffe; verwandte, leicht verwechselbare Konzepte sauber trennen (modulspezifisch, z. B. Begriff A vs. Begriff B).
+- Verwende für dasselbe Konzept die eingeführte bevorzugte Bezeichnung durchgängig in Folien, Lernnotizen, Abbildungen, Übungen, Musterlösungen, Quizfragen und Codebeispielen. Trenne fachlich unterschiedliche, leicht verwechselbare Konzepte; eine einheitliche Wortwahl darf Bedeutungsunterschiede nicht verdecken.
+- Pflege wiederkehrende oder leicht verwechselbare Kursbegriffe zentral in [GLOSSAR.md](GLOSSAR.md): bevorzugte Bezeichnung, Bedeutung und Geltungsbereich, zulässige Synonyme bzw. englische Bezeichnungen, gegebenenfalls API-Zuordnung sowie die Einführung im Kurs. Lies das Glossar vor dem Erstellen oder Überarbeiten von Materialien. Die enthaltenen Template-Beispiele sind für den konkreten Kurs anzupassen, keine Vorgabe für dessen Themenwahl.
+- Ordne Synonyme, Abkürzungen und abweichende englische Bezeichnungen bei ihrer Einführung ausdrücklich dem Kursbegriff zu. Wechsle nicht ohne Erklärung zwischen ihnen. Führe in Übungen und Quiz keine unerklärten Alternativbezeichnungen ein, wenn das Lernziel nicht gerade deren Zuordnung ist. Selbstständig nutzbare Materialien benötigen die zum Verständnis nötige lokale Erklärung oder einen präzisen Verweis.
+- Erhalte tatsächliche API-Namen und vorgegebene Codebezeichner. Erkläre ihre Zuordnung zum fachlichen Begriff und relevante semantische Unterschiede. Verwende in generischem Pseudocode konsistente Operationsnamen. Beispielsweise sind ein Mutex als Objekt und das Erwerben bzw. Freigeben dieses Objekts zu unterscheiden; `acquire` und `lock` sind nicht kontextfrei austauschbar. Keine pauschalen Textersetzungen in Code, Zitaten oder API-Namen.
+- Gleiche bei Änderungen die Terminologie mit den zugehörigen Materialien und dem Glossar ab. Ergänze fehlende Festlegungen anhand der vorhandenen Einführung und Literatur. Benenne widersprüchliche Verwendungen mit Fundstellen; erfinde keine neue Benennung, um den Konflikt zu umgehen. Bei beauftragten Begriffskorrekturen Glossar und betroffene Materialien gemeinsam konsistent halten.
 
 ### Literaturbezug
 

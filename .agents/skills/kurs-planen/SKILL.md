@@ -16,6 +16,7 @@ Vor Beginn lesen:
 - [Kursstartseite](../../../README.md), [Projektkonfiguration](../../../_quarto.yml)
   und [Einrichtungsanleitung](../../../TEMPLATE.md)
 - Einschlägige Abschnitte der [Fachregeln](../../../FACHREGELN.md)
+- [Kursglossar](../../../GLOSSAR.md) mit bereits eingeführten Begriffen
 - Vorhandene Einheiten, Übungen sowie vom Nutzer bereitgestellte Modul- und Prüfungsunterlagen
 
 ## Eingaben klären
@@ -50,6 +51,7 @@ Wenn eine solche Umstrukturierung bereits beauftragt ist, sie vollständig ausar
 4. **Einheitenfolge planen.** Von Voraussetzungen zu Anwendung und Transfer führen.
    An authentischen IT-/EIT-Anwendungsfällen orientieren, soweit sie zu den Lernzielen passen.
    Pro Einheit Thema, Voraussetzungen, Ziele, Kerninhalte und Übungs-/Prüfidee festhalten.
+   Zentrale Begriffe und ihre Einführung den Einheiten zuordnen; das Kursglossar bei Bedarf anhand der vorhandenen Quellen pflegen.
    Fachregeln nach konkreten Inhalten zuordnen; mehrere Fachschwerpunkte dürfen zusammenwirken.
 5. **Zeitbudget prüfen.** Erklärung, aktive Bearbeitung, Fragen, Besprechung und Selbststudium berücksichtigen.
    Geplante Zeiten summieren und mit den vorhandenen Stunden abgleichen.

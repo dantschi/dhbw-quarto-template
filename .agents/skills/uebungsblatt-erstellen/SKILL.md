@@ -16,7 +16,7 @@ Vor Beginn lesen:
 
 - [Gemeinsame Arbeitsweise](../references/arbeitsweise.md) und [Projektregeln](../../../AGENTS.md)
 - Einschlägige Abschnitte der [Fachregeln](../../../FACHREGELN.md)
-- [Kurskontext](../../../README.md), zugehörige Einheit und vorhandene Übungsblätter
+- [Kurskontext](../../../README.md), [Kursglossar](../../../GLOSSAR.md), zugehörige Einheit und vorhandene Übungsblätter
 - [Blattvorlage](../../../labs/lab_template.qmd), [Lab-Konfiguration](../../../labs/_quarto.yml)
   und [Lösungsprofil](../../../labs/_quarto-solution.yml)
 - Für Einrichtung und Ausgaben die [technische Anleitung](../../../TEMPLATE.md)
@@ -63,6 +63,7 @@ Bereits beauftragte Änderungen direkt ausarbeiten; das Blatt nicht an einer Zwi
    Auch lösungsverratende Hinweise oder Abbildungen entsprechend behandeln.
    Die Aufgabenstellung muss ohne Lösungsblöcke vollständig bleiben.
 6. **Fachlich gegenprüfen.** Die Aufgaben aus Studierendensicht lösen und Angaben gegen Lösungen abgleichen.
+   Die eingeführte Terminologie aus Folien und Lernnotizen in Aufgaben, Musterlösungen und Codeerklärungen beibehalten.
    Rechnungen unabhängig prüfen; Code mit relevanten Normal-/Randfällen prüfen, soweit Werkzeuge verfügbar sind.
    Fachabhängige Modellannahmen und Nachweisgrenzen offenlegen; keine Ausführung oder Messung erfinden.
 7. **Beide Fassungen bauen.** Aus dem Repository-Stamm die gemeinsame Umgebung verwenden:

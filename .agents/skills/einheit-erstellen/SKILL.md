@@ -34,6 +34,8 @@ Bereits ausdrücklich beauftragte Umstrukturierungen direkt umsetzen; keine erne
 ## Ablauf
 
 1. **Bestand aufnehmen.** Zielquelle, Nachbareinheiten, vorhandene Beispiele und Diagrammquellen lesen.
+   Das [Kursglossar](../../../GLOSSAR.md) mit zugehörigen Übungen, Lösungen und Quizfragen abgleichen;
+   eingeführte Begriffe auch in Folientext, Lernnotizen und Codeerklärungen konsistent weiterführen.
    Bestehende Nutzeränderungen beachten und den konkret beauftragten Umfang abgrenzen.
 2. **Lernweg festlegen.** Wenige beobachtbare Lernziele mit einer passenden Übung oder Verständnisprüfung verbinden.
    Zeit für Erklärung, aktive Bearbeitung, Fragen und Besprechung einplanen; den roten Faden fortführen.

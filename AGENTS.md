@@ -4,6 +4,8 @@ Diese Datei enthält die gemeinsamen Projektregeln für KI-Tools und gilt für d
 
 Lies vor dem Erstellen oder Bearbeiten von Vorlesungsfolien zusätzlich [vorlesungen/AGENTS.md](vorlesungen/AGENTS.md), vor der Arbeit an Quiz-CSV-Dateien zusätzlich [quizacademy/AGENTS.md](quizacademy/AGENTS.md). Diese Dateien ergänzen die zentralen Regeln für ihren jeweiligen Bereich.
 
+Für Programmieraufgaben mit Startcode gelten zusätzlich die [Regeln für Codeprojekte](code/labs/AGENTS.md).
+
 Lies für Inhalte zu Informatik, Digitaltechnik, Mikrocomputertechnik und Realzeitsystemen außerdem die jeweils einschlägigen Abschnitte in [FACHREGELN.md](FACHREGELN.md). Entscheidend ist der Inhalt einer Aufgabe oder eines Beispiels, nicht allein der Modulname; mehrere Fachabschnitte können gemeinsam gelten.
 
 ## Aufgabenbezogene Skills
@@ -89,6 +91,7 @@ Wende Einheiten- und Dimensionsprüfungen bei physikalischen Größen an. Für l
 - Beschreibe bei Messaufgaben Schaltung bzw. Messaufbau, Bauteilwerte, Bezugsrichtungen, Geräteeinstellungen, Messgrößen und Auswertung. Gib erwartete Beobachtungen oder begründete Wertebereiche an und berücksichtige relevante Messunsicherheiten.
 - Dokumentiere für Simulationen und Softwareversuche die nötigen Modellannahmen, Versionen, Parameter und Arbeitsschritte. Bewahre verwendete Skripte und zulässige Eingabedaten nachvollziehbar im Repository auf.
 - Erstelle zu jeder Aufgabe eine überprüfte Musterlösung mit Rechenweg bzw. Auswertung und typischen Fehlannahmen. Halte Lösungen in Übungsblättern im vorgesehenen `solution`-Profil und prüfe, dass sie in der Studierendenversion nicht erscheinen.
+- Bei Programmieraufgaben sind nummerierte TODOs und ein ausdrücklich dokumentierter unvollständiger Startzustand beabsichtigt. Erhalte die studentischen Ergänzungsstellen; löse sie nicht automatisch beim Validieren. Aufgabenstellung, Startcode, Referenzlösung und Tests müssen dieselben Schnittstellen und Annahmen verwenden. Paketdateien und erwartete Prüfresultate stehen in `code/labs/<lab_id>/lab.json`.
 
 ## Tech-Stack und Quarto-Konventionen
 
@@ -111,13 +114,14 @@ Gilt für Quarto-, Markdown- und Stylesheet-Dateien (`**/*.{qmd,scss,css,md}`).
 
 ### Ausgabeformate und Prüfung
 
-Verwende nach Einrichtung und Aktivierung der gemeinsamen Build-Umgebung `python3 scripts/build-materials.py all` als vollständige Prüfung für Cloud und CI. Der Build muss für alle vorhandenen passenden Quellen Website, PDF-Handouts sowie Studierenden- und Lösungsversionen der Übungsblätter erfolgreich erzeugen. Für gezielte Arbeitsstände sind die Teilbefehle `website`, `handouts` und `labs` verfügbar; `bash build_labs.sh` ruft denselben Lab-Build auf.
+Verwende nach Einrichtung und Aktivierung der gemeinsamen Build-Umgebung `python3 scripts/build-materials.py all` als vollständige Prüfung für Cloud und CI. Der Build muss für alle vorhandenen passenden Quellen Website, PDF-Handouts sowie Studierenden- und Lösungsversionen der Übungsblätter erfolgreich erzeugen. Vorhandene Programmierprojekte werden zusätzlich geprüft und als Startcode-ZIP paketiert. Für gezielte Arbeitsstände sind die Teilbefehle `website`, `handouts`, `labs` und `code` verfügbar; `labs` und `bash build_labs.sh` prüfen auch die zugehörigen Codeprojekte.
 
 | Zweck | Aufruf aus dem Repository-Stamm | Erwartete Ausgabe |
 |-------|--------------------------------|-------------------|
 | Website und Vorträge mit Notizen nur in der Speaker View | `python3 scripts/build-materials.py website` | u. a. `_site/vorlesungen/01_kickoff.html` |
 | Reguläre PDF-Handouts mit Folieninhalt und Lernnotizen | `python3 scripts/build-materials.py handouts` | u. a. `_site/vorlesungen/01_kickoff-handout.pdf`; zusätzlich `_handout/vorlesungen/01_kickoff.pdf` |
 | Übungsblätter und Musterlösungen | `python3 scripts/build-materials.py labs` | u. a. `_site/labs/lab_01_beispiel.pdf` und `lab_01_beispiel-musterloesung.pdf`; zusätzlich `labs/_output/*-{studierende,musterloesung}.pdf` |
+| Programmierprojekte einschließlich Startzustand, Referenzlösung und entpacktem Paket | `python3 scripts/build-materials.py code` | `_site/labs/<lab_id>-startcode.zip` für vorhandene Manifeste |
 | Optionales HTML-Handout mit sichtbaren Notizen | `quarto render vorlesungen/01_kickoff.qmd --profile handout --to revealjs` | `_handout/vorlesungen/01_kickoff.html` |
 
 Der gemeinsame Build verarbeitet Vorlesungen und nummerierte Übungsblätter bzw. `probeklausur.qmd` auch in Unterordnern, schließt Vorlagen aus und übernimmt nur frisch erfolgreich gerenderte Ergebnisse. Verwende alte PDFs im Quellordner nicht als Erfolgsnachweis. Fehlende oder leere Pflichtausgaben und Renderfehler dürfen nicht übersprungen werden; ein fehlgeschlagener Build darf keine Veröffentlichung auslösen. Die Veröffentlichung verwendet ausschließlich die geprüften Dateien aus `_site/`.

@@ -15,6 +15,7 @@ Die **GitHub-Pages-Startseite** ist der Inhalt von [`README.md`](README.md) (Kur
 | Diagramme | Mermaid, WaveDrom/PlantUML sowie Schaltpläne und berechnete Plots (siehe [Diagramm-Entscheidungsbaum](AGENTS.md#diagramm-entscheidungsbaum)) |
 | Handout | Profil `handout` (`_quarto-handout.yml`) → PDF mit Folie + Dozentennotizen |
 | Übungsblätter | `labs/*.qmd` mit Profil `solution`; Vorlage: `labs/lab_template.qmd` |
+| Programmieraufgaben | Optionale Startcode-Projekte unter `code/labs/`; geprüfte ZIP-Downloads zum Aufgabenblatt |
 | Build und CI/CD | Gemeinsame Skripte in `scripts/`; GitHub Actions prüft Website und PDFs, veröffentlicht auf `gh-pages` |
 | KI-Kontext | Toolübergreifende Regeln in [`AGENTS.md`](AGENTS.md), ergänzt durch [`FACHREGELN.md`](FACHREGELN.md) sowie Regeln in `vorlesungen/` und `quizacademy/` |
 
@@ -54,6 +55,7 @@ Die Projektregeln stehen in normalen Markdown-Dateien im verbreiteten `AGENTS.md
 | [`FACHREGELN.md`](FACHREGELN.md) | Je nach Inhalt zusätzliche Modellannahmen und Prüfungen für Informatik, Digitaltechnik, Mikrocomputertechnik und Realzeitsysteme |
 | [`vorlesungen/AGENTS.md`](vorlesungen/AGENTS.md) | Zusätzlich für Vorlesungsfolien: vollständige Notizen und UTF-8-Prüfungen |
 | [`quizacademy/AGENTS.md`](quizacademy/AGENTS.md) | Zusätzlich für Quiz-CSV-Dateien: Format, Lernzielbezug, Schwierigkeit und Antwortgestaltung |
+| [`code/labs/AGENTS.md`](code/labs/AGENTS.md) | Zusätzlich für Programmieraufgaben: Startcode, Referenzlösung, Prüfvertrag und Studierendenpaket |
 
 Die zentralen Regeln gelten immer zusätzlich zu den Regeln im jeweiligen Unterordner. `AGENTS.md` weist das KI-Tool an, für fachliche Inhalte die passenden Abschnitte aus `FACHREGELN.md` zu lesen. Bei einem KI-Tool ohne automatische `AGENTS.md`-Unterstützung die zentrale Datei und die für die Aufgabe relevanten ergänzenden Dateien ausdrücklich als Kontext übergeben. Die Regeln werden nur hier gepflegt; es sind keine separaten Cursor-Regeldateien erforderlich.
 
@@ -81,6 +83,65 @@ python3 .agents/skills/quiz-erstellen/scripts/validate_quiz.py quizacademy/datei
 ```
 
 Dieser prüft das Dateiformat und die formalen Antwortbedingungen. Ob Fragen, Optionen und Erläuterungen fachlich richtig und didaktisch geeignet sind, wird gesondert geprüft. Die Skripttests laufen mit `python3 -m unittest discover -s tests -v`.
+
+## Programmieraufgaben mit Startcode
+
+Ein Übungsblatt kann optional ein Programmierprojekt enthalten. Aufgabenblatt und Code verwenden dieselbe Blattkennung; [Code-Regeln](code/labs/AGENTS.md) und der erweiterte Skill [uebungsblatt-erstellen](.agents/skills/uebungsblatt-erstellen/SKILL.md) beschreiben die Autorenanforderungen.
+
+Unterstützt werden derzeit Projektordner direkt unter `code/labs/` mit der Kennung `lab_NN_thema` und dem zugehörigen Blatt direkt unter `labs/`. `NN` ist zweistellig; für das Thema sind ASCII-Buchstaben, Ziffern, Unterstriche und Bindestriche erlaubt. Kennungen mit `template` bleiben Vorlagen und sind nicht als Programmierprojekt zulässig.
+
+```text
+labs/lab_02_suchen.qmd
+code/labs/lab_02_suchen/
+  README.md
+  lab.json
+  starter/
+  solution/
+  tests/
+```
+
+Das [Python-Beispiel zur linearen Suche](code/labs/lab_02_suchen/README.md) verwendet Python 3.12.x und ausschließlich die Standardbibliothek. Es demonstriert importierbaren Startcode mit nummerierten TODOs, eine Referenzlösung mit gleichen Schnittstellen und öffentliche Prüfungen. Die Aufgaben-PDF enthält denselben Downloadlink wie die Kursübersicht.
+
+### Anleitung und Ausgangszustand
+
+Die Projekt-README muss auch im entpackten Studierendenpaket verständlich sein: Sprache und Version, Einrichtung, konkrete Start-/Testbefehle, zu bearbeitende Dateien und erwartete Ergebnisse angeben. TODOs müssen eindeutig zu Teilaufgaben passen. Der Startcode ist standardmäßig baubar bzw. importierbar; fehlende Funktionen dürfen die ausdrücklich vorgesehenen Tests noch scheitern lassen. Falls Übersetzungsfehler selbst das Lernziel sind, müssen auch diese gezielt beschrieben und überprüft werden.
+
+Die Referenzlösung erfüllt die Aufgabenstellung und besteht alle deklarierten Prüfungen. Sie ist mit den Erläuterungen im PDF synchron zu halten. Ein Validierungslauf ergänzt beabsichtigte TODOs nicht selbstständig.
+
+### Manifest und Prüfvertrag
+
+Jedes unterstützte Projekt besitzt eine [`lab.json`](code/labs/lab_02_suchen/lab.json) mit Schema-Version `1`:
+
+| Feld | Bedeutung |
+|------|-----------|
+| `version`, `language` | Manifestversion und Programmiersprache |
+| `runtime.command`, `runtime.output_pattern` | Argumentliste der Versionsabfrage und regulärer Ausdruck für die gesamte, außen getrimmte Ausgabe |
+| `student_files` | Ausdrückliche Liste der auszuliefernden Dateien relativ zum Projektordner, einschließlich README, Startcode und öffentlicher Tests |
+| `solution_files` | Ergänzende Dateien unter `solution/` für die Referenzprüfung; sie kommen nicht in das ZIP |
+| `checks` | Benannte Befehle als Argumentlisten mit getrennten Erwartungen für `starter` und `solution` |
+
+Die Befehle laufen ohne Shell in isolierten Arbeitskopien mit `starter/` bzw. `solution/` als Arbeitsverzeichnis und einem Zeitlimit von 60 Sekunden pro Aufruf. Shell-Operatoren wie `&&` werden nicht ausgewertet; mehrere Prüfschritte als getrennte Einträge oder als eigenes Prüfskript deklarieren. Die Versionsabfrage prüft die tatsächliche Laufzeit; ein Quarto-Build ersetzt beispielsweise keinen C-Compiler oder eine Java-Laufzeit. Für eine neue Lehrsprache müssen die passende Version und ihre Einrichtung auch in der Cloud und in GitHub Actions festgelegt werden.
+
+Dateilisten enthalten einzelne relative Dateipfade, keine Verzeichnisse oder Platzhaltermuster. Symlinks, versteckte Dateien und Verzeichnisse (etwa `.gitignore` oder `.vscode/`) sowie erkannte Cache- und Buildartefakte werden abgelehnt. `student_files` muss `README.md` und mindestens je eine Datei unter `starter/` und `tests/` enthalten; `solution_files` enthält ausschließlich Dateien unter `solution/`.
+
+Jede Prüf-Erwartung enthält `exit_code`. Falls zusätzlich `json` angegeben ist, muss die Standardausgabe genau dieses JSON-Ergebnis liefern. Ein erwarteter Rückgabecode ungleich null benötigt stets ein solches Ergebnisprotokoll, etwa mit Testanzahl sowie den konkreten Fehlerkennungen. Dadurch wird ein Absturz oder zusätzlicher unerwarteter Fehler nicht pauschal als erwartetes Starterverhalten akzeptiert. Die Referenzlösung muss erfolgreiche Prüfungen deklarieren und bestehen.
+
+### ZIP und gemeinsamer Build
+
+```bash
+source scripts/activate.sh
+python3 scripts/build-materials.py labs
+# oder vollständig wie in CI:
+python3 scripts/build-materials.py all
+# nur Codeprüfungen und ZIPs, ohne Quarto-Aufruf:
+python3 scripts/build-materials.py code
+```
+
+`labs` und `all` prüfen vorhandene Programmierprojekte zusätzlich zu den PDF-Ausgaben; `code` prüft und paketiert nur die Projekte. Nur ausdrücklich in `student_files` genannte Dateien kommen in das Archiv; keine ungefilterten Verzeichnisse, Referenzlösungen, internen Tests, Caches oder Buildreste übernehmen. Das ZIP erhält den obersten Ordner `<lab_id>/`, wird frisch entpackt und erneut mit dem Startervertrag geprüft. Versionierte Quellen werden durch diese Prüfläufe nicht verändert. Fehlende Dateien, unpassende Laufzeiten und unerwartete Ergebnisse lassen den Build fehlschlagen.
+
+Das öffentliche Paket des Beispiels liegt unter `_site/labs/lab_02_suchen-startcode.zip`. Auf der Website wird es relativ als `labs/lab_02_suchen-startcode.zip` verlinkt; aus dem direkt unter `labs/` liegenden Aufgabenblatt als `lab_02_suchen-startcode.zip`. Referenzcode erhält kein automatisches Downloadpaket.
+
+Ein öffentliches Git-Repository macht auch `solution/` lesbar. Getrennte ZIPs und das Quarto-Profil `solution` steuern die ausgelieferten Artefakte, verbergen aber keine Repository-Dateien. Sollen Lösungen erst später oder nur für Lehrende zugänglich sein, brauchen sie eine dafür geeignete getrennte Ablage. Die Beispielreferenz in diesem Template ist bewusst öffentlich.
 
 ## Build-Umgebung einrichten
 
@@ -124,7 +185,7 @@ quarto preview
 quarto preview vorlesungen/01_kickoff.qmd
 ```
 
-Der gemeinsame Build erstellt die Website, zu allen Vorlesungen unter `vorlesungen/` ein PDF-Handout und zu nummerierten Übungsblättern sowie `probeklausur.qmd` beide PDF-Versionen. Er berücksichtigt auch Unterordner; Vorlagen sowie versteckte und interne Verzeichnisse bleiben ausgenommen. Er rendert in ein frisches Arbeitsverzeichnis und übernimmt die Ergebnisse erst, wenn alle angeforderten Renderläufe erfolgreich waren. Fehlende, leere oder fehlgeschlagene Pflichtausgaben führen zu einem Fehler.
+Der gemeinsame Build erstellt die Website, zu allen Vorlesungen unter `vorlesungen/` ein PDF-Handout und zu nummerierten Übungsblättern sowie `probeklausur.qmd` beide PDF-Versionen. Bei Programmieraufgaben prüft er zusätzlich die deklarierten Codevarianten und entpackten Startcode-Pakete. Er berücksichtigt bei den Quarto-Quellen auch Unterordner; Vorlagen sowie versteckte und interne Verzeichnisse bleiben ausgenommen. Er rendert in ein frisches Arbeitsverzeichnis und übernimmt die Ergebnisse erst, wenn alle angeforderten Renderläufe und Codeprüfungen erfolgreich waren. Fehlende, leere oder fehlgeschlagene Pflichtausgaben führen zu einem Fehler.
 
 Die veröffentlichbaren Dateien liegen gemeinsam in `_site/`:
 
@@ -134,6 +195,7 @@ Die veröffentlichbaren Dateien liegen gemeinsam in `_site/`:
 | PDF-Handout | `_site/vorlesungen/01_kickoff-handout.pdf` |
 | Übungsblatt für Studierende | `_site/labs/lab_01_beispiel.pdf` |
 | Musterlösung | `_site/labs/lab_01_beispiel-musterloesung.pdf` |
+| Startcode-Paket | `_site/labs/lab_02_suchen-startcode.zip` |
 
 Für bestehende lokale Abläufe werden Handouts zusätzlich unter `_handout/vorlesungen/` und Lab-PDFs mit den Suffixen `-studierende.pdf` bzw. `-musterloesung.pdf` unter `labs/_output/` abgelegt. Vorhandene PDFs im Quellordner sind kein Nachweis für einen erfolgreichen Build. Nach einem fehlgeschlagenen Build können dort noch Ergebnisse eines früheren erfolgreichen Laufs liegen; veröffentlicht werden darf nur nach erfolgreichem vollständigem Build.
 
@@ -145,7 +207,7 @@ Workflow: [`.github/workflows/publish.yml`](.github/workflows/publish.yml)
 
 **Trigger:** Pull Request, Push auf `main` oder manuell (*Actions* → *Build and publish Quarto materials*).
 
-Der Build-Job prüft die Build-Skripte, richtet die gemeinsame Toolchain ein und führt `python3 scripts/build-materials.py all` aus. Website, PDF-Handouts und beide Versionen der Übungsblätter müssen erfolgreich entstehen. Die vollständige Website einschließlich PDFs steht bei einem erfolgreichen Lauf 14 Tage als Artefakt `course-materials` zum Herunterladen bereit; Pull Requests veröffentlichen nichts.
+Der Build-Job prüft die Build-Skripte, richtet die gemeinsame Toolchain ein und führt `python3 scripts/build-materials.py all` aus. Website, PDF-Handouts und beide Versionen der Übungsblätter müssen erfolgreich entstehen; vorhandene Programmierprojekte müssen ihren getrennten Starter-/Referenzvertrag und den Test des entpackten ZIPs erfüllen. Die vollständige Website einschließlich PDFs und Startcode-Paketen steht bei einem erfolgreichen Lauf 14 Tage als Artefakt `course-materials` zum Herunterladen bereit; Pull Requests veröffentlichen nichts.
 
 Ein eigener Deploy-Job veröffentlicht nur auf `main` und nur nach erfolgreichem Build die bereits geprüften Dateien auf **`gh-pages`**. Er rendert nicht erneut und installiert über `scripts/setup.sh --quarto-only` nur das dafür benötigte Quarto. Nur dieser Job erhält Schreibrechte auf Repository-Inhalte.
 

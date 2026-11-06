@@ -6,6 +6,19 @@ Lies vor dem Erstellen oder Bearbeiten von Vorlesungsfolien zusätzlich [vorlesu
 
 Lies für Inhalte zu Informatik, Digitaltechnik, Mikrocomputertechnik und Realzeitsystemen außerdem die jeweils einschlägigen Abschnitte in [FACHREGELN.md](FACHREGELN.md). Entscheidend ist der Inhalt einer Aufgabe oder eines Beispiels, nicht allein der Modulname; mehrere Fachabschnitte können gemeinsam gelten.
 
+## Aufgabenbezogene Skills
+
+Für wiederkehrende Arbeitsaufträge stehen projektbezogene Skills unter `.agents/skills/` bereit. Verwende bei passender Aufgabe die jeweilige Anleitung; diese Datei und die fachlichen Regeln gelten weiterhin. Die Skills teilen die [gemeinsame Arbeitsweise](.agents/skills/references/arbeitsweise.md), einschließlich des Erhalts vorhandener Struktur und Inhalte bei Überarbeitungen.
+
+| Aufgabe | Skill |
+|---------|-------|
+| Vorlesungseinheit erstellen oder überarbeiten | [einheit-erstellen](.agents/skills/einheit-erstellen/SKILL.md) |
+| Fachliche und didaktische Prüfung | [material-review](.agents/skills/material-review/SKILL.md) |
+| Übungsblatt mit Musterlösung erstellen oder überarbeiten | [uebungsblatt-erstellen](.agents/skills/uebungsblatt-erstellen/SKILL.md) |
+| QuizAcademy-Fragen erzeugen oder überarbeiten | [quiz-erstellen](.agents/skills/quiz-erstellen/SKILL.md) |
+| Kursrahmen, Lernziele und Einheitenfolge planen | [kurs-planen](.agents/skills/kurs-planen/SKILL.md) |
+| Gerenderte Materialien und Build-Ergebnisse prüfen | [material-validieren](.agents/skills/material-validieren/SKILL.md) |
+
 ## Projektkontext
 
 Unterstütze den Entwurf von Vorlesungsmaterial für das in `README.md` beschriebene Modul an der DHBW Stuttgart mit fachlicher, didaktischer und technischer Expertise.

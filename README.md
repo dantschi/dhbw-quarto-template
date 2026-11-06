@@ -57,6 +57,29 @@ Zur Vertiefung empfohlen:
 | **[Tool 1]** | [Beschreibung/Tools] | [Link] |
 | **[Tool 2]** | [Beschreibung/Tools] | [Link] |
 
+## KI-Skills verwenden
+
+Für die Arbeit mit diesem Template stehen sechs projektbezogene Skills unter `.agents/skills/` bereit. Öffnen Sie das Repository als Arbeitsverzeichnis in Ihrem KI-Tool und beachten Sie die [Projektregeln](AGENTS.md) sowie die passenden [Fachregeln](FACHREGELN.md).
+
+| Skill | Verwendung |
+|-------|------------|
+| [kurs-planen](.agents/skills/kurs-planen/SKILL.md) | Kursrahmen, Lernziele, Einheitenfolge und Zeitbudget planen |
+| [einheit-erstellen](.agents/skills/einheit-erstellen/SKILL.md) | Folien mit vollständigen Lernnotizen, Beispielen und Übungen erstellen oder überarbeiten |
+| [uebungsblatt-erstellen](.agents/skills/uebungsblatt-erstellen/SKILL.md) | Aufgaben und überprüfte Musterlösungen mit getrennten PDF-Versionen erstellen |
+| [quiz-erstellen](.agents/skills/quiz-erstellen/SKILL.md) | QuizAcademy-Fragen aus vorhandenen Vorlesungen erstellen und das CSV-Format prüfen |
+| [material-review](.agents/skills/material-review/SKILL.md) | Fachliche und didaktische Befunde mit Fundstellen und Verbesserungsvorschlägen erhalten |
+| [material-validieren](.agents/skills/material-validieren/SKILL.md) | Frische HTML-/PDF-Ausgaben bauen und auf Vollständigkeit, Lesbarkeit und Lösungstrennung prüfen |
+
+Nennen Sie im Auftrag den gewünschten Skill und das konkrete Ziel, zum Beispiel:
+
+> Nutzen Sie den Skill `einheit-erstellen` für eine 90-minütige Einheit zu synchronen Automaten. Übernehmen Sie Vorkenntnisse und technische Annahmen aus dem Kurskontext. Erhalten Sie bei der Überarbeitung vorhandene Struktur und Inhalte.
+
+Die automatische Skill-Erkennung hängt vom KI-Tool ab. Falls nötig, geben Sie die Anleitung ausdrücklich vor: „Lesen Sie `.agents/skills/einheit-erstellen/SKILL.md` und bearbeiten Sie meinen Auftrag nach diesem Ablauf.“ Befehle aus den Anleitungen werden im Repository-Stamm ausgeführt.
+
+Dokumentieren Sie Modul, Semester, Vorkenntnisse, Lernziele, Zeitbudget und gegebenenfalls Sprache, Hardware und Zeitmodell im Kurskontext dieser README. Bereits bekannte Angaben werden übernommen; die Skills fragen nur entscheidende Lücken nach. Größere didaktische Umstrukturierungen werden standardmäßig begründet vorgeschlagen. Ein Review ändert ohne Korrekturauftrag keine Materialien; ein erfolgreicher Build ersetzt keine fachliche Prüfung.
+
+Weitere Hinweise einschließlich des CSV-Validators stehen unter [Projekt-Skills verwenden](TEMPLATE.md#projekt-skills-verwenden).
+
 ## OER und Lizenz
 
 Dieses Vorlesungsmaterial ist eine **Open Educational Resource (OER)**. Die Vorlesungsinhalte – Texte, Code und Diagramme – stehen unter der Lizenz **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.

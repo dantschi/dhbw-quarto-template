@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the website and all teaching PDFs using the same rules locally and in CI."""
+"""Build teaching materials and verified starter packages locally and in CI."""
 
 from __future__ import annotations
 
@@ -13,10 +13,14 @@ import subprocess
 import sys
 import tempfile
 
+# Also support importing this CLI by file path in the orchestration tests.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from programming_labs import ProgrammingLabError, build_programming_packages
+
 
 LAB_SOURCE = re.compile(r"(?:lab_[0-9]{2}_.+|probeklausur)\.qmd\Z")
 LAB_PDF = re.compile(r"(?:lab_[0-9]{2}_.+|probeklausur(?:-musterloesung|-studierende)?)\.pdf\Z")
-CATEGORIES = ("website", "handouts", "labs")
+CATEGORIES = ("website", "handouts", "labs", "code")
 
 
 class BuildError(RuntimeError):
@@ -54,12 +58,14 @@ def discover_sources(root: Path) -> dict[str, list[Path]]:
     return {"website": pages + lectures, "handouts": lectures, "labs": labs}
 
 
-def is_material_pdf(path: Path) -> bool:
-    """Quarto may copy old source-side PDFs because README links point to them."""
-    return path.suffix == ".pdf" and (
+def is_material_resource(path: Path) -> bool:
+    """Discard source-side material outputs copied as linked Quarto resources."""
+    return (path.suffix == ".pdf" and (
         path.parts[0] == "labs" and bool(LAB_PDF.fullmatch(path.name))
         or path.parts[0] == "vorlesungen" and path.name.endswith("-handout.pdf")
-    )
+    )) or (
+        path.parts[0] == "labs" and path.name.endswith("-startcode.zip")
+    ) or path.parts[:2] == ("code", "labs")
 
 
 def owned_path(path: str) -> bool:
@@ -141,7 +147,7 @@ class MaterialBuilder:
         temporary_manifest.replace(self.manifest)
 
     def build(self, command: str):
-        selected = CATEGORIES if command == "all" else (command,)
+        selected = CATEGORIES if command == "all" else ("labs", "code") if command == "labs" else (command,)
         sources = discover_sources(self.root)
         if "website" in selected and not sources["website"]:
             raise BuildError("Website: keine .qmd-Quellen gefunden; der Pflicht-Build ist nicht möglich.")
@@ -152,6 +158,14 @@ class MaterialBuilder:
         with tempfile.TemporaryDirectory(prefix="run-", dir=self.state) as directory:
             stage = Path(directory)
             for category in selected:
+                if category == "code":
+                    try:
+                        packages = build_programming_packages(self.root, stage / "code", report=self.report)
+                    except ProgrammingLabError as error:
+                        raise BuildError(f"Programmieraufgaben: {error}") from error
+                    for destination, archive in packages.items():
+                        add_artifact(artifacts[category], Path(destination), archive)
+                    continue
                 self.report(f"{category}: {len(sources[category])} Quelle(n).")
                 if not sources[category]:
                     self.report(f"{category}: keine passenden Quellen; optionaler Bereich wird übersprungen.")
@@ -161,7 +175,7 @@ class MaterialBuilder:
                         self.render(source, self.root, output)
                     for source in output.rglob("*"):
                         relative = source.relative_to(output)
-                        if source.is_file() and not is_material_pdf(relative):
+                        if source.is_file() and not is_material_resource(relative):
                             add_artifact(artifacts[category], Path("_site") / relative, source)
                 elif category == "handouts":
                     for index, source in enumerate(sources[category]):

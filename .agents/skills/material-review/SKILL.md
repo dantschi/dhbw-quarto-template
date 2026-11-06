@@ -22,6 +22,8 @@ Lies die [gemeinsame Arbeitsweise](../references/arbeitsweise.md), die
 [Fachregeln](../../../FACHREGELN.md). Bei Folien gelten zusätzlich die
 [Vorlesungsregeln](../../../vorlesungen/AGENTS.md), bei Quizfragen die
 [Quizregeln](../../../quizacademy/AGENTS.md).
+Bei Programmieraufgaben außerdem die [Code-Regeln](../../../code/labs/AGENTS.md)
+und das Manifest sowie README, Startcode, Referenzlösung und Tests des Projekts lesen.
 
 ## Vorgehen
 
@@ -70,6 +72,14 @@ Lies die [gemeinsame Arbeitsweise](../references/arbeitsweise.md), die
 - **Quiz und Labore:** Lösbarkeit, eindeutige richtige Antwort bzw. überprüfbare
   Musterlösung, typische Fehlannahmen und Lernzielbezug prüfen. Studierendenmaterial
   darf keine versteckten Lösungen preisgeben; Quizstruktur gesondert kontrollieren.
+- **Programmieraufgaben:** Gleiche Schnittstellen und Annahmen in Blatt, TODOs,
+  Startcode, Referenzlösung und Tests prüfen. Beabsichtigte TODOs sind Lernaufgaben,
+  keine automatisch zu behebenden Fehler. Bewerte, ob die Referenzlösung das Lernziel
+  erfüllt und ob der Startervertrag nur die vorgesehenen offenen Teile zulässt.
+  Prüfe die Dateiliste des ZIPs und dessen eigenständige Nutzbarkeit. Erwartete
+  Fehlschläge benötigen konkrete Testkennungen bzw. das vereinbarte JSON-Protokoll;
+  ein beliebiger fehlgeschlagener Testlauf reicht nicht. Tests dürfen Aufgaben nicht
+  durch eine unangeforderte Änderung der Schnittstelle oder Erwartungen umgehen.
 
 ## Darstellung und Nachweisgrenzen
 

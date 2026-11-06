@@ -46,7 +46,7 @@ class FakeQuarto:
             resource.parent.mkdir(parents=True, exist_ok=True)
             resource.write_bytes(b"resource")
             if self.copy_stale:
-                for relative in ("labs/lab_01_beispiel.pdf", "labs/lab_01_beispiel-musterloesung.pdf", "vorlesungen/01_kickoff-handout.pdf"):
+                for relative in ("labs/lab_01_beispiel.pdf", "labs/lab_01_beispiel-musterloesung.pdf", "vorlesungen/01_kickoff-handout.pdf", "labs/lab_01_beispiel-startcode.zip", "code/labs/lab_01_beispiel/solution/answer.py"):
                     stale = output / relative
                     stale.parent.mkdir(parents=True, exist_ok=True)
                     stale.write_bytes(b"stale source-side PDF copied by Quarto")
@@ -174,10 +174,55 @@ class BuildMaterialsTests(unittest.TestCase):
         self.builder(FakeQuarto(copy_stale=True)).build("website")
         self.assertFalse((self.root / "_site/labs/lab_01_beispiel.pdf").exists())
         self.assertFalse((self.root / "_site/vorlesungen/01_kickoff-handout.pdf").exists())
+        self.assertFalse((self.root / "_site/labs/lab_01_beispiel-startcode.zip").exists())
+        self.assertFalse((self.root / "_site/code/labs/lab_01_beispiel/solution/answer.py").exists())
         self.builder().build("labs")
         self.builder(FakeQuarto(copy_stale=True)).build("website")
         self.assertEqual((self.root / "_site/labs/lab_01_beispiel.pdf").read_bytes(), b"%PDF-student")
         self.assertEqual((self.root / "_site/labs/lab_01_beispiel-musterloesung.pdf").read_bytes(), b"%PDF-solution")
+
+    def test_labs_build_includes_verified_packages_and_code_only_needs_no_quarto(self):
+        self.fixture()
+
+        def packages(root, stage, report):
+            stage.mkdir(parents=True)
+            artifact = stage / "verified.zip"
+            artifact.write_bytes(b"fresh verified student archive")
+            return {"_site/labs/lab_01_beispiel-startcode.zip": artifact}
+
+        with patch.object(materials, "build_programming_packages", side_effect=packages) as package_build:
+            self.builder().build("labs")
+            self.assertEqual(package_build.call_count, 1)
+            self.assertEqual((self.root / "_site/labs/lab_01_beispiel-startcode.zip").read_bytes(), b"fresh verified student archive")
+            runner = FakeQuarto()
+            self.builder(runner).build("code")
+            self.assertFalse(runner.calls)
+
+    def test_code_failure_prevents_publishing_successful_document_builds(self):
+        self.fixture()
+        previous = self.write("_site/index.html", "previous successful build")
+        with patch.object(materials, "build_programming_packages", side_effect=materials.ProgrammingLabError("unexpected starter error")):
+            with self.assertRaisesRegex(materials.BuildError, "unexpected starter error"):
+                self.builder().build("all")
+        self.assertEqual(previous.read_text(), "previous successful build")
+        self.assertFalse((self.root / "_site/labs/lab_01_beispiel.pdf").exists())
+        self.assertFalse((self.root / ".quarto/materials-build/manifest.json").exists())
+
+    def test_removed_programming_packages_clean_only_owned_zip_outputs(self):
+        self.fixture()
+
+        def packages(root, stage, report):
+            stage.mkdir(parents=True)
+            artifact = stage / "verified.zip"
+            artifact.write_bytes(b"archive")
+            return {"_site/labs/lab_01_beispiel-startcode.zip": artifact}
+
+        with patch.object(materials, "build_programming_packages", side_effect=packages):
+            self.builder().build("code")
+        untouched = self.write("_site/labs/custom.zip", "manually supplied archive")
+        self.builder().build("code")
+        self.assertFalse((self.root / "_site/labs/lab_01_beispiel-startcode.zip").exists())
+        self.assertEqual(untouched.read_text(), "manually supplied archive")
 
     def test_removed_sources_clean_only_previously_owned_outputs(self):
         self.fixture()

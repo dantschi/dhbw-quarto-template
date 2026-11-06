@@ -1,6 +1,6 @@
 ---
 name: material-validieren
-description: Geänderte Lehrmaterialien dieses DHBW-Quarto-Templates mit der versionsgebundenen Umgebung bauen und ihre frischen HTML- und PDF-Ausgaben kontrollieren; Prüfumfang, tatsächliche Ergebnisse und verbleibende Grenzen nachvollziehbar berichten.
+description: Geänderte Lehrmaterialien dieses DHBW-Quarto-Templates mit der versionsgebundenen Umgebung bauen, frische HTML- und PDF-Ausgaben kontrollieren und vorhandene Programmieraufgaben samt Startcode-ZIP prüfen; Prüfumfang, Ergebnisse und Grenzen nachvollziehbar berichten.
 ---
 
 # Lehrmaterial validieren
@@ -17,6 +17,8 @@ Lies die [gemeinsame Arbeitsweise](../references/arbeitsweise.md), die
 [Fachregeln](../../../FACHREGELN.md) und je nach Inhalt die
 [Vorlesungsregeln](../../../vorlesungen/AGENTS.md) bzw.
 [Quizregeln](../../../quizacademy/AGENTS.md).
+Bei Programmieraufgaben zusätzlich die [Code-Regeln](../../../code/labs/AGENTS.md)
+und die [Paketkonventionen](../../../TEMPLATE.md#programmieraufgaben-mit-startcode) lesen.
 Bewahre vorhandene Struktur und Inhalte. Melde notwendige größere
 Umstellungen begründet; setze sie nur innerhalb des beauftragten Umfangs um.
 
@@ -47,6 +49,7 @@ installieren. System- und Netzwerkfehler diagnostizieren; Fehler nie als Erfolg 
 | Vortrag, Website oder deren Gestaltung | `python3 scripts/build-materials.py website` |
 | Lernnotizen, Vortrag oder PDF-Gestaltung | zusätzlich `python3 scripts/build-materials.py handouts` |
 | Labor, Probeklausur oder Lösungsprofil | `python3 scripts/build-materials.py labs` für beide Fassungen |
+| Programmieraufgaben mit Manifest | `python3 scripts/build-materials.py labs`: zusätzlich Startcode, Referenzlösung und entpacktes Studierenden-ZIP |
 | Buildskripte, Filter oder deren Konfiguration | passende Ausgabeformate und `python3 -m unittest discover -s tests -v` |
 | Vollständiger Abschluss oder Veröffentlichungsbereitschaft | `python3 scripts/build-materials.py all` |
 
@@ -90,6 +93,19 @@ Validatorlauf belegt das Format, nicht die fachliche Eindeutigkeit der Antworten
    Quellen und Fachregeln abgleichen; für ein ausführliches Review
    [material-review](../material-review/SKILL.md) verwenden. Erfolgreiches Kompilieren belegt keine fachliche
    oder didaktische Richtigkeit.
+7. **Programmierpakete prüfen.** Bei `code/labs/<lab_id>/lab.json` die Laufzeit,
+   Befehle, Dateilisten und getrennten Erwartungen prüfen. `all` und `labs` müssen
+   den Startervertrag, alle Referenzprüfungen und erneut den tatsächlich entpackten
+   Download erfolgreich prüfen. Das ZIP unter `_site/labs/<lab_id>-startcode.zip`
+   muss README, Startcode und freigegebene Tests vollständig enthalten; keine
+   Referenzlösung oder Buildreste. Eine lokale erfolgreiche Ausführung aus dem
+   Quellprojekt ersetzt den Test des entpackten Pakets nicht.
+
+Erhalte beabsichtigte TODOs und fülle sie bei einer reinen Validierung nicht aus.
+Vergleiche erwartete Starterfehlschläge exakt mit dem Manifest; ein allgemeiner
+Rückgabecode ungleich null oder pauschales Ignorieren aller Testfehler reicht nicht.
+Die Referenzlösung muss sämtliche deklarierten Prüfungen bestehen. Für zusätzliche
+Lehrsprachen müssen passende Compiler/Laufzeiten tatsächlich eingerichtet sein.
 
 Nutze verfügbare Browser-, PDF- und Bildwerkzeuge tatsächlich. Bei fehlenden
 Werkzeugen die ausgelassene Kontrolle und deren Folge für den Abschluss nennen.

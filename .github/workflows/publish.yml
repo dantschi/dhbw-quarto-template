@@ -29,6 +29,11 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Python for the programming example
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Test build scripts
         run: python3 -m unittest discover -s tests -v
 
@@ -38,7 +43,7 @@ jobs:
       - name: Set up pinned toolchain
         run: bash scripts/setup.sh
 
-      - name: Build website, handouts and both lab versions
+      - name: Build website, PDFs and verified starter packages
         run: |
           source scripts/activate.sh
           python3 scripts/build-materials.py all

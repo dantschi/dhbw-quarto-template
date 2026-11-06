@@ -17,12 +17,12 @@ Der rote Faden der Veranstaltung:
 
 **[Ebene 1] → [Ebene 2] → [Ebene 3] → [Ebene 4]**
 
-Pro Einheit: Folien (Reveal.js), Handout-PDF sowie Übungsblatt (Studierende / Musterlösung). Links verweisen auf die Kurswebsite (relativ, funktioniert lokal und auf Pages).
+Pro Einheit: Folien (Reveal.js), Handout-PDF sowie Übungsblatt (Studierende / Musterlösung). Für Programmieraufgaben gibt es optional ein Startcode-ZIP. Links verweisen auf die Kurswebsite (relativ, funktioniert lokal und auf Pages).
 
-| Einheit | Thema | Schwerpunkt | Folien | Handout | Übungsblatt | Musterlösung |
-|--------:|-------|-------------|:------:|:-------:|:-----------:|:------------:|
-| 1 | [Thema Einheit 1] | [Schwerpunkt] | [HTML](vorlesungen/01_kickoff.html) | [PDF](vorlesungen/01_kickoff-handout.pdf) | [PDF](labs/lab_01_beispiel.pdf) | [PDF](labs/lab_01_beispiel-musterloesung.pdf) |
-| 2 | [Thema Einheit 2] | [Schwerpunkt] | [HTML](vorlesungen/02_….html) | [PDF](vorlesungen/02_…-handout.pdf) | [PDF](labs/lab_02_….pdf) | [PDF](labs/lab_02_…-musterloesung.pdf) |
+| Einheit | Thema | Schwerpunkt | Folien | Handout | Übungsblatt | Musterlösung | Startcode |
+|--------:|-------|-------------|:------:|:-------:|:-----------:|:------------:|:---------:|
+| 1 | [Thema Einheit 1] | [Schwerpunkt] | [HTML](vorlesungen/01_kickoff.html) | [PDF](vorlesungen/01_kickoff-handout.pdf) | [PDF](labs/lab_01_beispiel.pdf) | [PDF](labs/lab_01_beispiel-musterloesung.pdf) | — |
+| 2 | [Thema Einheit 2] | [Schwerpunkt] | [HTML](vorlesungen/02_….html) | [PDF](vorlesungen/02_…-handout.pdf) | [PDF](labs/lab_02_suchen.pdf) | [PDF](labs/lab_02_suchen-musterloesung.pdf) | [ZIP](labs/lab_02_suchen-startcode.zip) |
 
 **Hinweise:** Folien im Browser öffnen (Speaker View: Taste **S**). Handout-PDF = Folieninhalt mit Skriptnotizen. Quelltexte unter [`vorlesungen/`](vorlesungen/) und [`labs/`](labs/).
 
@@ -56,6 +56,14 @@ Zur Vertiefung empfohlen:
 |------|---------|------|
 | **[Tool 1]** | [Beschreibung/Tools] | [Link] |
 | **[Tool 2]** | [Beschreibung/Tools] | [Link] |
+
+### Programmieraufgaben mit Startcode
+
+Laden Sie das zum Übungsblatt gehörende Startcode-ZIP herunter, entpacken Sie es und lesen Sie zuerst die enthaltene `README.md`. Sie beschreibt die benötigte Sprache und Version, Einrichtung, Ausführung und Tests sowie die zu bearbeitenden Dateien. Nummerierte TODOs gehören zur Übung; noch nicht bestandene Funktionstests können der dokumentierte Ausgangszustand sein.
+
+Das Template enthält als Beispiel [Blatt 2: Suchen und Zählen](labs/lab_02_suchen.pdf) mit einem [Python-Startprojekt](labs/lab_02_suchen-startcode.zip) für Python 3.12. Das ZIP enthält die Anleitung, Startcode und öffentliche Tests. Die Referenzlösung wird getrennt geprüft und ist kein Bestandteil des Startcode-ZIPs. Die Codequellen im öffentlichen Repository sind dennoch einsehbar; das ZIP ist keine Zugriffsbeschränkung.
+
+Für Lehrende stehen die Autoren- und Build-Konventionen unter [Programmieraufgaben mit Startcode](TEMPLATE.md#programmieraufgaben-mit-startcode).
 
 ## KI-Skills verwenden
 

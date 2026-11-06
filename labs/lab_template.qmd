@@ -13,6 +13,11 @@ subtitle: "[Modulname] ([Modulkürzel])"
 
 ## Aufgabe 1: [Aufgabentitel]
 
+<!-- Bei Programmieraufgaben: Startcode-ZIP verlinken, zu bearbeitende Dateien
+     und TODO-IDs nennen; Sprache/Version, Startbefehle und erwarteten
+     Ausgangszustand angeben. Beispiel: lab_02_suchen.qmd.
+     Die Paketkonventionen stehen in code/labs/AGENTS.md und TEMPLATE.md. -->
+
 [Aufgabenstellung]
 
 ### Ihre Lösung {.unnumbered}

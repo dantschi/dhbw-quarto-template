@@ -57,6 +57,31 @@ Die Projektregeln stehen in normalen Markdown-Dateien im verbreiteten `AGENTS.md
 
 Die zentralen Regeln gelten immer zusätzlich zu den Regeln im jeweiligen Unterordner. `AGENTS.md` weist das KI-Tool an, für fachliche Inhalte die passenden Abschnitte aus `FACHREGELN.md` zu lesen. Bei einem KI-Tool ohne automatische `AGENTS.md`-Unterstützung die zentrale Datei und die für die Aufgabe relevanten ergänzenden Dateien ausdrücklich als Kontext übergeben. Die Regeln werden nur hier gepflegt; es sind keine separaten Cursor-Regeldateien erforderlich.
 
+### Projekt-Skills verwenden
+
+Unter `.agents/skills/` liegen sechs Aufgabenanleitungen im `SKILL.md`-Format. Die zentralen Regeln legen Qualitätsanforderungen fest; Skills beschreiben dazu Eingaben, Arbeitsschritte, Ergebnisse und Abschlussprüfungen.
+
+| Skill | Beispielauftrag |
+|-------|-----------------|
+| [einheit-erstellen](.agents/skills/einheit-erstellen/SKILL.md) | „Erstelle eine Einheit zu endlichen Automaten mit vollständigen Lernnotizen.“ |
+| [material-review](.agents/skills/material-review/SKILL.md) | „Prüfe diese Timer-Beispiele fachlich und didaktisch.“ |
+| [uebungsblatt-erstellen](.agents/skills/uebungsblatt-erstellen/SKILL.md) | „Erstelle zur Einheit ein Übungsblatt samt Musterlösung.“ |
+| [quiz-erstellen](.agents/skills/quiz-erstellen/SKILL.md) | „Erzeuge acht QuizAcademy-Fragen zur vorhandenen Vorlesung.“ |
+| [kurs-planen](.agents/skills/kurs-planen/SKILL.md) | „Plane die Einheitenfolge aus diesen Modulvorgaben und dem Zeitbudget.“ |
+| [material-validieren](.agents/skills/material-validieren/SKILL.md) | „Baue und prüfe alle Ausgabeformate des Kurses.“ |
+
+Die automatische Erkennung von `.agents/skills/` hängt vom KI-Tool ab. Bei Bedarf die jeweilige `SKILL.md` ausdrücklich als Anleitung übergeben; sämtliche Verweise gelten relativ zu dieser Datei. Es ist keine automatische Aktivierung weiterer Skills erforderlich: Deren Prüfabläufe können direkt gelesen und die vorhandenen Skripte aufgerufen werden.
+
+Bei Überarbeitungen erhalten die Skills standardmäßig die vorhandene Struktur und die Inhalte. Größere didaktische Umstrukturierungen werden begründet vorgeschlagen; bereits beauftragte Änderungen werden ohne zusätzliche Freigabeschritte bearbeitet. Die [gemeinsame Arbeitsweise](.agents/skills/references/arbeitsweise.md) beschreibt auch den Umgang mit fehlenden Kursangaben. Es müssen nicht für jeden Aufruf alle Kursdaten erneut eingegeben werden.
+
+Der Quiz-Skill enthält einen Formatvalidator für eine oder mehrere CSV-Dateien:
+
+```bash
+python3 .agents/skills/quiz-erstellen/scripts/validate_quiz.py quizacademy/datei.csv
+```
+
+Dieser prüft das Dateiformat und die formalen Antwortbedingungen. Ob Fragen, Optionen und Erläuterungen fachlich richtig und didaktisch geeignet sind, wird gesondert geprüft. Die Skripttests laufen mit `python3 -m unittest discover -s tests -v`.
+
 ## Build-Umgebung einrichten
 
 Cloud-Umgebung und GitHub Actions verwenden dieselben Setup- und Build-Skripte. Das Setup unterstützt Linux x86_64 mit Debian 13 oder Ubuntu 24.04. Es benötigt `curl`, `python3`, `tar`, `xz`, `sha256sum` und `dpkg-deb`; die Systemabhängigkeiten für den Browser und die SVG-Konvertierung installiert der erste Aufruf mit Root-Rechten bzw. `sudo`:

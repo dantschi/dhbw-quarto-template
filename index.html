@@ -236,6 +236,51 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
+<section id="ki-skills-verwenden" class="level2">
+<h2 class="anchored" data-anchor-id="ki-skills-verwenden">KI-Skills verwenden</h2>
+<p>Für die Arbeit mit diesem Template stehen sechs projektbezogene Skills unter <code>.agents/skills/</code> bereit. Öffnen Sie das Repository als Arbeitsverzeichnis in Ihrem KI-Tool und beachten Sie die <a href="AGENTS.md">Projektregeln</a> sowie die passenden <a href="FACHREGELN.md">Fachregeln</a>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>Verwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href=".agents/skills/kurs-planen/SKILL.md">kurs-planen</a></td>
+<td>Kursrahmen, Lernziele, Einheitenfolge und Zeitbudget planen</td>
+</tr>
+<tr class="even">
+<td><a href=".agents/skills/einheit-erstellen/SKILL.md">einheit-erstellen</a></td>
+<td>Folien mit vollständigen Lernnotizen, Beispielen und Übungen erstellen oder überarbeiten</td>
+</tr>
+<tr class="odd">
+<td><a href=".agents/skills/uebungsblatt-erstellen/SKILL.md">uebungsblatt-erstellen</a></td>
+<td>Aufgaben und überprüfte Musterlösungen mit getrennten PDF-Versionen erstellen</td>
+</tr>
+<tr class="even">
+<td><a href=".agents/skills/quiz-erstellen/SKILL.md">quiz-erstellen</a></td>
+<td>QuizAcademy-Fragen aus vorhandenen Vorlesungen erstellen und das CSV-Format prüfen</td>
+</tr>
+<tr class="odd">
+<td><a href=".agents/skills/material-review/SKILL.md">material-review</a></td>
+<td>Fachliche und didaktische Befunde mit Fundstellen und Verbesserungsvorschlägen erhalten</td>
+</tr>
+<tr class="even">
+<td><a href=".agents/skills/material-validieren/SKILL.md">material-validieren</a></td>
+<td>Frische HTML-/PDF-Ausgaben bauen und auf Vollständigkeit, Lesbarkeit und Lösungstrennung prüfen</td>
+</tr>
+</tbody>
+</table>
+<p>Nennen Sie im Auftrag den gewünschten Skill und das konkrete Ziel, zum Beispiel:</p>
+<blockquote class="blockquote">
+<p>Nutzen Sie den Skill <code>einheit-erstellen</code> für eine 90-minütige Einheit zu synchronen Automaten. Übernehmen Sie Vorkenntnisse und technische Annahmen aus dem Kurskontext. Erhalten Sie bei der Überarbeitung vorhandene Struktur und Inhalte.</p>
+</blockquote>
+<p>Die automatische Skill-Erkennung hängt vom KI-Tool ab. Falls nötig, geben Sie die Anleitung ausdrücklich vor: „Lesen Sie <code>.agents/skills/einheit-erstellen/SKILL.md</code> und bearbeiten Sie meinen Auftrag nach diesem Ablauf.“ Befehle aus den Anleitungen werden im Repository-Stamm ausgeführt.</p>
+<p>Dokumentieren Sie Modul, Semester, Vorkenntnisse, Lernziele, Zeitbudget und gegebenenfalls Sprache, Hardware und Zeitmodell im Kurskontext dieser README. Bereits bekannte Angaben werden übernommen; die Skills fragen nur entscheidende Lücken nach. Größere didaktische Umstrukturierungen werden standardmäßig begründet vorgeschlagen. Ein Review ändert ohne Korrekturauftrag keine Materialien; ein erfolgreicher Build ersetzt keine fachliche Prüfung.</p>
+<p>Weitere Hinweise einschließlich des CSV-Validators stehen unter <a href="TEMPLATE.md#projekt-skills-verwenden">Projekt-Skills verwenden</a>.</p>
+</section>
 <section id="oer-und-lizenz" class="level2">
 <h2 class="anchored" data-anchor-id="oer-und-lizenz">OER und Lizenz</h2>
 <p>Dieses Vorlesungsmaterial ist eine <strong>Open Educational Resource (OER)</strong>. Die Vorlesungsinhalte – Texte, Code und Diagramme – stehen unter der Lizenz <strong><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a></strong>.</p>

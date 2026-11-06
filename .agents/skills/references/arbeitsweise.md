@@ -6,6 +6,8 @@ Diese Arbeitsweise ergänzt die [Projektregeln](../../../AGENTS.md); die passend
 
 Lies zuerst den Auftrag, `README.md` (Kursrahmen und Lernziele), `_quarto.yml` und die vorhandenen Materialien im angefragten Bereich. Übernimm bereits bekannte Angaben und Präferenzen aus der Sitzung. Wähle Fachregeln nach dem tatsächlichen Inhalt, auch fachübergreifend.
 
+Lies vor dem Erstellen oder Überarbeiten das [Kursglossar](../../../GLOSSAR.md) und die zugehörigen Folien, Lernnotizen, Übungen, Musterlösungen, Quizfragen und Codebeispiele im betroffenen Themenbereich. Stimme die Begriffswahl materialübergreifend nach den [Terminologieregeln](../../../AGENTS.md#präzise-terminologie) ab: eingeführte Vorzugsbegriffe übernehmen, Synonyme ausdrücklich zuordnen und echte API-Bezeichner erhalten sowie ihrem fachlichen Konzept zuordnen. Fehlen Glossar oder relevante Einträge, ergänze sie bei einem Bearbeitungsauftrag im bestehenden Umfang konsistent aus den verfügbaren Quellen; benenne widersprüchliche Bezeichnungen und offene Zuordnungen, statt sie stillschweigend zu vereinheitlichen. Ein reines Review meldet solche Lücken als Befund.
+
 | Auftrag | Zusätzlich benötigte Angaben, soweit nicht schon dokumentiert |
 |---------|-------------------------------------------------------------|
 | Kurs planen | Modulvorgaben bzw. verfügbare Quellen, Vorkenntnisse, Umfang und vorgesehene Prüfungsform |

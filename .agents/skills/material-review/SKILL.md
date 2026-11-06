@@ -24,6 +24,7 @@ Lies die [gemeinsame Arbeitsweise](../references/arbeitsweise.md), die
 [Quizregeln](../../../quizacademy/AGENTS.md).
 Bei Programmieraufgaben außerdem die [Code-Regeln](../../../code/labs/AGENTS.md)
 und das Manifest sowie README, Startcode, Referenzlösung und Tests des Projekts lesen.
+Das [Kursglossar](../../../GLOSSAR.md) als Grundlage des Terminologieabgleichs lesen.
 
 ## Vorgehen
 
@@ -35,7 +36,10 @@ und das Manifest sowie README, Startcode, Referenzlösung und Tests des Projekts
    Notizen ein zusammenhängender, mit sichtbarer Folie verständlicher Lerntext? Jede Folie zählt,
    einschließlich Titel, Orientierung und Abschluss.
 3. **Darstellungen abgleichen.** Vergleiche Folientext, Notizen, Formeln, Code,
-   Abbildungen, Aufgaben und Musterlösungen. Prüfe Annahmen, Eingaben,
+   Abbildungen, Aufgaben, Musterlösungen und zugehörige Quizfragen. Gleiche die Terminologie
+   dieser Quellen ausdrücklich mit dem Kursglossar und den [Terminologieregeln](../../../AGENTS.md#präzise-terminologie) ab.
+   Benenne abweichende Bezeichnungen, nicht zugeordnete Synonyme und Konzept-/API-Verwechslungen mit den jeweiligen Fundstellen.
+   Prüfe Annahmen, Eingaben,
    Anfangszustände, Einheiten, Rundungen, Grenzfälle und Quellenfundstellen.
 4. **Fachprüfung auswählen.** Wende nur passende Kriterien aus der folgenden
    Liste an; fachübergreifende Beispiele können mehrere Bereiche betreffen.

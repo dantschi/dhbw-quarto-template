@@ -57,6 +57,10 @@ Zur Vertiefung empfohlen:
 | **[Tool 1]** | [Beschreibung/Tools] | [Link] |
 | **[Tool 2]** | [Beschreibung/Tools] | [Link] |
 
+### Kursglossar
+
+Das [Kursglossar](GLOSSAR.md) erklärt die bevorzugten Fachbegriffe, ihre Bedeutung und die Zuordnung zu Synonymen und API-Namen. Diese Bezeichnungen gelten gemeinsam für Folien, Übungen und Quiz. Im Template enthält das Glossar gekennzeichnete Beispiele, die beim Anlegen eines konkreten Kurses angepasst werden.
+
 ### Programmieraufgaben mit Startcode
 
 Laden Sie das zum Übungsblatt gehörende Startcode-ZIP herunter, entpacken Sie es und lesen Sie zuerst die enthaltene `README.md`. Sie beschreibt die benötigte Sprache und Version, Einrichtung, Ausführung und Tests sowie die zu bearbeitenden Dateien. Nummerierte TODOs gehören zur Übung; noch nicht bestandene Funktionstests können der dokumentierte Ausgangszustand sein.
@@ -67,7 +71,7 @@ Für Lehrende stehen die Autoren- und Build-Konventionen unter [Programmieraufga
 
 ## KI-Skills verwenden
 
-Für die Arbeit mit diesem Template stehen sechs projektbezogene Skills unter `.agents/skills/` bereit. Öffnen Sie das Repository als Arbeitsverzeichnis in Ihrem KI-Tool und beachten Sie die [Projektregeln](AGENTS.md) sowie die passenden [Fachregeln](FACHREGELN.md).
+Für die Arbeit mit diesem Template stehen sechs projektbezogene Skills unter `.agents/skills/` bereit. Öffnen Sie das Repository als Arbeitsverzeichnis in Ihrem KI-Tool und beachten Sie die [Projektregeln](AGENTS.md), die passenden [Fachregeln](FACHREGELN.md) und die Begriffsfestlegungen im [Kursglossar](GLOSSAR.md).
 
 | Skill | Verwendung |
 |-------|------------|

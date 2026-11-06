@@ -32,6 +32,7 @@ Die **GitHub-Pages-Startseite** ist der Inhalt von [`README.md`](README.md) (Kur
 |-------|--------|
 | `_quarto.yml` | **Ersetzen:** `[Modulname]`, `[Modulkürzel]`, `[GITHUB-USER]`, `[REPO]` |
 | `README.md` | **Ersetzen:** Kursinhalt, Einheiten-Tabelle, Literatur, Tools |
+| `GLOSSAR.md` | **Anpassen:** Template-Beispiele durch die im Kurs eingeführten Begriffe, Synonyme und API-Zuordnungen ersetzen |
 | `index.qmd` | behält `{{< include README.md >}}` |
 | `vorlesungen/01_kickoff.qmd` | **Ersetzen:** Folieninhalt und Notizen |
 | `labs/lab_01_beispiel.qmd` | **Ersetzen** oder aus `lab_template.qmd` ableiten |
@@ -45,6 +46,10 @@ Für informationstechnische Inhalte je nach Bedarf außerdem Programmiersprache 
 
 Für jede Einheit wenige überprüfbare Lernziele formulieren und passende Übungen bzw. Verständnisprüfungen sowie ein Zeitbudget zuordnen. Die [Projektregeln](AGENTS.md#kurskontext-und-lernziele) beschreiben die Anforderungen an Lernziele, Quellen, Rechenprüfungen und reproduzierbare Laboraufgaben.
 
+### Begriffe kursweit festlegen
+
+Das in der README verlinkte [Kursglossar](GLOSSAR.md) ist die gemeinsame Quelle für bevorzugte Bezeichnungen, Bedeutung, Synonyme und die Zuordnung zu konkreten APIs. Die enthaltenen Beispiele beim Anlegen des Kurses ersetzen oder passend übernehmen; weitere wiederkehrende und leicht verwechselbare Begriffe bei ihrer Einführung ergänzen. Die [Terminologieregel](AGENTS.md#präzise-terminologie) gilt für sämtliche Materialien und wird von den Erstellungs- und Review-Skills berücksichtigt. Reale API-Namen bleiben erhalten; abweichende Bezeichnungen werden erklärt und fachlich zugeordnet.
+
 ## Mit KI-Tools arbeiten
 
 Die Projektregeln stehen in normalen Markdown-Dateien im verbreiteten `AGENTS.md`-Format. KI-Tools mit entsprechender Unterstützung, einschließlich Cursor, können sie als Projektanweisungen einlesen:
@@ -53,6 +58,7 @@ Die Projektregeln stehen in normalen Markdown-Dateien im verbreiteten `AGENTS.md
 |-------|----------------|
 | [`AGENTS.md`](AGENTS.md) | Kurskontext und Lernziele, akademische Genauigkeit, EIT-Rechen- und Laboraufgaben, Tech-Stack, Diagramme und lesbares Design |
 | [`FACHREGELN.md`](FACHREGELN.md) | Je nach Inhalt zusätzliche Modellannahmen und Prüfungen für Informatik, Digitaltechnik, Mikrocomputertechnik und Realzeitsysteme |
+| [`GLOSSAR.md`](GLOSSAR.md) | Kursbezogene Begriffsfestlegungen und Zuordnung von Synonymen und API-Namen |
 | [`vorlesungen/AGENTS.md`](vorlesungen/AGENTS.md) | Zusätzlich für Vorlesungsfolien: vollständige Notizen und UTF-8-Prüfungen |
 | [`quizacademy/AGENTS.md`](quizacademy/AGENTS.md) | Zusätzlich für Quiz-CSV-Dateien: Format, Lernzielbezug, Schwierigkeit und Antwortgestaltung |
 | [`code/labs/AGENTS.md`](code/labs/AGENTS.md) | Zusätzlich für Programmieraufgaben: Startcode, Referenzlösung, Prüfvertrag und Studierendenpaket |

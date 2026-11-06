@@ -93,6 +93,8 @@ Validatorlauf belegt das Format, nicht die fachliche Eindeutigkeit der Antworten
    Quellen und Fachregeln abgleichen; für ein ausführliches Review
    [material-review](../material-review/SKILL.md) verwenden. Erfolgreiches Kompilieren belegt keine fachliche
    oder didaktische Richtigkeit.
+   Bei inhaltlichem Prüfumfang die Begriffswahl mit dem [Kursglossar](../../../GLOSSAR.md)
+   und zusammengehörigen Materialien abgleichen; ein automatischer Build beweist keine semantische Terminologiekonsistenz.
 7. **Programmierpakete prüfen.** Bei `code/labs/<lab_id>/lab.json` die Laufzeit,
    Befehle, Dateilisten und getrennten Erwartungen prüfen. `all` und `labs` müssen
    den Startervertrag, alle Referenzprüfungen und erneut den tatsächlich entpackten

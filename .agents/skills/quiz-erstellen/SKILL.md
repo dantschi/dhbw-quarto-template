@@ -10,6 +10,7 @@ description: QuizAcademy-Fragen aus vorhandenen Vorlesungen erstellen oder über
 Nutze diesen Skill für konkrete Quizaufträge auf Basis vorhandener Lehrinhalte. Ein reines Review ohne Änderungen gehört zu `material-review`; der Quarto-Build ersetzt keine Quizprüfung.
 
 Lies die [gemeinsame Arbeitsweise](../references/arbeitsweise.md), die [Projektregeln](../../../AGENTS.md), die [Quizregeln](../../../quizacademy/AGENTS.md) und die zum Inhalt passenden [Fachregeln](../../../FACHREGELN.md). Diese Regeln bleiben die maßgebliche Quelle für Format und Qualität.
+Lies außerdem das [Kursglossar](../../../GLOSSAR.md) und die zugehörigen Lernnotizen, Übungen und Lösungen; führe deren eingeführte Begriffe in Fragen, Optionen und Erläuterungen konsistent fort.
 
 ## Benötigte Eingaben
 

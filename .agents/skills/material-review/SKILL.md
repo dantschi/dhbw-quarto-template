@@ -35,6 +35,9 @@ Das [Kursglossar](../../../GLOSSAR.md) als Grundlage des Terminologieabgleichs l
    Übungen und Zeitbudget zusammen? Sind neue Begriffe erklärt und die vorhandenen
    Notizen ein zusammenhängender, mit sichtbarer Folie verständlicher Lerntext? Jede Folie zählt,
    einschließlich Titel, Orientierung und Abschluss.
+   Prüfe bei Vorlesungen die [aktivierende Einstiegsfrage](../../../vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung) ausdrücklich:
+   Platzierung vor Agenda/Lernzielen, Passung zum Vorwissen, begründbare Antworten ohne vorweggenommene Lösung,
+   Denk-/Austauschphase, vollständige Auflösung samt Fehlvorstellungen in den Notizen und spätere Wiederaufnahme.
    Prüfe je Aufgabe Lernziel und eigenständigen Denkschritt nach den [Didaktikregeln](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung).
    Belege Foliennähe sowie Unter- oder Überforderung konkret am Lösungsweg und an den zugehörigen Folien/Beispielen mit Fundstellen;
    benenne dafür die vorausgesetzten Kenntnisse, Schritte, Hilfen und geschätzte Zeit und schlage eine passende Aufgabenvariante vor.

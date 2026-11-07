@@ -38,14 +38,19 @@ Bereits beauftragte Änderungen direkt ausarbeiten; das Blatt nicht an einer Zwi
 
 ## Ablauf
 
-1. **Zuordnung herstellen.** Jede Aufgabe einem beobachtbaren Lernziel zuordnen.
-   Bearbeitung und Besprechung realistisch bemessen; passende Progression und typische Fehlannahmen berücksichtigen.
+1. **Zuordnung herstellen.** Jede Aufgabe einem beobachtbaren Lernziel und dem erforderlichen eigenständigen Denkschritt zuordnen.
+   Den Satz gemäß den [Didaktikregeln](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung) abstufen:
+   wenige Einstiege, bei passendem Lernziel Schwerpunkt auf selbstständiger Anwendung und Analyse, optional gekennzeichnete Vertiefung; keine starre Quote.
+   Bearbeitung und Besprechung realistisch schätzen; Vorkenntnisse, Denk-/Rechenschritte, Hilfen und typische Fehlannahmen berücksichtigen.
 2. **Kanonische Quelle anlegen.** Die Vorlage nach `labs/lab_NN_thema.qmd` übernehmen oder das bestehende Blatt bearbeiten.
    Eine freie Nummer passend zum Kurs verwenden; Blatt und PDF-Musterlösung bleiben in derselben Quarto-Quelle.
    Bei Programmieraufgaben gehört der Referenzcode zum Material und muss mit der PDF-Musterlösung übereinstimmen.
 3. **Aufgaben formulieren.** Voraussetzungen, benötigte Hilfsmittel, Eingaben und erwartete Arbeitsergebnisse angeben.
    Relevante Randbedingungen, Darstellungen und Bewertungskriterien verständlich beschreiben.
    Aufgaben müssen mit den bereitgestellten Informationen lösbar sein.
+   Für Transfer bekanntes Wissen auf eine neue Situation, einen Ablauf, eine Fehlerdiagnose, eine Begründung oder veränderte Annahmen anwenden lassen;
+   bloße Folienparaphrasen und Zahlenwechsel als Wiederholung einordnen.
+   Zur Prüfungsvorbereitung tatsächliche Prüfungsform und Anforderungen abgleichen, Hilfen schrittweise reduzieren und je nach Lernziel offene Rechen-, Begründungs- oder Codeaufgaben ergänzend zu Multiple Choice vorsehen.
 4. **Versuche reproduzierbar beschreiben.** Bei Laboraufgaben Aufbau, Parameter, Arbeitsschritte und Auswertung angeben.
    Zulässige Daten und nötige Skripte im Repository erhalten; konkrete Hardware- und API-Aussagen belegen.
    Messungen, Simulationen und Modellrechnungen unterscheidbar benennen.
@@ -63,6 +68,7 @@ Bereits beauftragte Änderungen direkt ausarbeiten; das Blatt nicht an einer Zwi
    Auch lösungsverratende Hinweise oder Abbildungen entsprechend behandeln.
    Die Aufgabenstellung muss ohne Lösungsblöcke vollständig bleiben.
 6. **Fachlich gegenprüfen.** Die Aufgaben aus Studierendensicht lösen und Angaben gegen Lösungen abgleichen.
+   Am Lösungsweg mit Folien und ausgearbeiteten Beispielen vergleichen, was bereits vorgegeben ist und was selbstständig zu leisten bleibt.
    Die eingeführte Terminologie aus Folien und Lernnotizen in Aufgaben, Musterlösungen und Codeerklärungen beibehalten.
    Rechnungen unabhängig prüfen; Code mit relevanten Normal-/Randfällen prüfen, soweit Werkzeuge verfügbar sind.
    Fachabhängige Modellannahmen und Nachweisgrenzen offenlegen; keine Ausführung oder Messung erfinden.
@@ -125,6 +131,7 @@ der Ordner `solution/` dennoch öffentlich; eine gewünschte spätere Freigabe m
 
 - Sind jede Aufgabe und ihre Lösung unter denselben dokumentierten Annahmen korrekt und vollständig?
 - Passen Schwierigkeit, Hilfsmittel und Umfang zum Kurs und zum Zeitbudget?
+- Ist der eigenständige Denkschritt je Aufgabe belegt und das geschätzte Niveau am verfügbaren Prüfungsbezug ausgerichtet?
 - Sind beide PDFs frisch, lesbar und auf Lösungstrennung geprüft?
 - Sind tatsächlich ausgeführte Versuche und lediglich hergeleitete Ergebnisse klar unterschieden?
 - Bei Programmieraufgaben: Passen TODOs und Tests zum Blatt, ist die Referenzlösung geprüft,

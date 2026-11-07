@@ -48,9 +48,12 @@ Wenn eine solche Umstrukturierung bereits beauftragt ist, sie vollständig ausar
 3. **Lernziele formulieren.** Wenige überprüfbare Ziele für das Modul und die einzelnen Einheiten entwickeln.
    Das erwartete Niveau etwa durch „erklären“, „analysieren“, „implementieren“ oder „beurteilen“ konkretisieren.
    Für jedes Ziel geeignete Übungen oder Verständnisprüfungen und einen Bezug zur Prüfungsform vorsehen.
+   Prüfungsanforderungen nur aus tatsächlich verfügbaren Vorgaben ableiten; offene Angaben kenntlich machen.
 4. **Einheitenfolge planen.** Von Voraussetzungen zu Anwendung und Transfer führen.
    An authentischen IT-/EIT-Anwendungsfällen orientieren, soweit sie zu den Lernzielen passen.
    Pro Einheit Thema, Voraussetzungen, Ziele, Kerninhalte und Übungs-/Prüfidee festhalten.
+   Eigenständige Denkschritte und eine gestufte Übungsfolge nach den [Didaktikregeln](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung) planen;
+   zur Prüfungsvorbereitung Hilfen reduzieren und passende offene Aufgaben ergänzend zu Multiple Choice berücksichtigen.
    Zentrale Begriffe und ihre Einführung den Einheiten zuordnen; das Kursglossar bei Bedarf anhand der vorhandenen Quellen pflegen.
    Fachregeln nach konkreten Inhalten zuordnen; mehrere Fachschwerpunkte dürfen zusammenwirken.
 5. **Zeitbudget prüfen.** Erklärung, aktive Bearbeitung, Fragen, Besprechung und Selbststudium berücksichtigen.

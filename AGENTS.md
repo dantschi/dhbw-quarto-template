@@ -64,6 +64,8 @@ Nenne bei Literatur die Ausgabe und eine geprüfte Fundstelle, bei Datenblätter
 
 Konzepte klar und schrittweise aufbauen — von Grundlagen zu Anwendungen. Den in den Folien etablierten roten Faden (`[Ebene 1] → … → [Ebene n]`) konsistent fortführen.
 
+Beginne jede Vorlesungseinheit mit einer Frage, die das Vorwissen aktiviert und vorhandene Vorstellungen zum Thema herausfordert. Platzierung, Durchführung, vollständige Notizen und spätere Auflösung stehen in den [Folienregeln zur Einstiegsfrage](vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung).
+
 ### Verständnis, Transfer und Prüfungsvorbereitung
 
 - Bestimme für jede Übungsaufgabe und Quizfrage das Lernziel und den eigenständigen Denkschritt: beispielsweise einen Ablauf herleiten, einen Fehler diagnostizieren, eine Lösung begründen oder die Folgen geänderter Randbedingungen beurteilen. Halte diese Zuordnung für Lehrende knapp in vorhandenen Autorennotizen oder im Abschlussbericht fest. Begriffs- und Routineaufgaben sind als Einstieg und für entsprechende Lernziele sinnvoll.

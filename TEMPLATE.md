@@ -24,7 +24,7 @@ Die **GitHub-Pages-Startseite** ist der Inhalt von [`README.md`](README.md) (Kur
 1. Auf GitHub **Use this template** → neues Repository erstellen.
 2. Repository klonen und die unten beschriebene [Build-Umgebung einrichten](#build-umgebung-einrichten).
 3. Alle `[…]`-Platzhalter in `_quarto.yml`, `README.md`, `vorlesungen/01_kickoff.qmd` und optional in `AGENTS.md` ersetzen.
-4. Weitere Vorlesungen als `vorlesungen/0N_….qmd` anlegen (`format: revealjs`, jede Folie mit `## Titel`, Notizen in `::: notes`).
+4. Weitere Vorlesungen als `vorlesungen/0N_….qmd` anlegen (`format: revealjs`, jede Folie mit `## Titel`, Notizen in `::: notes`). Nach der Titelfolie mit einer [aktivierenden Vorwissensfrage](vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung) beginnen; die Beispielfrage in `01_kickoff.qmd` passend zum neuen Thema ersetzen und später auflösen.
 5. Übungsblätter als `labs/lab_NN_….qmd` anlegen (Vorlage: `labs/lab_template.qmd`).
 6. Design/Livefigures möglichst unverändert lassen.
 

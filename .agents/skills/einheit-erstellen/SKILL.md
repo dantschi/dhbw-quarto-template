@@ -30,6 +30,8 @@ Nur fehlende Angaben erfragen, die den Entwurf wesentlich bestimmen; sonst begr�
 Bei einer Überarbeitung vorhandene Gliederung, Inhalte und Dateinamen standardmäßig erhalten.
 Größere didaktische Umstrukturierungen mit Grund und erwarteter Wirkung vorschlagen.
 Bereits ausdrücklich beauftragte Umstrukturierungen direkt umsetzen; keine erneute Freigabe verlangen.
+Bei Entwurf oder inhaltlicher Überarbeitung die Einstiegsfrage gemäß den Folienregeln umsetzen.
+Eine reine Ausgabeprüfung oder kleine technische Änderung strukturiert eine bestehende Einheit nicht automatisch um.
 
 ## Ablauf
 
@@ -38,6 +40,9 @@ Bereits ausdrücklich beauftragte Umstrukturierungen direkt umsetzen; keine erne
    eingeführte Begriffe auch in Folientext, Lernnotizen und Codeerklärungen konsistent weiterführen.
    Bestehende Nutzeränderungen beachten und den konkret beauftragten Umfang abgrenzen.
 2. **Lernweg festlegen.** Wenige beobachtbare Lernziele mit einer passenden Übung oder Verständnisprüfung verbinden.
+   Als erste inhaltliche Folie nach dem Titel und vor Agenda/Lernzielen eine [aktivierende Einstiegsfrage](../../../vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung) vorsehen,
+   die mit dokumentiertem Vorwissen oder Alltagserfahrung eine begründete Vermutung, Vorhersage oder Entscheidung ermöglicht.
+   Denk-/Austauschphase und das Sammeln begründeter Antworten im Zeitbudget berücksichtigen; die Antwort auf der Einstiegsfolie offenlassen.
    Je Aufgabe den eigenständigen Denkschritt bestimmen und den Aufgabensatz nach den zentralen [Didaktikregeln](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung) abstufen.
    Zeit für Erklärung, aktive Bearbeitung, Fragen und Besprechung einplanen; den roten Faden fortführen.
    Dies als Arbeitsgrundlage nutzen und die beauftragte Einheit anschließend vollständig ausarbeiten.
@@ -45,6 +50,8 @@ Bereits ausdrücklich beauftragte Umstrukturierungen direkt umsetzen; keine erne
    Bestehende Frontmatter-Konventionen übernehmen; jede Folie im Dokumentkörper mit `## Titel` beginnen.
    `---` im Dokumentkörper nicht als Folientrenner verwenden.
 4. **Folien und Notizen gemeinsam schreiben.** Jede Folie erhält vollständigen Lerntext in `::: notes`.
+   Zur Einstiegsfrage erwartbare Antworten, Fehlvorstellungen, Annahmen, fachliche Auflösung und Übergang in den Notizen ausarbeiten;
+   die Frage im Verlauf oder Abschluss wieder aufgreifen und beantworten.
    Auch Orientierung, Übungen und Abschluss benötigen Notizen; Übungslösungen darin nachvollziehbar ausarbeiten.
    Neue Begriffe, Code und Abbildungen erklären und Voraussetzungen, Grenzen und Übergänge sichtbar machen.
 5. **Beispiele prüfen.** Eingaben, Anfangszustände und Modellannahmen festlegen.
@@ -82,6 +89,7 @@ Bereits ausdrücklich beauftragte Umstrukturierungen direkt umsetzen; keine erne
 
 - Decken Inhalte und Übungen die Lernziele im Zeitbudget ab?
 - Hat jede Folie verständliche, vollständige und fachlich konsistente Notizen?
+- Ist die Einstiegsfrage passend zum Vorwissen platziert, in den Notizen vollständig ausgearbeitet und später beantwortet?
 - Stimmen Aussagen, Code, Rechnungen und Diagramme unter den dokumentierten Annahmen überein?
 - Sind UTF-8 ohne BOM, Formeln, Kontraste, Beschriftungen und Verweise geprüft?
 - Sind Folien und Handout frisch erzeugt und visuell geprüft oder konkrete Prüfgrenzen offengelegt?

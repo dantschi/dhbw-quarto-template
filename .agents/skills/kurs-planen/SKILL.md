@@ -52,6 +52,8 @@ Wenn eine solche Umstrukturierung bereits beauftragt ist, sie vollständig ausar
 4. **Einheitenfolge planen.** Von Voraussetzungen zu Anwendung und Transfer führen.
    An authentischen IT-/EIT-Anwendungsfällen orientieren, soweit sie zu den Lernzielen passen.
    Pro Einheit Thema, Voraussetzungen, Ziele, Kerninhalte und Übungs-/Prüfidee festhalten.
+   Für jede Vorlesung eine [aktivierende Einstiegsfrage](../../../vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung) aus dokumentiertem Vorwissen oder Alltagserfahrung
+   sowie ihre spätere fachliche Auflösung einplanen; Zeit für Denken, Austausch und begründete Antworten berücksichtigen.
    Eigenständige Denkschritte und eine gestufte Übungsfolge nach den [Didaktikregeln](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung) planen;
    zur Prüfungsvorbereitung Hilfen reduzieren und passende offene Aufgaben ergänzend zu Multiple Choice berücksichtigen.
    Zentrale Begriffe und ihre Einführung den Einheiten zuordnen; das Kursglossar bei Bedarf anhand der vorhandenen Quellen pflegen.

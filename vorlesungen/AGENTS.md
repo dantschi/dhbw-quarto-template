@@ -2,6 +2,16 @@
 
 Diese Regeln ergänzen die [zentralen Projektregeln](../AGENTS.md) und gelten für alle Quarto-Folien unter `vorlesungen/` (`vorlesungen/**/*.qmd`), einschließlich ihrer Notizen.
 
+## Aktivierende Einstiegsfrage je Vorlesung
+
+Beginne jede Vorlesungseinheit mit einer themenbezogenen Frage als erster inhaltlicher Folie nach der Titelfolie, vor Agenda und Lernzielen. Die Frage soll vorhandene Vorstellungen herausfordern und Vorwissen aktivieren: etwa eine begründete Vermutung, Vorhersage oder Entscheidung zu einem greifbaren Fall verlangen. Knüpfe an die dokumentierten Vorkenntnisse oder verständliche Alltagserfahrungen an. Die Frage muss einen Bezug zum Lernziel der Einheit haben und ohne die erst noch einzuführenden Begriffe bearbeitbar sein; vermeide Fangfragen.
+
+Plane eine kurze Denk- und gegebenenfalls Austauschphase im Zeitbudget ein. Lasse Antworten und ihre Begründungen sammeln, bevor du die fachliche Auflösung gibst. Nimm die Antwort auf der Einstiegsfolie nicht vorweg. Die vollständigen `::: notes` erläutern den Vorwissensbezug, erwartbare Antworten, typische Fehlvorstellungen, nötige Annahmen, eine fachlich begründete Auflösung und den Übergang zum Thema. Sie müssen neben den Moderationshinweisen auch einen verständlichen Lerntext enthalten.
+
+Greife die Frage im Verlauf oder spätestens am Abschluss erneut auf und beantworte sie mit dem inzwischen erarbeiteten Wissen. Mache sichtbar, welche anfängliche Vorstellung bestätigt, präzisiert oder korrigiert wird. Passe beim Ableiten einer neuen Vorlesung aus dem Template die Beispielfrage an deren Thema und Vorkenntnisse an.
+
+Diese Vorgabe gilt beim Erstellen und inhaltlichen Überarbeiten einer Einheit. Reine Ausgabeprüfungen oder kleine technische Änderungen lösen keine automatische Umstrukturierung bestehender Vorlesungen aus.
+
 ## UTF-8 bei Folien-Edits
 
 Deutsche `.qmd`-Folien sind unter Windows **UTF-8-fragil**: Editor-/Patch-Tools können Unicode stillschweigend zerstören (typisch: `→` wird zu `?`, Umlaute/`—` zu Mojibake). Vor dem finalen Rebuild immer prüfen.
@@ -82,6 +92,7 @@ Als Orientierung gelten etwa 70–120 Wörter für einfache Orientierungsfolien,
 
 Prüfe jede Folie einschließlich ihrer Notizen, bevor du die Vorlesung als fertig meldest:
 
+- Aktiviert die erste inhaltliche Folie mit einer passenden Frage das Vorwissen, sind erwartbare Antworten und Auflösung in den Notizen ausgearbeitet und wird die Frage später nachvollziehbar beantwortet?
 - Sind neue Begriffe, Abkürzungen, Symbole und relevante Codebezeichner eingeführt und kontextabhängige Bedeutungen lokal geklärt? Sind ausdrücklich einzeln nutzbare Folien für sich verständlich?
 - Sind Motivation, Bedeutung, Voraussetzungen und Folgerungen verständlich?
 - Sind Beispiele, Rechnungen und Übungslösungen vollständig, dimensionskonsistent und plausibel?

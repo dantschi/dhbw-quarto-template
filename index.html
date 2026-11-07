@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -125,17 +160,213 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<!-- TODO TEMPLATE-TEIL BEGINN: Für eine konkrete Veranstaltung diesen gesamten Block bis einschließlich TODO TEMPLATE-TEIL ENDE löschen. -->
+<section id="dhbw-quarto-vorlesungstemplate" class="level1">
+<h1>DHBW Quarto Vorlesungstemplate</h1>
+<p>Ein Template zum Entwerfen, Prüfen und Veröffentlichen von Vorlesungsmaterial an der DHBW Stuttgart, insbesondere für informationstechnische Fächer im Studiengang Elektro- und Informationstechnik. Es verbindet Quarto-Websites, Vorträge, Handouts, Übungen, Quizfragen und gemeinsame Anleitungen für KI-Tools.</p>
+<p>Dies ist ein inoffizielles Dozenten-Template, keine offizielle DHBW-Software.</p>
+<blockquote class="blockquote">
+<p><strong>TODO beim Anlegen einer echten Veranstaltung:</strong> Ersetzen Sie die Platzhalter in der <a href="#modulname-modulkürzel">Homepage-Vorlage weiter unten</a>. Löschen Sie danach den gesamten oberen Template-Teil zwischen <code>TODO TEMPLATE-TEIL BEGINN</code> und <code>TODO TEMPLATE-TEIL ENDE</code>, einschließlich beider Kommentarzeilen. Der Veranstaltungsinhalt unterhalb der Endmarkierung bleibt erhalten.</p>
+</blockquote>
+<section id="was-das-template-enthält" class="level2">
+<h2 class="anchored" data-anchor-id="was-das-template-enthält">Was das Template enthält</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bereich</th>
+<th>Funktion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kurswebsite</td>
+<td><code>index.qmd</code> übernimmt den Inhalt dieser README als Startseite.</td>
+</tr>
+<tr class="even">
+<td>Vorlesungen</td>
+<td>Reveal.js-Folien mit vollständigen Lernnotizen, aktivierender Einstiegsfrage und späterer Auflösung.</td>
+</tr>
+<tr class="odd">
+<td>Handouts</td>
+<td>PDF mit Folieninhalt und zugehörigen Lernnotizen.</td>
+</tr>
+<tr class="even">
+<td>Übungsblätter</td>
+<td>Gemeinsame Quarto-Quelle für Studierenden-PDF und getrennte Musterlösung.</td>
+</tr>
+<tr class="odd">
+<td>Programmieraufgaben</td>
+<td>Optionaler Startcode, Referenzlösung und Tests; geprüftes Startcode-ZIP als Download.</td>
+</tr>
+<tr class="even">
+<td>Quizfragen</td>
+<td>QuizAcademy-CSV mit Formatvalidator sowie Regeln für Verständnis, Transfer und angemessenen Anspruch.</td>
+</tr>
+<tr class="odd">
+<td>KI-Unterstützung</td>
+<td>Toolübergreifende <code>AGENTS.md</code>-Regeln, Fachregeln, Kursglossar und sechs Aufgaben-Skills.</td>
+</tr>
+<tr class="even">
+<td>Gemeinsamer Build</td>
+<td>Versionsgebundene Werkzeuge für Cloud und GitHub Actions; Veröffentlichung erst nach erfolgreicher Prüfung.</td>
+</tr>
+</tbody>
+</table>
+<p>Die Quellen liegen unter <code>vorlesungen/</code>, <code>labs/</code>, <code>quizacademy/</code> und für Programmierprojekte unter <code>code/labs/</code>. Layout, Diagramme und Profile sind vorbereitet. Die technische Anleitung und alle Konventionen stehen in <a href="TEMPLATE.md">TEMPLATE.md</a>.</p>
+</section>
+<section id="so-funktioniert-der-ablauf" class="level2">
+<h2 class="anchored" data-anchor-id="so-funktioniert-der-ablauf">So funktioniert der Ablauf</h2>
+<ol type="1">
+<li>Kursrahmen, Lernziele und Begriffsfestlegungen in der unteren Homepage-Vorlage und in <a href="GLOSSAR.md">GLOSSAR.md</a> pflegen.</li>
+<li>Folien, Lernnotizen, Übungen und Quizfragen aus diesen Vorgaben entwickeln. Die <a href="AGENTS.md">Projektregeln</a> und <a href="FACHREGELN.md">Fachregeln</a> unterstützen konsistente, fachlich geprüfte Inhalte.</li>
+<li>Den gemeinsamen Build ausführen. Er erzeugt Website, Handouts, beide Übungsblattfassungen und vorhandene Startcode-Pakete zunächst in einem frischen Arbeitsverzeichnis. Nur ein vollständig erfolgreicher Lauf übernimmt die angeforderten Ergebnisse.</li>
+<li>Frische Ausgaben fachlich und visuell prüfen. Die veröffentlichbaren Materialien liegen in <code>_site/</code>; ein erfolgreicher Build allein belegt keine didaktische Qualität.</li>
+<li>GitHub Actions führt bei Pull Requests und Pushes auf <code>main</code> denselben vollständigen Build aus. Nach Erfolg veröffentlicht der Workflow auf <code>main</code> die geprüften Materialien auf <code>gh-pages</code>.</li>
+</ol>
+</section>
+<section id="schnellstart" class="level2">
+<h2 class="anchored" data-anchor-id="schnellstart">Schnellstart</h2>
+<p>Erstellen Sie über <strong>Use this template</strong> ein eigenes GitHub-Repository und klonen Sie es. Die gemeinsame Build-Umgebung unterstützt Linux x86_64 mit Debian 13 oder Ubuntu 24.04; das mitgelieferte Programmierbeispiel benötigt Python 3.12. Voraussetzungen und Werkzeugversionen sind unter <a href="TEMPLATE.md#build-umgebung-einrichten">Build-Umgebung einrichten</a> beschrieben.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Einmalig: Systempakete benötigen Root-Rechte oder sudo.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> scripts/setup.sh <span class="at">--system-deps</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> scripts/setup.sh</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># In jeder neuen Bash-Sitzung aktivieren und Materialien bauen.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> scripts/activate.sh</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/build-materials.py all</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Website lokal ansehen.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Für gezielte Arbeitsstände stehen <code>website</code>, <code>handouts</code>, <code>labs</code> und <code>code</code> als Teilbefehle des Builders bereit. Der vollständige Abschluss verwendet <code>all</code>. Weitere Aufrufe und Ausgabepfade stehen unter <a href="TEMPLATE.md#lokal-arbeiten">Lokal arbeiten</a>.</p>
+</section>
+<section id="eine-veranstaltung-aus-dem-template-erstellen" class="level2">
+<h2 class="anchored" data-anchor-id="eine-veranstaltung-aus-dem-template-erstellen">Eine Veranstaltung aus dem Template erstellen</h2>
+<ul>
+<li>Platzhalter in <code>_quarto.yml</code> und der unteren Homepage-Vorlage durch die tatsächlichen Kursdaten ersetzen.</li>
+<li>Beispiele in <code>vorlesungen/</code>, <code>labs/</code>, <code>code/labs/</code> und <code>GLOSSAR.md</code> passend zum Kurs übernehmen oder ersetzen. Unbenutzte Beispiel- und Probeklausurzeilen aus der Kursübersicht entfernen.</li>
+<li>Den oberen Template-Teil an den TODO-Markierungen vollständig löschen. <code>index.qmd</code> behält seinen Include von <code>README.md</code>: Solange der obere Teil vorhanden ist, zeigt die Website beide Teile; danach zeigt sie nur die Veranstaltung.</li>
+<li>Die übernommene Veranstaltung mit dem vollständigen Build prüfen. Details stehen unter <a href="TEMPLATE.md#neues-modul-anlegen">Neues Modul anlegen</a>.</li>
+</ul>
+<p>Das mitgelieferte <a href="code/labs/lab_02_suchen/README.md">Python-Beispiel „Suchen und Zählen“</a> zeigt die Trennung von Startcode, Referenzlösung und Tests. Sein Download entsteht beim Build unter <code>_site/labs/lab_02_suchen-startcode.zip</code>. Anleitung und Paketkonventionen stehen unter <a href="TEMPLATE.md#programmieraufgaben-mit-startcode">Programmieraufgaben mit Startcode</a>.</p>
+</section>
+<section id="ki-skills-verwenden" class="level2">
+<h2 class="anchored" data-anchor-id="ki-skills-verwenden">KI-Skills verwenden</h2>
+<p>Für die Arbeit mit diesem Template stehen sechs projektbezogene Skills unter <code>.agents/skills/</code> bereit. Öffnen Sie das Repository als Arbeitsverzeichnis in Ihrem KI-Tool und beachten Sie die <a href="AGENTS.md">Projektregeln</a>, die passenden <a href="FACHREGELN.md">Fachregeln</a> und die Begriffsfestlegungen im <a href="GLOSSAR.md">Kursglossar</a>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>Verwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href=".agents/skills/kurs-planen/SKILL.md">kurs-planen</a></td>
+<td>Kursrahmen, Lernziele, Einheitenfolge und Zeitbudget planen</td>
+</tr>
+<tr class="even">
+<td><a href=".agents/skills/einheit-erstellen/SKILL.md">einheit-erstellen</a></td>
+<td>Folien mit vollständigen Lernnotizen, Beispielen und Übungen erstellen oder überarbeiten</td>
+</tr>
+<tr class="odd">
+<td><a href=".agents/skills/uebungsblatt-erstellen/SKILL.md">uebungsblatt-erstellen</a></td>
+<td>Aufgaben und überprüfte Musterlösungen mit getrennten PDF-Versionen erstellen</td>
+</tr>
+<tr class="even">
+<td><a href=".agents/skills/quiz-erstellen/SKILL.md">quiz-erstellen</a></td>
+<td>QuizAcademy-Fragen aus vorhandenen Vorlesungen erstellen und das CSV-Format prüfen</td>
+</tr>
+<tr class="odd">
+<td><a href=".agents/skills/material-review/SKILL.md">material-review</a></td>
+<td>Fachliche und didaktische Befunde mit Fundstellen und Verbesserungsvorschlägen erhalten</td>
+</tr>
+<tr class="even">
+<td><a href=".agents/skills/material-validieren/SKILL.md">material-validieren</a></td>
+<td>Frische HTML-/PDF-Ausgaben bauen und auf Vollständigkeit, Lesbarkeit und Lösungstrennung prüfen</td>
+</tr>
+</tbody>
+</table>
+<p>Nennen Sie im Auftrag den gewünschten Skill und das konkrete Ziel, zum Beispiel:</p>
+<blockquote class="blockquote">
+<p>Nutzen Sie den Skill <code>einheit-erstellen</code> für eine 90-minütige Einheit zu synchronen Automaten. Übernehmen Sie Vorkenntnisse und technische Annahmen aus dem Kurskontext. Erhalten Sie bei der Überarbeitung vorhandene Struktur und Inhalte.</p>
+</blockquote>
+<p>Die automatische Skill-Erkennung hängt vom KI-Tool ab. Falls nötig, geben Sie die Anleitung ausdrücklich vor: „Lesen Sie <code>.agents/skills/einheit-erstellen/SKILL.md</code> und bearbeiten Sie meinen Auftrag nach diesem Ablauf.“ Befehle aus den Anleitungen werden im Repository-Stamm ausgeführt.</p>
+<p>Dokumentieren Sie Modul, Semester, Vorkenntnisse, Lernziele, Zeitbudget und gegebenenfalls Sprache, Hardware und Zeitmodell im Abschnitt „Kursrahmen und Lernziele“ der untenstehenden Homepage-Vorlage. Bereits bekannte Angaben werden übernommen; die Skills fragen nur entscheidende Lücken nach. Größere didaktische Umstrukturierungen werden standardmäßig begründet vorgeschlagen. Ein Review ändert ohne Korrekturauftrag keine Materialien; ein erfolgreicher Build ersetzt keine fachliche Prüfung.</p>
+<p>Weitere Hinweise einschließlich des CSV-Validators stehen unter <a href="TEMPLATE.md#projekt-skills-verwenden">Projekt-Skills verwenden</a>.</p>
+<p>Die Skills berücksichtigen außerdem <a href="TEMPLATE.md#aufgaben-für-verständnis-und-prüfungsvorbereitung">Verständnis, Folienabstand und Prüfungsvorbereitung</a>: eigenständige Denkschritte, passende Hilfen und einen abgestuften Anspruch. Die Einschätzung richtet sich nach Lernzielen und vorhandenen Prüfungsvorgaben; tatsächliche Bearbeitungszeiten und Rückmeldungen helfen bei der Kalibrierung.</p>
+</section>
+<section id="homepage-vorlage-für-die-veranstaltung" class="level2">
+<h2 class="anchored" data-anchor-id="homepage-vorlage-für-die-veranstaltung">Homepage-Vorlage für die Veranstaltung</h2>
+<blockquote class="blockquote">
+<p><strong>TODO:</strong> Ab der folgenden Endmarkierung steht der spätere Veranstaltungsinhalt. Passen Sie ihn an Ihren Kurs an und entfernen Sie den darüberliegenden Template-Teil wie oben beschrieben. Die Lizenzangaben am Ende gehören weiterhin zur Veranstaltung.</p>
+</blockquote>
+<!-- TODO TEMPLATE-TEIL ENDE: Bis einschließlich dieser Kommentarzeile löschen; die folgende Veranstaltungs-Homepage behalten. -->
+<!-- TODO VERANSTALTUNG: Platzhalter und Beispielzeilen durch reale Kursdaten und Materialien ersetzen; diesen Kommentar anschließend entfernen. -->
+</section>
+</section>
 <section id="modulname-modulkürzel" class="level1">
 <h1>[Modulname] ([Modulkürzel])</h1>
 <p>Herzlich willkommen zur Vorlesung <strong>[Modulname] ([Modulkürzel])</strong> an der Dualen Hochschule Baden-Württemberg Stuttgart[, Studiengang …].</p>
 <p><strong>Dozent:in:</strong> [Dozent:in]<br>
-<strong>Kurswebsite:</strong> [[GITHUB-USER].github.io/[REPO]](https://[GITHUB-USER].github.io/[REPO]/<br>
+<strong>Kurswebsite:</strong> <a href="https://%5BGITHUB-USER%5D.github.io/%5BREPO%5D/">[GITHUB-USER].github.io/[REPO]</a><br>
 <em>Hinweis: Quellen im Repo unter <a href="vorlesungen/"><code>vorlesungen/</code></a> und <a href="labs/"><code>labs/</code></a>.</em><br>
 <strong>Repository:</strong> <a href="https://github.com/%5BGITHUB-USER%5D/%5BREPO%5D">github.com/[GITHUB-USER]/[REPO]</a></p>
 <p>[Beschreibung]</p>
-<blockquote class="blockquote">
-<p><strong>Template-Hinweis:</strong> Einrichtungsanleitung und technische Doku stehen in <a href="TEMPLATE.md"><code>TEMPLATE.md</code></a>. Diese Datei (<code>README.md</code>) ist die <strong>GitHub-Pages-Startseite</strong> — bitte wie bei einem fertigen Kurs pflegen (Platzhalter ersetzen, Einheiten-Tabelle erweitern).</p>
-</blockquote>
+<section id="kursrahmen-und-lernziele" class="level2">
+<h2 class="anchored" data-anchor-id="kursrahmen-und-lernziele">Kursrahmen und Lernziele</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 77%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rahmen</th>
+<th>Angaben zur Veranstaltung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Studiengang und Studienrichtung</td>
+<td>[Studiengang / Studienrichtung]</td>
+</tr>
+<tr class="even">
+<td>Semester</td>
+<td>[Semester]</td>
+</tr>
+<tr class="odd">
+<td>Vorausgesetzte Kenntnisse</td>
+<td>[Vorkenntnisse]</td>
+</tr>
+<tr class="even">
+<td>Präsenz- und Selbstlernzeit</td>
+<td>[Umfang und Zeitbudget]</td>
+</tr>
+<tr class="odd">
+<td>Prüfungsform und Hilfsmittel</td>
+<td>[Vorgesehene Prüfungsform und erlaubte Hilfsmittel]</td>
+</tr>
+<tr class="even">
+<td>Technische Voraussetzungen</td>
+<td>[Bei Bedarf: Sprache und Version, Zielplattform, Werkzeuge, Zeitmodell]</td>
+</tr>
+<tr class="odd">
+<td>Modulvorgaben</td>
+<td>[Modulhandbuch mit Fassung und Fundstelle; offene Vorgaben kennzeichnen]</td>
+</tr>
+</tbody>
+</table>
+<p>Nach Abschluss der Veranstaltung können Sie:</p>
+<ul>
+<li>[Beobachtbares Lernziel 1]</li>
+<li>[Beobachtbares Lernziel 2]</li>
+<li>[Beobachtbares Lernziel 3]</li>
+</ul>
+</section>
 <section id="kursübersicht" class="level2">
 <h2 class="anchored" data-anchor-id="kursübersicht">Kursübersicht</h2>
 <p>Der rote Faden der Veranstaltung:</p>
@@ -240,60 +471,13 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <section id="kursglossar" class="level3">
 <h3 class="anchored" data-anchor-id="kursglossar">Kursglossar</h3>
-<p>Das <a href="GLOSSAR.md">Kursglossar</a> erklärt die bevorzugten Fachbegriffe, ihre Bedeutung und die Zuordnung zu Synonymen und API-Namen. Diese Bezeichnungen gelten gemeinsam für Folien, Übungen und Quiz. Im Template enthält das Glossar gekennzeichnete Beispiele, die beim Anlegen eines konkreten Kurses angepasst werden.</p>
+<p>Das <a href="GLOSSAR.md">Kursglossar</a> erklärt die bevorzugten Fachbegriffe, ihre Bedeutung und die Zuordnung zu Synonymen und API-Namen. Diese Bezeichnungen gelten gemeinsam für Folien, Übungen und Quiz.</p>
 </section>
 <section id="programmieraufgaben-mit-startcode" class="level3">
 <h3 class="anchored" data-anchor-id="programmieraufgaben-mit-startcode">Programmieraufgaben mit Startcode</h3>
 <p>Laden Sie das zum Übungsblatt gehörende Startcode-ZIP herunter, entpacken Sie es und lesen Sie zuerst die enthaltene <code>README.md</code>. Sie beschreibt die benötigte Sprache und Version, Einrichtung, Ausführung und Tests sowie die zu bearbeitenden Dateien. Nummerierte TODOs gehören zur Übung; noch nicht bestandene Funktionstests können der dokumentierte Ausgangszustand sein.</p>
-<p>Das Template enthält als Beispiel <a href="labs/lab_02_suchen.pdf">Blatt 2: Suchen und Zählen</a> mit einem <a href="labs/lab_02_suchen-startcode.zip">Python-Startprojekt</a> für Python 3.12. Das ZIP enthält die Anleitung, Startcode und öffentliche Tests. Die Referenzlösung wird getrennt geprüft und ist kein Bestandteil des Startcode-ZIPs. Die Codequellen im öffentlichen Repository sind dennoch einsehbar; das ZIP ist keine Zugriffsbeschränkung.</p>
-<p>Für Lehrende stehen die Autoren- und Build-Konventionen unter <a href="TEMPLATE.md#programmieraufgaben-mit-startcode">Programmieraufgaben mit Startcode</a>.</p>
+<p>Das jeweilige Paket enthält die Anleitung, Startcode und freigegebene Tests. Die Referenzlösung ist kein Bestandteil des Startcode-ZIPs. Quelltexte und Lösungen in einem öffentlichen Repository sind dennoch einsehbar; das ZIP ist keine Zugriffsbeschränkung.</p>
 </section>
-</section>
-<section id="ki-skills-verwenden" class="level2">
-<h2 class="anchored" data-anchor-id="ki-skills-verwenden">KI-Skills verwenden</h2>
-<p>Für die Arbeit mit diesem Template stehen sechs projektbezogene Skills unter <code>.agents/skills/</code> bereit. Öffnen Sie das Repository als Arbeitsverzeichnis in Ihrem KI-Tool und beachten Sie die <a href="AGENTS.md">Projektregeln</a>, die passenden <a href="FACHREGELN.md">Fachregeln</a> und die Begriffsfestlegungen im <a href="GLOSSAR.md">Kursglossar</a>.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Skill</th>
-<th>Verwendung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href=".agents/skills/kurs-planen/SKILL.md">kurs-planen</a></td>
-<td>Kursrahmen, Lernziele, Einheitenfolge und Zeitbudget planen</td>
-</tr>
-<tr class="even">
-<td><a href=".agents/skills/einheit-erstellen/SKILL.md">einheit-erstellen</a></td>
-<td>Folien mit vollständigen Lernnotizen, Beispielen und Übungen erstellen oder überarbeiten</td>
-</tr>
-<tr class="odd">
-<td><a href=".agents/skills/uebungsblatt-erstellen/SKILL.md">uebungsblatt-erstellen</a></td>
-<td>Aufgaben und überprüfte Musterlösungen mit getrennten PDF-Versionen erstellen</td>
-</tr>
-<tr class="even">
-<td><a href=".agents/skills/quiz-erstellen/SKILL.md">quiz-erstellen</a></td>
-<td>QuizAcademy-Fragen aus vorhandenen Vorlesungen erstellen und das CSV-Format prüfen</td>
-</tr>
-<tr class="odd">
-<td><a href=".agents/skills/material-review/SKILL.md">material-review</a></td>
-<td>Fachliche und didaktische Befunde mit Fundstellen und Verbesserungsvorschlägen erhalten</td>
-</tr>
-<tr class="even">
-<td><a href=".agents/skills/material-validieren/SKILL.md">material-validieren</a></td>
-<td>Frische HTML-/PDF-Ausgaben bauen und auf Vollständigkeit, Lesbarkeit und Lösungstrennung prüfen</td>
-</tr>
-</tbody>
-</table>
-<p>Nennen Sie im Auftrag den gewünschten Skill und das konkrete Ziel, zum Beispiel:</p>
-<blockquote class="blockquote">
-<p>Nutzen Sie den Skill <code>einheit-erstellen</code> für eine 90-minütige Einheit zu synchronen Automaten. Übernehmen Sie Vorkenntnisse und technische Annahmen aus dem Kurskontext. Erhalten Sie bei der Überarbeitung vorhandene Struktur und Inhalte.</p>
-</blockquote>
-<p>Die automatische Skill-Erkennung hängt vom KI-Tool ab. Falls nötig, geben Sie die Anleitung ausdrücklich vor: „Lesen Sie <code>.agents/skills/einheit-erstellen/SKILL.md</code> und bearbeiten Sie meinen Auftrag nach diesem Ablauf.“ Befehle aus den Anleitungen werden im Repository-Stamm ausgeführt.</p>
-<p>Dokumentieren Sie Modul, Semester, Vorkenntnisse, Lernziele, Zeitbudget und gegebenenfalls Sprache, Hardware und Zeitmodell im Kurskontext dieser README. Bereits bekannte Angaben werden übernommen; die Skills fragen nur entscheidende Lücken nach. Größere didaktische Umstrukturierungen werden standardmäßig begründet vorgeschlagen. Ein Review ändert ohne Korrekturauftrag keine Materialien; ein erfolgreicher Build ersetzt keine fachliche Prüfung.</p>
-<p>Weitere Hinweise einschließlich des CSV-Validators stehen unter <a href="TEMPLATE.md#projekt-skills-verwenden">Projekt-Skills verwenden</a>.</p>
-<p>Die Skills berücksichtigen außerdem <a href="TEMPLATE.md#aufgaben-für-verständnis-und-prüfungsvorbereitung">Verständnis, Folienabstand und Prüfungsvorbereitung</a>: eigenständige Denkschritte, passende Hilfen und einen abgestuften Anspruch. Die Einschätzung richtet sich nach Lernzielen und vorhandenen Prüfungsvorgaben; tatsächliche Bearbeitungszeiten und Rückmeldungen helfen bei der Kalibrierung.</p>
 </section>
 <section id="oer-und-lizenz" class="level2">
 <h2 class="anchored" data-anchor-id="oer-und-lizenz">OER und Lizenz</h2>

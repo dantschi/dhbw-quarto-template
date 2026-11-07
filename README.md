@@ -92,6 +92,8 @@ Dokumentieren Sie Modul, Semester, Vorkenntnisse, Lernziele, Zeitbudget und gege
 
 Weitere Hinweise einschließlich des CSV-Validators stehen unter [Projekt-Skills verwenden](TEMPLATE.md#projekt-skills-verwenden).
 
+Die Skills berücksichtigen außerdem [Verständnis, Folienabstand und Prüfungsvorbereitung](TEMPLATE.md#aufgaben-für-verständnis-und-prüfungsvorbereitung): eigenständige Denkschritte, passende Hilfen und einen abgestuften Anspruch. Die Einschätzung richtet sich nach Lernzielen und vorhandenen Prüfungsvorgaben; tatsächliche Bearbeitungszeiten und Rückmeldungen helfen bei der Kalibrierung.
+
 ## OER und Lizenz
 
 Dieses Vorlesungsmaterial ist eine **Open Educational Resource (OER)**. Die Vorlesungsinhalte – Texte, Code und Diagramme – stehen unter der Lizenz **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.

@@ -19,6 +19,8 @@ Lies vor dem Erstellen oder Überarbeiten das [Kursglossar](../../../GLOSSAR.md)
 
 Klär nur Angaben nach, deren Fehlen eine fachlich belastbare Bearbeitung verhindert, etwa die Wortbreite einer davon abhängigen Rechenaufgabe. Fahre mit unabhängigen Arbeitsschritten fort. Kennzeichne vertretbare didaktische Annahmen und offene Punkte im Entwurf bzw. Prüfbericht; erfinde keine offiziellen Vorgaben, Quellen, Hardwareeigenschaften oder erfolgreichen Werkzeugläufe. Ein fehlendes Detail ist kein Grund für eine pauschale neue Abfragerunde über bereits dokumentierte Kursdaten.
 
+Für Aufgabenentwurf und -review gelten die Regeln zu [Verständnis, Transfer und Prüfungsvorbereitung](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung). Beurteile den eigenständigen Denkschritt am Lösungsweg und an den zugehörigen Lehrmaterialien. Begründe Schwierigkeit und Bearbeitungszeit zunächst als Schätzung anhand von Vorkenntnissen, Denk-/Rechenschritten und Hilfen; nutze tatsächliche Bearbeitungserfahrungen und Rückmeldungen zur späteren Kalibrierung. Halte die Autorenprüfung zu Lernziel, Denkschritt, Hilfen und Prüfungsbezug kompakt in vorhandenen Notizen oder im Abschlussbericht fest; dafür sind keine zusätzlichen Dateien oder Metadatenformate erforderlich.
+
 ## Überarbeiten und Auftragsgrenzen
 
 - Erhalte standardmäßig vorhandene Struktur, Inhalte, Dateinamen, Nummerierung und Verweise. Setze die beauftragten Änderungen im betroffenen Bereich vollständig um und sichere die Konsistenz abhängiger Stellen.

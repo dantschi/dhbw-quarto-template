@@ -35,6 +35,10 @@ Das [Kursglossar](../../../GLOSSAR.md) als Grundlage des Terminologieabgleichs l
    Übungen und Zeitbudget zusammen? Sind neue Begriffe erklärt und die vorhandenen
    Notizen ein zusammenhängender, mit sichtbarer Folie verständlicher Lerntext? Jede Folie zählt,
    einschließlich Titel, Orientierung und Abschluss.
+   Prüfe je Aufgabe Lernziel und eigenständigen Denkschritt nach den [Didaktikregeln](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung).
+   Belege Foliennähe sowie Unter- oder Überforderung konkret am Lösungsweg und an den zugehörigen Folien/Beispielen mit Fundstellen;
+   benenne dafür die vorausgesetzten Kenntnisse, Schritte, Hilfen und geschätzte Zeit und schlage eine passende Aufgabenvariante vor.
+   Beurteile Staffelung und Prüfungsvorbereitung anhand der tatsächlichen Prüfungsanforderungen; fehlende Vorgaben oder Rückmeldungen begrenzen die Bewertung.
 3. **Darstellungen abgleichen.** Vergleiche Folientext, Notizen, Formeln, Code,
    Abbildungen, Aufgaben, Musterlösungen und zugehörige Quizfragen. Gleiche die Terminologie
    dieser Quellen ausdrücklich mit dem Kursglossar und den [Terminologieregeln](../../../AGENTS.md#präzise-terminologie) ab.

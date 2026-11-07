@@ -91,8 +91,8 @@ Validatorlauf belegt das Format, nicht die fachliche Eindeutigkeit der Antworten
    sein. Prüfe insbesondere neue Aufgaben und geänderte Sichtbarkeitsblöcke.
 6. **Fachliche Grenzen prüfen.** Rechenergebnisse, Modelle und Darstellungen mit
    Quellen und Fachregeln abgleichen; für ein ausführliches Review
-   [material-review](../material-review/SKILL.md) verwenden. Erfolgreiches Kompilieren belegt keine fachliche
-   oder didaktische Richtigkeit.
+   [material-review](../material-review/SKILL.md) verwenden. Ein erfolgreicher Build belegt keine fachliche
+   oder didaktische Richtigkeit und keine Kalibrierung der Aufgabenschwierigkeit.
    Bei inhaltlichem Prüfumfang die Begriffswahl mit dem [Kursglossar](../../../GLOSSAR.md)
    und zusammengehörigen Materialien abgleichen; ein automatischer Build beweist keine semantische Terminologiekonsistenz.
 7. **Programmierpakete prüfen.** Bei `code/labs/<lab_id>/lab.json` die Laufzeit,

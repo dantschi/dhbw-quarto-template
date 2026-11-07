@@ -46,6 +46,12 @@ Für informationstechnische Inhalte je nach Bedarf außerdem Programmiersprache 
 
 Für jede Einheit wenige überprüfbare Lernziele formulieren und passende Übungen bzw. Verständnisprüfungen sowie ein Zeitbudget zuordnen. Die [Projektregeln](AGENTS.md#kurskontext-und-lernziele) beschreiben die Anforderungen an Lernziele, Quellen, Rechenprüfungen und reproduzierbare Laboraufgaben.
 
+### Aufgaben für Verständnis und Prüfungsvorbereitung
+
+Die [didaktischen Aufgabenregeln](AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung) verlangen je Aufgabe ein Lernziel und einen eigenständigen Denkschritt sowie einen Abgleich mit den Folien. Halten Sie die Zuordnung und die Einschätzung von Anspruch, Hilfen und Bearbeitungszeit für Lehrende knapp in vorhandenen Notizen oder im Abschlussbericht fest; zusätzliche Dateien oder Quiz-CSV-Spalten sind dafür nicht nötig. Planen Sie eine zum Kurs passende Folge aus Einstieg, selbstständiger Anwendung bzw. Analyse und gegebenenfalls zusätzlicher Vertiefung. Die Erstellungs- und Review-Skills prüfen diese Kriterien ausdrücklich.
+
+Dokumentierte Prüfungsvorgaben bestimmen die passenden Aufgabenarten und die erwartete Selbstständigkeit. Fehlende Vorgaben werden als offen oder als begründete Annahme ausgewiesen. Multiple-Choice-Fragen werden für offene Prüfungsaufgaben durch entsprechende Übungen ergänzt. Geschätzte Schwierigkeit und Zeiten sollten später anhand tatsächlicher Bearbeitungen und Rückmeldungen angepasst werden; ein erfolgreicher Materialbuild ist dafür kein Nachweis.
+
 ### Begriffe kursweit festlegen
 
 Das in der README verlinkte [Kursglossar](GLOSSAR.md) ist die gemeinsame Quelle für bevorzugte Bezeichnungen, Bedeutung, Synonyme und die Zuordnung zu konkreten APIs. Die enthaltenen Beispiele beim Anlegen des Kurses ersetzen oder passend übernehmen; weitere wiederkehrende und leicht verwechselbare Begriffe bei ihrer Einführung ergänzen. Die [Terminologieregel](AGENTS.md#präzise-terminologie) gilt für sämtliche Materialien und wird von den Erstellungs- und Review-Skills berücksichtigt. Reale API-Namen bleiben erhalten; abweichende Bezeichnungen werden erklärt und fachlich zugeordnet.

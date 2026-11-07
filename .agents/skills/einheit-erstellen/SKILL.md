@@ -38,6 +38,7 @@ Bereits ausdrücklich beauftragte Umstrukturierungen direkt umsetzen; keine erne
    eingeführte Begriffe auch in Folientext, Lernnotizen und Codeerklärungen konsistent weiterführen.
    Bestehende Nutzeränderungen beachten und den konkret beauftragten Umfang abgrenzen.
 2. **Lernweg festlegen.** Wenige beobachtbare Lernziele mit einer passenden Übung oder Verständnisprüfung verbinden.
+   Je Aufgabe den eigenständigen Denkschritt bestimmen und den Aufgabensatz nach den zentralen [Didaktikregeln](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung) abstufen.
    Zeit für Erklärung, aktive Bearbeitung, Fragen und Besprechung einplanen; den roten Faden fortführen.
    Dies als Arbeitsgrundlage nutzen und die beauftragte Einheit anschließend vollständig ausarbeiten.
 3. **Quarto-Quelle bearbeiten.** Neue Einheiten passend zur vorhandenen Nummerierung unter `vorlesungen/` anlegen.
@@ -48,6 +49,7 @@ Bereits ausdrücklich beauftragte Umstrukturierungen direkt umsetzen; keine erne
    Neue Begriffe, Code und Abbildungen erklären und Voraussetzungen, Grenzen und Übergänge sichtbar machen.
 5. **Beispiele prüfen.** Eingaben, Anfangszustände und Modellannahmen festlegen.
    Rechenwege und relevante Normal-/Randfälle unabhängig nachvollziehen; passende Fachprüfungen anwenden.
+   Übungslösungen mit Folien und erklärten Beispielen vergleichen: Welche Anwendung oder Begründung müssen Studierende noch selbst leisten?
    Nur tatsächlich ausgeführte Programme oder Versuche als ausgeführt beschreiben.
 6. **Darstellungen ergänzen.** Den Diagramm-Entscheidungsbaum aus den Projektregeln anwenden.
    Bearbeitbare Quellen und nötige Erzeugungsskripte erhalten; Aussagen mit Folientext und Notizen abgleichen.

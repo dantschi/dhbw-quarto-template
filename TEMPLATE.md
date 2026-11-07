@@ -4,7 +4,11 @@
 
 GitHub-Template-Repository für Vorlesungswebsites an der **DHBW Stuttgart**: Quarto-Website, Reveal.js-Folien (Apple-/DHBW-Design), PDF-Handouts, Übungsblätter und Publish über GitHub Actions.
 
-Die **GitHub-Pages-Startseite** ist der Inhalt von [`README.md`](README.md) (Kursübersicht wie bei [mct1](https://dantschi.github.io/mct1/)). Diese Datei (`TEMPLATE.md`) beschreibt nur die technische Einrichtung.
+Die [`README.md`](README.md) besteht aus zwei Teilen: oben eine fertige Beschreibung des Templates mit Funktionsüberblick, Quickstart und KI-Skills; darunter die Homepage-Vorlage für eine konkrete Veranstaltung ab `# [Modulname] ([Modulkürzel])`. Diese Datei (`TEMPLATE.md`) beschreibt die technische Einrichtung und die Autoren- und Build-Konventionen im Detail.
+
+Der obere, zusammenhängende Template-Teil ist durch `<!-- TODO TEMPLATE-TEIL BEGINN: … -->` und `<!-- TODO TEMPLATE-TEIL ENDE: … -->` begrenzt. Ein sichtbarer TODO-Hinweis darin benennt den Löschbereich. Beim Einrichten einer Veranstaltung kann der gesamte Block einschließlich beider Markierungen entfernt werden; der untere Kursabschnitt bleibt erhalten.
+
+`index.qmd` übernimmt weiterhin die gesamte README unverändert mit `{{< include README.md >}}` als **GitHub-Pages-Startseite**. Bis zum Löschen des Template-Teils zeigt die Website beide Teile, danach ausschließlich die Veranstaltung (Kursübersicht wie bei [mct1](https://dantschi.github.io/mct1/)). Dafür ist keine Änderung an `index.qmd` erforderlich.
 
 ## Was enthalten ist
 
@@ -23,24 +27,25 @@ Die **GitHub-Pages-Startseite** ist der Inhalt von [`README.md`](README.md) (Kur
 
 1. Auf GitHub **Use this template** → neues Repository erstellen.
 2. Repository klonen und die unten beschriebene [Build-Umgebung einrichten](#build-umgebung-einrichten).
-3. Alle `[…]`-Platzhalter in `_quarto.yml`, `README.md`, `vorlesungen/01_kickoff.qmd` und optional in `AGENTS.md` ersetzen.
-4. Weitere Vorlesungen als `vorlesungen/0N_….qmd` anlegen (`format: revealjs`, jede Folie mit `## Titel`, Notizen in `::: notes`). Nach der Titelfolie mit einer [aktivierenden Vorwissensfrage](vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung) beginnen; die Beispielfrage in `01_kickoff.qmd` passend zum neuen Thema ersetzen und später auflösen.
-5. Übungsblätter als `labs/lab_NN_….qmd` anlegen (Vorlage: `labs/lab_template.qmd`).
-6. Design/Livefigures möglichst unverändert lassen.
+3. Alle `[…]`-Platzhalter in `_quarto.yml`, im unteren Veranstaltungsteil der `README.md`, in `vorlesungen/01_kickoff.qmd` und optional in `AGENTS.md` ersetzen. Den vorbereiteten Kursrahmen samt Lernzielen ausfüllen und Kursübersicht, Literatur, Tools sowie Glossar anpassen.
+4. Für die konkrete Kurswebsite den oberen Template-Block der README zwischen den TODO-Kommentaren vollständig einschließlich beider Markierungen löschen. Der Kursabschnitt ab `# [Modulname] ([Modulkürzel])` bleibt als Homepage erhalten; `index.qmd` behält seinen README-Include.
+5. Weitere Vorlesungen als `vorlesungen/0N_….qmd` anlegen (`format: revealjs`, jede Folie mit `## Titel`, Notizen in `::: notes`). Nach der Titelfolie mit einer [aktivierenden Vorwissensfrage](vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung) beginnen; die Beispielfrage in `01_kickoff.qmd` passend zum neuen Thema ersetzen und später auflösen.
+6. Übungsblätter als `labs/lab_NN_….qmd` anlegen (Vorlage: `labs/lab_template.qmd`).
+7. Design/Livefigures möglichst unverändert lassen.
 
 | Datei | Aktion |
 |-------|--------|
 | `_quarto.yml` | **Ersetzen:** `[Modulname]`, `[Modulkürzel]`, `[GITHUB-USER]`, `[REPO]` |
-| `README.md` | **Ersetzen:** Kursinhalt, Einheiten-Tabelle, Literatur, Tools |
+| `README.md` | **Anpassen:** unteren Kursabschnitt mit Kursrahmen, Lernzielen, Einheiten-Tabelle, Literatur und Tools ausfüllen; oberen Template-Block samt TODO-Markierungen löschen |
 | `GLOSSAR.md` | **Anpassen:** Template-Beispiele durch die im Kurs eingeführten Begriffe, Synonyme und API-Zuordnungen ersetzen |
-| `index.qmd` | behält `{{< include README.md >}}` |
+| `index.qmd` | **Beibehalten:** `{{< include README.md >}}` übernimmt die gesamte aktuelle README |
 | `vorlesungen/01_kickoff.qmd` | **Ersetzen:** Folieninhalt und Notizen |
 | `labs/lab_01_beispiel.qmd` | **Ersetzen** oder aus `lab_template.qmd` ableiten |
 | `AGENTS.md`, `vorlesungen/AGENTS.md`, `quizacademy/AGENTS.md` | optional **Anpassen:** Modulbezug und Zielgruppe |
 
 ## Kurskontext festlegen
 
-Vor dem Entwurf einer konkreten EIT-Vorlesung in `README.md` einen Abschnitt „Kursrahmen und Lernziele“ pflegen. Darin Modulname und -kürzel, Semester bzw. Studienrichtung, Vorkenntnisse, Präsenz- und Selbstlernzeit, Prüfungsform, Literatur und Werkzeuge zentral festhalten. Vorgaben aus einem vorliegenden Modulhandbuch mit dessen Fassung benennen; offene Angaben und Annahmen kenntlich machen.
+Vor dem Entwurf einer konkreten EIT-Vorlesung im unteren Veranstaltungsteil der `README.md` den vorbereiteten Abschnitt „Kursrahmen und Lernziele“ pflegen. Darin Modulname und -kürzel, Semester bzw. Studienrichtung, Vorkenntnisse, Präsenz- und Selbstlernzeit, Prüfungsform, Literatur und Werkzeuge zentral festhalten. Vorgaben aus einem vorliegenden Modulhandbuch mit dessen Fassung benennen; offene Angaben und Annahmen kenntlich machen.
 
 Für informationstechnische Inhalte je nach Bedarf außerdem Programmiersprache und Standard bzw. Laufzeitversion, Zielplattform mit Controller/Kern und Architekturvariante, Toolchainversion mit relevanten Compileroptionen sowie das Zeitmodell dokumentieren. Die passenden Abschnitte der [Fachregeln](FACHREGELN.md) nach dem Inhalt der Einheit wählen; beispielsweise können bei einem Scheduling-Thema in Mikrocomputertechnik beide Fachabschnitte gelten.
 

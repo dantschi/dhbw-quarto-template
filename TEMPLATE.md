@@ -101,6 +101,8 @@ python3 .agents/skills/quiz-erstellen/scripts/validate_quiz.py quizacademy/datei
 
 Dieser prüft das Dateiformat und die formalen Antwortbedingungen. Ob Fragen, Optionen und Erläuterungen fachlich richtig und didaktisch geeignet sind, wird gesondert geprüft. Die Skripttests laufen mit `python3 -m unittest discover -s tests -v`.
 
+Für größere Materialreviews gibt es eine [ausfüllbare Prüfpaket-Vorlage](.agents/skills/material-review/references/pruefpaket-vorlage.md) und ein [konkretes Beispiel für „Suchen und Zählen“](.agents/skills/material-review/examples/pruefpaket-lab-02-suchen.md). Das Paket grenzt Quellen, Lernziele, Voraussetzungen, Materialstand und Prüfaufträge ab. Wenn das KI-Tool neue Agenten ohne bisherigen Chatverlauf unterstützt, können Fachprüfung und Lernwegprüfung getrennt erfolgen; andernfalls benennt der Review diese Grenze. Paketvorbereitung ist noch keine ausgeführte Prüfung. Der [Review-Skill](.agents/skills/material-review/SKILL.md#optionales-review-mit-abgegrenztem-prüfpaket) beschreibt Ablauf und Zusammenführung.
+
 ## Programmieraufgaben mit Startcode
 
 Ein Übungsblatt kann optional ein Programmierprojekt enthalten. Aufgabenblatt und Code verwenden dieselbe Blattkennung; [Code-Regeln](code/labs/AGENTS.md) und der erweiterte Skill [uebungsblatt-erstellen](.agents/skills/uebungsblatt-erstellen/SKILL.md) beschreiben die Autorenanforderungen.

@@ -82,6 +82,8 @@ Dokumentieren Sie Modul, Semester, Vorkenntnisse, Lernziele, Zeitbudget und gege
 
 Weitere Hinweise einschließlich des CSV-Validators stehen unter [Projekt-Skills verwenden](TEMPLATE.md#projekt-skills-verwenden).
 
+Für einen größeren Review können Sie ein [abgegrenztes Prüfpaket](.agents/skills/material-review/references/pruefpaket-vorlage.md) verwenden. Es hält Materialien, Lernziele, Voraussetzungen und Prüfgrenzen fest und ermöglicht getrennte fachliche und didaktische Prüfblicke ohne bisherigen Chatverlauf, sofern das KI-Tool dies unterstützt. Ein [ausgefülltes Beispiel](.agents/skills/material-review/examples/pruefpaket-lab-02-suchen.md) liegt bei.
+
 Die Skills berücksichtigen außerdem [Verständnis, Folienabstand und Prüfungsvorbereitung](TEMPLATE.md#aufgaben-für-verständnis-und-prüfungsvorbereitung): eigenständige Denkschritte, passende Hilfen und einen abgestuften Anspruch. Die Einschätzung richtet sich nach Lernzielen und vorhandenen Prüfungsvorgaben; tatsächliche Bearbeitungszeiten und Rückmeldungen helfen bei der Kalibrierung.
 
 ## Homepage-Vorlage für die Veranstaltung

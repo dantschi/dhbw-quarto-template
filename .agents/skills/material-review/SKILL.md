@@ -26,6 +26,29 @@ Bei Programmieraufgaben außerdem die [Code-Regeln](../../../code/labs/AGENTS.md
 und das Manifest sowie README, Startcode, Referenzlösung und Tests des Projekts lesen.
 Das [Kursglossar](../../../GLOSSAR.md) als Grundlage des Terminologieabgleichs lesen.
 
+## Optionales Review mit abgegrenztem Prüfpaket
+
+Nutze bei größeren Einheiten, Abschlussreviews oder einem entsprechenden Auftrag
+die [Prüfpaket-Vorlage](references/pruefpaket-vorlage.md). Sie bündelt Auftrag,
+genauen Materialstand, Lernziele und Voraussetzungen, ausgewählte Materialien und
+Regeln sowie bekannte Nachweise und Prüfgrenzen. Das
+[Beispiel zum Blatt „Suchen und Zählen“](examples/pruefpaket-lab-02-suchen.md)
+zeigt einen konkreten Zuschnitt; kleine Korrekturen benötigen kein Pflichtpaket.
+
+Erstelle das Paket aus den verfügbaren Quellen; füge keinen bisherigen Chatverlauf,
+keine Autorenrechtfertigung und kein gewünschtes Prüfergebnis hinzu. Teile fachliche
+Prüfung und Lernweg/Lösbarkeit in getrennte Aufträge. Wenn möglich, neue Prüfer ohne
+Gesprächshistorie einsetzen und ihnen nur das Paket und die notwendigen Materialien
+als Ausgangskontext geben. Fehlt diese Möglichkeit, den normalen Review durchführen
+und die nicht erfolgte frische Zweitperspektive offenlegen. Ein Rollenwechsel im
+selben Kontext zählt nicht als unabhängiger Durchlauf.
+
+Verifiziere eingehende Befunde an den Quellen, führe Doppelungen zusammen und kläre
+Widersprüche sachlich. Berichte die tatsächliche Abdeckung und ausgefallene Prüfungen.
+Nur beauftragte Korrekturen umsetzen; danach betroffene Stellen gezielt nachprüfen
+und Stand sowie Fundstellen aktualisieren. Das Paket führt keine zusätzliche
+Freigabepflicht ein und ersetzt weder Tests noch die Beurteilung durch Lehrende.
+
 ## Vorgehen
 
 1. **Umfang abgrenzen.** Prüfe die vereinbarten Quellen und nötige Abhängigkeiten
@@ -33,8 +56,13 @@ Das [Kursglossar](../../../GLOSSAR.md) als Grundlage des Terminologieabgleichs l
    Bereiche. Bei Änderungen auch den fachlich relevanten Kontext der Änderung lesen.
 2. **Lernweg prüfen.** Passen Lernziele, Voraussetzungen, Begriffsaufbau, Beispiele,
    Übungen und Zeitbudget zusammen? Sind neue Begriffe erklärt und die vorhandenen
-   Notizen ein zusammenhängender, mit sichtbarer Folie verständlicher Lerntext? Jede Folie zählt,
+   Notizen ein zusammenhängendes Skript, das mit den sichtbaren Folien verständlich ist? Jede Folie zählt,
    einschließlich Titel, Orientierung und Abschluss.
+   Lies die Notizen zusätzlich am Stück in Folienreihenfolge; prüfe Begriffseinführung, logische Übergänge, Erklärungen und Herleitungen
+   auf Lücken, Begriffssprünge und unnötige Wiederholungen. Kernaussagen sichtbarer Abbildungen, Formeln und Code müssen erläutert sein;
+   isolierte Folienkommentare und reine Regieanweisungen reichen nicht aus, eine vollständige Duplizierung sichtbarer Inhalte ist nicht erforderlich.
+   Prüfe [Abschnittsfolien und Orientierung](../../../vorlesungen/AGENTS.md#sichtbare-abschnitte-und-orientierung) vor neuen größeren Themenblöcken:
+   prägnante Titel passend zur Agenda und knappe Einordnung im Lernweg, ohne kleinteilige Trenner oder Verdrängung der Einstiegsfrage.
    Prüfe bei Vorlesungen die [aktivierende Einstiegsfrage](../../../vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung) ausdrücklich:
    Platzierung vor Agenda/Lernzielen, Passung zum Vorwissen, begründbare Antworten ohne vorweggenommene Lösung,
    Denk-/Austauschphase, vollständige Auflösung samt Fehlvorstellungen in den Notizen und spätere Wiederaufnahme.
@@ -95,7 +123,8 @@ Das [Kursglossar](../../../GLOSSAR.md) als Grundlage des Terminologieabgleichs l
 ## Darstellung und Nachweisgrenzen
 
 Bewerte Lesbarkeit und Notizzuordnung anhand frischer Ausgaben, sofern sie
-vorliegen. Für neue Renderläufe [material-validieren](../material-validieren/SKILL.md) verwenden und
+vorliegen. Prüfe dabei auch die sichtbare Abschnittsorientierung im Folienverlauf.
+Für neue Renderläufe [material-validieren](../material-validieren/SKILL.md) verwenden und
 dessen ausgeführten Umfang nennen; ohne Ausgabe keine visuelle Freigabe behaupten.
 Die Extension-Datei `_extensions/seandavi/livefigures/SKILL.md` dient allenfalls
 als Syntaxreferenz. Projektvorgaben zu Mermaid, WaveDrom, PlantUML und IEC-SVG
@@ -111,6 +140,9 @@ Trenne sichere Fehler, begründete Verbesserungen und offene Fachfragen.
 Behaupte Tests, Simulationen oder Hardwareversuche nur, wenn sie tatsächlich erfolgt sind.
 
 Schließe mit geprüftem Umfang, tatsächlich ausgeführten Prüfungen und Grenzen.
+Bei Nutzung eines Prüfpakets je Prüfrolle und Material die vollständige,
+stichprobenartige oder nicht erfolgte Abdeckung nennen; Paketvorbereitung und
+tatsächlich ausgeführten Review ausdrücklich unterscheiden.
 Wenn keine Befunde bestehen, nenne das und verbleibende Prüflücken. Der Review
 ist abgeschlossen, wenn alle vereinbarten Bereiche bewertet sind; Korrekturen,
 Commit, Push, Pull Request und Veröffentlichung folgen daraus nicht automatisch.

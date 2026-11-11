@@ -43,20 +43,27 @@ Eine reine Ausgabeprüfung oder kleine technische Änderung strukturiert eine be
    Als erste inhaltliche Folie nach dem Titel und vor Agenda/Lernzielen eine [aktivierende Einstiegsfrage](../../../vorlesungen/AGENTS.md#aktivierende-einstiegsfrage-je-vorlesung) vorsehen,
    die mit dokumentiertem Vorwissen oder Alltagserfahrung eine begründete Vermutung, Vorhersage oder Entscheidung ermöglicht.
    Denk-/Austauschphase und das Sammeln begründeter Antworten im Zeitbudget berücksichtigen; die Antwort auf der Einstiegsfolie offenlassen.
+   Vor jedem neuen größeren Themenblock eine [Abschnittsfolie zur Orientierung](../../../vorlesungen/AGENTS.md#sichtbare-abschnitte-und-orientierung)
+   mit prägnantem Titel und knapper Einordnung im Lernweg vorsehen; Namen mit der Agenda abstimmen und kleinteilige Trenner vermeiden.
+   Die aktivierende Einstiegsfrage bleibt die erste inhaltliche Folie.
    Je Aufgabe den eigenständigen Denkschritt bestimmen und den Aufgabensatz nach den zentralen [Didaktikregeln](../../../AGENTS.md#verständnis-transfer-und-prüfungsvorbereitung) abstufen.
    Zeit für Erklärung, aktive Bearbeitung, Fragen und Besprechung einplanen; den roten Faden fortführen.
    Dies als Arbeitsgrundlage nutzen und die beauftragte Einheit anschließend vollständig ausarbeiten.
 3. **Quarto-Quelle bearbeiten.** Neue Einheiten passend zur vorhandenen Nummerierung unter `vorlesungen/` anlegen.
-   Bestehende Frontmatter-Konventionen übernehmen; jede Folie im Dokumentkörper mit `## Titel` beginnen.
-   `---` im Dokumentkörper nicht als Folientrenner verwenden.
+   Bestehende Frontmatter-Konventionen übernehmen; jede Folie einschließlich Abschnittsfolien mit `## Titel` und eigenen `::: notes` anlegen.
+   Wegen des Handoutfilters weder H1-Überschriften noch `---` im Dokumentkörper als Abschnittstrenner verwenden.
 4. **Folien und Notizen gemeinsam schreiben.** Jede Folie erhält vollständigen Lerntext in `::: notes`.
    Zur Einstiegsfrage erwartbare Antworten, Fehlvorstellungen, Annahmen, fachliche Auflösung und Übergang in den Notizen ausarbeiten;
    die Frage im Verlauf oder Abschluss wieder aufgreifen und beantworten.
    Auch Orientierung, Übungen und Abschluss benötigen Notizen; Übungslösungen darin nachvollziehbar ausarbeiten.
    Neue Begriffe, Code und Abbildungen erklären und Voraussetzungen, Grenzen und Übergänge sichtbar machen.
+   Die Notizen über alle Folien hinweg als durchgehendes Skript mit kohärenter Prosa, Begriffseinführung, Erklärungen und Herleitungen schreiben.
+   Sichtbare Abbildungen, Formeln und Code dürfen vorausgesetzt werden; Kernaussagen, Ablauf und Bezug im Text erläutern, ohne alles vollständig zu duplizieren.
+   Isolierte Folienkommentare oder reine Regieanweisungen ergeben noch keinen zusammenhängenden Lerntext.
 5. **Beispiele prüfen.** Eingaben, Anfangszustände und Modellannahmen festlegen.
    Rechenwege und relevante Normal-/Randfälle unabhängig nachvollziehen; passende Fachprüfungen anwenden.
    Übungslösungen mit Folien und erklärten Beispielen vergleichen: Welche Anwendung oder Begründung müssen Studierende noch selbst leisten?
+   Alle Notizen zusätzlich am Stück in Folienreihenfolge lesen und fehlende Übergänge, Begriffssprünge sowie unnötige Wiederholungen beheben.
    Nur tatsächlich ausgeführte Programme oder Versuche als ausgeführt beschreiben.
 6. **Darstellungen ergänzen.** Den Diagramm-Entscheidungsbaum aus den Projektregeln anwenden.
    Bearbeitbare Quellen und nötige Erzeugungsskripte erhalten; Aussagen mit Folientext und Notizen abgleichen.
@@ -89,6 +96,7 @@ Eine reine Ausgabeprüfung oder kleine technische Änderung strukturiert eine be
 
 - Decken Inhalte und Übungen die Lernziele im Zeitbudget ab?
 - Hat jede Folie verständliche, vollständige und fachlich konsistente Notizen?
+- Orientieren Abschnittsfolien vor größeren Themenblöcken sichtbar im Lernweg, und lesen sich die Notizen zusammen als fortlaufendes Skript?
 - Ist die Einstiegsfrage passend zum Vorwissen platziert, in den Notizen vollständig ausgearbeitet und später beantwortet?
 - Stimmen Aussagen, Code, Rechnungen und Diagramme unter den dokumentierten Annahmen überein?
 - Sind UTF-8 ohne BOM, Formeln, Kontraste, Beschriftungen und Verweise geprüft?

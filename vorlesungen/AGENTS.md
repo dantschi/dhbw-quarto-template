@@ -12,6 +12,14 @@ Greife die Frage im Verlauf oder spätestens am Abschluss erneut auf und beantwo
 
 Diese Vorgabe gilt beim Erstellen und inhaltlichen Überarbeiten einer Einheit. Reine Ausgabeprüfungen oder kleine technische Änderungen lösen keine automatische Umstrukturierung bestehender Vorlesungen aus.
 
+## Sichtbare Abschnitte und Orientierung
+
+Füge vor jedem neuen größeren inhaltlichen Themenblock eine eigene Abschnittsfolie mit einer prägnanten Zwischenüberschrift ein. Verwende dieselben Abschnittsbezeichnungen wie in der Agenda bzw. im Lernweg der Einheit. Eine knappe Standortangabe soll sichtbar machen, was bereits erarbeitet wurde und welche Frage der folgende Abschnitt behandelt. Die aktivierende Einstiegsfrage bleibt die erste inhaltliche Folie nach der Titelfolie.
+
+Orientiere die Gliederung an zusammenhängenden Themen und Lernzielen; nicht jede einzelne Inhaltsfolie benötigt eine zusätzliche Abschnittsfolie. Auch Abschnittsfolien beginnen mit `##` und erhalten eigene `::: notes`. Verwende dafür keine Ebene-1-Überschriften oder `---` als Folientrenner, damit Vortrag und Handout dieselben Foliengrenzen verwenden.
+
+Die Abschnittsnotizen führen wie ein kurzer Kapitelanfang in den folgenden Gedankengang ein: Sie verbinden bisherige Ergebnisse mit dem neuen Problem und erläutern dessen Bedeutung für das Lernziel. Ergänze diese Orientierung beim Erstellen und im beauftragten Umfang inhaltlicher Überarbeitungen; reine Renderprüfungen und kleine technische Änderungen gliedern bestehende Inhalte nicht automatisch neu.
+
 ## UTF-8 bei Folien-Edits
 
 Deutsche `.qmd`-Folien sind unter Windows **UTF-8-fragil**: Editor-/Patch-Tools können Unicode stillschweigend zerstören (typisch: `→` wird zu `?`, Umlaute/`—` zu Mojibake). Vor dem finalen Rebuild immer prüfen.
@@ -44,7 +52,7 @@ Geltungsbereich: Diese Regel gilt bei der Erstellung, Ergänzung und Änderung a
 
 Zielgruppe: Bachelorstudierende der DHBW Stuttgart im Studiengang Elektro- und Informationstechnik. Setze nur ausdrücklich benannte Vorkenntnisse voraus. Führe neue Begriffe und anspruchsvolle Zusammenhänge verständlich ein.
 
-Grundsatz: Erstelle Folieninhalt, Abbildungen und zugehörige Notizen gemeinsam. Eine Folie ist erst fertig, wenn ihre Notizen die Inhalte fachlich korrekt, nachvollziehbar und zusammenhängend erklären. Die Notizen müssen als begleitender Lerntext ohne zusätzliche mündliche Erläuterung verständlich sein; die Folie darf dabei sichtbar vorausgesetzt werden.
+Grundsatz: Erstelle Folieninhalt, Abbildungen und zugehörige Notizen gemeinsam. Eine Folie ist erst fertig, wenn ihre Notizen die Inhalte fachlich korrekt, nachvollziehbar und zusammenhängend erklären. Die Notizen einer Einheit bilden über die Foliengrenzen hinweg ein durchgehendes Skript bzw. Lehrbuchkapitel, das mit den zugehörigen Folien ohne zusätzliche mündliche Erläuterung verständlich und im Handout flüssig lesbar ist. Sichtbare Abbildungen, Formeln und Code dürfen dabei vorausgesetzt werden; ihre Kernaussagen, Zusammenhänge und nötigen Herleitungen müssen im Text erklärt sein.
 
 ### 1. Vollständige Erklärung für jede Folie
 
@@ -62,7 +70,9 @@ Bereits eingeführte Begriffe müssen auf späteren Folien nicht vollständig er
 
 Ordne jede fachliche Folie kurz in den bisherigen Gedankengang ein. Erläutere, welches Problem sie löst und welche offene Frage zur nächsten Folie führt. Übergänge müssen den inhaltlichen Zusammenhang erklären; „Als Nächstes betrachten wir …“ allein reicht nicht.
 
-Schreibe natürliche, zusammenhängende deutsche Prosa. Nutze übersichtliche Absätze und bei Bedarf kurze Listen. Vermeide ein mechanisch wiederholtes Schema und unnötige Füllsätze.
+Schreibe natürliche, zusammenhängende deutsche Prosa mit einem fortlaufenden Erklärungsbogen: Begriffe einführen, Aussagen begründen, an Beispielen entwickeln und Ergebnisse für den nächsten Gedankenschritt nutzen. Halte die Notizen der jeweiligen Folie zugeordnet, führe längere Argumentationen aber über mehrere Folien hinweg verständlich weiter. Benenne bei Rückverweisen den Gegenstand und seine Bedeutung; vermeide unvermittelte Begriffssprünge und unnötige Wiederholungen derselben Einführung.
+
+Nutze übersichtliche Absätze und bei Bedarf kurze Listen. Vermeide ein mechanisch wiederholtes Schema, isolierte Folienkommentare wie „Hier sehen Sie …“ ohne Erklärung und unnötige Füllsätze. Setze erforderliche Moderationshinweise kurz vom eigentlichen Lerntext ab, damit dieser auch wie ein Skript gelesen werden kann.
 
 ### 4. Beispiele, Formeln und Übungen vollständig ausarbeiten
 
@@ -93,6 +103,8 @@ Als Orientierung gelten etwa 70–120 Wörter für einfache Orientierungsfolien,
 Prüfe jede Folie einschließlich ihrer Notizen, bevor du die Vorlesung als fertig meldest:
 
 - Aktiviert die erste inhaltliche Folie mit einer passenden Frage das Vorwissen, sind erwartbare Antworten und Auflösung in den Notizen ausgearbeitet und wird die Frage später nachvollziehbar beantwortet?
+- Sind neue Themenblöcke durch Abschnittsfolien mit passenden Zwischenüberschriften erkennbar, und bleibt die Position im Lernweg sichtbar?
+- Lassen sich die Notizen in ihrer Reihenfolge als durchgehendes Skript lesen, mit nachvollziehbaren Übergängen, begründeten Aussagen und passenden Rückverweisen?
 - Sind neue Begriffe, Abkürzungen, Symbole und relevante Codebezeichner eingeführt und kontextabhängige Bedeutungen lokal geklärt? Sind ausdrücklich einzeln nutzbare Folien für sich verständlich?
 - Sind Motivation, Bedeutung, Voraussetzungen und Folgerungen verständlich?
 - Sind Beispiele, Rechnungen und Übungslösungen vollständig, dimensionskonsistent und plausibel?
@@ -102,6 +114,8 @@ Prüfe jede Folie einschließlich ihrer Notizen, bevor du die Vorlesung als fert
 - Sind relevante Eingaben, Anfangszustände, Zahlendarstellungen und Zeit-/Ereigniskonventionen gemäß den [einschlägigen Fachregeln](../FACHREGELN.md) angegeben und die Darstellungen gegeneinander geprüft?
 - Decken die Übungen die Lernziele der Einheit ab und passt der Umfang zum Zeitbudget?
 
-Behebe erkannte Mängel unmittelbar. Prüfe auch das erzeugte Ausgabeformat, soweit die nötigen Werkzeuge verfügbar sind: Notizen müssen enthalten und richtig zugeordnet, Abbildungen und Beschriftungen lesbar sein. Berichte anschließend knapp, welche Prüfungen tatsächlich erfolgt sind und welche Grenzen verbleiben. Eine erfolgreich erzeugte Datei allein ist kein Nachweis fachlicher oder didaktischer Qualität.
+Lies die Notizen im geprüften Umfang zusätzlich am Stück, nicht nur einzeln neben den jeweiligen Folien. Prüfe dabei den roten Faden, fehlende Erklärungen an Abschnittswechseln, Begriffssprünge und unnötige Wiederholungen.
+
+Behebe erkannte Mängel unmittelbar. Prüfe auch das erzeugte Ausgabeformat, soweit die nötigen Werkzeuge verfügbar sind: Abschnittswechsel müssen im Vortrag und Handout erkennbar, Notizen enthalten und richtig zugeordnet sowie Abbildungen und Beschriftungen lesbar sein. Berichte anschließend knapp, welche Prüfungen tatsächlich erfolgt sind und welche Grenzen verbleiben. Eine erfolgreich erzeugte Datei allein ist kein Nachweis fachlicher oder didaktischer Qualität.
 
 Abnahmekriterium: Die Vorlesung ist erst abgeschlossen, wenn jede Folie diese Anforderungen erfüllt. Qualitätslücken dürfen nicht als spätere Ergänzung der Notizen offengelassen werden.
